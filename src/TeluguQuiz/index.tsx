@@ -247,58 +247,37 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 					}}
 				>
 					{/* Top Header Row: Left-Aligned Question Number & Centered Category */}
+					{/* Top Header: Centered Category / Heading Ribbon */}
 					<div
 						style={{
 							position: 'absolute',
-							top: 14,
-							left: 36,
-							right: 36,
+							top: 18,
+							left: 40,
+							right: 40,
 							display: 'flex',
-							justifyContent: 'space-between',
+							justifyContent: 'center',
 							alignItems: 'center',
 							zIndex: 10,
 						}}
 					>
-						{/* Question Number on Left Side Top: Vibrant Royal Blue Badge */}
-						<div
-							style={{
-								background: 'linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%)',
-								color: '#ffffff',
-								fontSize: 22,
-								fontWeight: 900,
-								padding: '8px 28px',
-								borderRadius: 24,
-								border: '2px solid #93c5fd',
-								boxShadow: '0 6px 18px rgba(37, 99, 235, 0.28)',
-								letterSpacing: 2,
-								display: 'flex',
-								alignItems: 'center',
-								gap: 8,
-							}}
-						>
-							<span>🏏</span>
-							<span>QUESTION #{quizIndex + 1}</span>
-						</div>
-
-						{/* Clean White Category Ribbon */}
 						<div
 							style={{
 								background: '#ffffff',
 								border: '2px solid #cbd5e1',
-								padding: '8px 36px',
+								borderTop: '3px solid #2563eb',
+								padding: '8px 44px',
 								borderRadius: 30,
-								fontSize: 22,
+								fontSize: 24,
 								fontWeight: 900,
 								color: '#0f172a',
 								letterSpacing: 1.5,
-								boxShadow: '0 6px 20px rgba(15, 23, 42, 0.07)',
+								boxShadow: '0 6px 20px rgba(15, 23, 42, 0.08)',
 								display: 'flex',
 								alignItems: 'center',
 								gap: 12,
-								textTransform: 'uppercase',
 							}}
 						>
-							<span style={{fontSize: 24}}>👑</span>
+							<span style={{fontSize: 26}}>🏏</span>
 							<span>{currentQuiz.category}</span>
 						</div>
 					</div>
@@ -340,22 +319,31 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 								justifyContent: 'center',
 							}}
 						>
-							{/* Question Text: Deep Crisp Slate Black (54px to 66px) */}
+							{/* Question Text: Large, Bold, with Q.NO in front */}
 							<div
 								style={{
 									fontSize:
 										currentQuiz.question.length > 65
-											? 54
+											? 60
 											: currentQuiz.question.length > 45
-												? 60
-												: 66,
+												? 68
+												: 76,
 									fontWeight: 900,
 									color: '#0f172a',
-									lineHeight: 1.36,
+									lineHeight: 1.34,
 									letterSpacing: 0.3,
 									display: 'inline-block',
 								}}
 							>
+								<span
+									style={{
+										color: '#2563eb',
+										marginRight: 16,
+										fontWeight: 900,
+									}}
+								>
+									{quizIndex + 1}.
+								</span>
 								{displayedQuestion}
 								{/* Blinking Typewriter Cursor */}
 								{isTyping && (
@@ -451,42 +439,44 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 										borderTop,
 										borderBottom: `6px solid ${bottomBevel}`,
 										borderRadius: 24,
-										padding: '0 36px',
+										padding: '0 40px',
 										display: 'flex',
 										alignItems: 'center',
 										justifyContent: 'space-between',
 										boxShadow: glow,
 									}}
 								>
-									<div style={{display: 'flex', alignItems: 'center', gap: 24}}>
+									<div style={{display: 'flex', alignItems: 'center', gap: 28}}>
 										{/* Metallic Blue / Green Coin */}
 										<div
 											style={{
-												width: 76,
-												height: 76,
-												borderRadius: 22,
+												width: 82,
+												height: 82,
+												borderRadius: 24,
 												background: letterBg,
 												border: `2px solid ${letterBorder}`,
 												display: 'flex',
 												justifyContent: 'center',
 												alignItems: 'center',
-												fontSize: 40,
+												fontSize: 44,
 												fontWeight: 900,
 												color: '#ffffff',
 												boxShadow:
-													'0 4px 12px rgba(37, 99, 235, 0.28), inset 0 1px 0 rgba(255,255,255,0.4)',
+													'0 6px 14px rgba(0,0,0,0.18), inset 0 2px 0 rgba(255,255,255,0.4)',
+												flexShrink: 0,
 											}}
 										>
 											{letters[idx]}
 										</div>
 
-										{/* Option Text: Deep High Contrast Slate Black (46px font) */}
+										{/* Option Text: Deep High Contrast Slate Black (48px to 52px font) */}
 										<div
 											style={{
-												fontSize: 46,
-												fontWeight: 800,
+												fontSize: option.length > 25 ? 44 : 50,
+												fontWeight: 900,
 												color: textColor,
 												letterSpacing: 0.3,
+												lineHeight: 1.25,
 											}}
 										>
 											{option}
@@ -496,7 +486,7 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 									{isTimeUp && isCorrect && (
 										<div
 											style={{
-												fontSize: 50,
+												fontSize: 54,
 												filter:
 													'drop-shadow(0 0 12px rgba(74, 222, 128, 0.95))',
 											}}
@@ -513,7 +503,7 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 					<div
 						style={{
 							position: 'absolute',
-							top: 650,
+							top: 645,
 							left: '50%',
 							transform: `translate(-50%, -50%) scale(${
 								interpolate(
@@ -538,8 +528,8 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 						{/* Premium Glowing Hub Chassis */}
 						<div
 							style={{
-								width: 170,
-								height: 170,
+								width: 180,
+								height: 180,
 								borderRadius: '50%',
 								background:
 									'radial-gradient(circle at 35% 35%, #ffffff 0%, #f8fafc 70%, #e2e8f0 100%)',
@@ -549,10 +539,10 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 										? '4px solid #f87171'
 										: '4px solid #93c5fd',
 								boxShadow: isTimeUp
-									? '0 0 0 10px rgba(34, 197, 94, 0.25), 0 16px 45px rgba(22, 163, 74, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.9)'
+									? '0 0 0 10px rgba(34, 197, 94, 0.25), 0 20px 50px rgba(22, 163, 74, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.9)'
 									: remainingSeconds <= 2
-										? '0 0 0 10px rgba(239, 68, 68, 0.25), 0 16px 45px rgba(239, 68, 68, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.9)'
-										: '0 0 0 10px rgba(37, 99, 235, 0.18), 0 16px 45px rgba(15, 23, 42, 0.22), inset 0 2px 4px rgba(255, 255, 255, 0.9)',
+										? '0 0 0 10px rgba(239, 68, 68, 0.25), 0 20px 50px rgba(239, 68, 68, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.9)'
+										: '0 0 0 10px rgba(37, 99, 235, 0.2), 0 20px 50px rgba(15, 23, 42, 0.25), inset 0 2px 4px rgba(255, 255, 255, 0.9)',
 								position: 'relative',
 								display: 'flex',
 								flexDirection: 'column',
@@ -562,8 +552,8 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 						>
 							{/* Animated Circular SVG Ring */}
 							<svg
-								width="170"
-								height="170"
+								width="180"
+								height="180"
 								style={{
 									position: 'absolute',
 									top: 0,
@@ -572,17 +562,17 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 								}}
 							>
 								<circle
-									cx="85"
-									cy="85"
-									r="74"
+									cx="90"
+									cy="90"
+									r="78"
 									stroke="rgba(226, 232, 240, 0.8)"
-									strokeWidth="8"
+									strokeWidth="10"
 									fill="none"
 								/>
 								<circle
-									cx="85"
-									cy="85"
-									r="74"
+									cx="90"
+									cy="90"
+									r="78"
 									stroke={
 										isTimeUp
 											? '#16a34a'
@@ -590,17 +580,17 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 												? '#ef4444'
 												: '#2563eb'
 									}
-									strokeWidth="8"
+									strokeWidth="10"
 									fill="none"
-									strokeDasharray={2 * Math.PI * 74}
-									strokeDashoffset={2 * Math.PI * 74 * (1 - ringProgress)}
+									strokeDasharray={2 * Math.PI * 78}
+									strokeDashoffset={2 * Math.PI * 78 * (1 - ringProgress)}
 									strokeLinecap="round"
 									style={{
 										filter: isTimeUp
-											? 'drop-shadow(0 0 12px rgba(34, 197, 94, 0.8))'
+											? 'drop-shadow(0 0 14px rgba(34, 197, 94, 0.85))'
 											: remainingSeconds <= 2
-												? 'drop-shadow(0 0 12px rgba(239, 68, 68, 0.8))'
-												: 'drop-shadow(0 0 10px rgba(37, 99, 235, 0.6))',
+												? 'drop-shadow(0 0 14px rgba(239, 68, 68, 0.85))'
+												: 'drop-shadow(0 0 12px rgba(37, 99, 235, 0.65))',
 									}}
 								/>
 							</svg>
@@ -616,16 +606,16 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 							>
 								<span
 									style={{
-										fontSize: 12,
+										fontSize: 13,
 										fontWeight: 900,
-										letterSpacing: 2,
+										letterSpacing: 2.5,
 										color: isTimeUp
 											? '#16a34a'
 											: remainingSeconds <= 2
 												? '#ef4444'
 												: '#1e40af',
 										textTransform: 'uppercase',
-										marginBottom: -2,
+										marginBottom: -4,
 									}}
 								>
 									{isTimeUp ? 'TIME UP' : 'TIMER'}
@@ -633,7 +623,7 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 
 								<span
 									style={{
-										fontSize: isTimeUp ? 42 : 64,
+										fontSize: isTimeUp ? 46 : 72,
 										fontWeight: 900,
 										color: isTimeUp
 											? '#16a34a'
@@ -651,7 +641,7 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 									style={{
 										fontSize: 12,
 										fontWeight: 900,
-										letterSpacing: 2,
+										letterSpacing: 2.5,
 										color: '#64748b',
 										textTransform: 'uppercase',
 										marginTop: 2,
@@ -760,231 +750,181 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 						</div>
 					</div>
 
-					{/* Explanation Area: Full-Width (No Photos) OR 2-Column (With Photos) */}
-					{!showPhotos ? (
-						<div
+					{/* Question Recap Strip */}
+					<div
+						style={{
+							background: '#eff6ff',
+							border: '2px solid #bfdbfe',
+							borderLeft: '8px solid #2563eb',
+							borderRadius: 20,
+							padding: '16px 36px',
+							display: 'flex',
+							alignItems: 'center',
+							gap: 16,
+							boxShadow: '0 4px 14px rgba(15, 23, 42, 0.04)',
+						}}
+					>
+						<span style={{fontSize: 32}}>❓</span>
+						<span
 							style={{
-								background: '#ffffff',
-								borderRadius: 24,
-								border: '2px solid #cbd5e1',
-								borderTop: '5px solid #2563eb',
-								padding: '44px 56px',
-								boxShadow: '0 12px 35px rgba(15, 23, 42, 0.08)',
-								display: 'flex',
-								flexDirection: 'column',
-								justifyContent: 'space-evenly',
-								flex: 1,
+								fontSize: 38,
+								fontWeight: 900,
+								color: '#1e3a8a',
+								lineHeight: 1.3,
 							}}
 						>
-							<div>
-								{/* Header */}
-								<div
-									style={{
-										display: 'flex',
-										alignItems: 'center',
-										gap: 16,
-										marginBottom: 20,
-									}}
-								>
-									<span style={{fontSize: 48}}>📖</span>
-									<h2
-										style={{
-											margin: 0,
-											fontSize: 46,
-											fontWeight: 900,
-											color: '#1d4ed8',
-											letterSpacing: 0.5,
-										}}
-									>
-										{currentQuiz.explanation.title}
-									</h2>
-								</div>
+							<span style={{color: '#2563eb', marginRight: 10}}>
+								ప్రశ్న {quizIndex + 1}:
+							</span>
+							{currentQuiz.question}
+						</span>
+					</div>
 
-								{/* Main Paragraph: Crisp Deep Slate Black 56px Font */}
-								<p
-									style={{
-										fontSize: 56,
-										fontWeight: 800,
-										color: '#0f172a',
-										lineHeight: 1.6,
-										margin: 0,
-										borderLeft: '8px solid #2563eb',
-										paddingLeft: 32,
-									}}
-								>
-									{currentQuiz.explanation.description}
-								</p>
-							</div>
-
-							{/* Key Highlights Grid: Broadcast Trivia Cards (Zero Photos Needed!) */}
-							{currentQuiz.explanation.points &&
-								currentQuiz.explanation.points.length > 0 && (
-									<div
-										style={{
-											display: 'grid',
-											gridTemplateColumns: `repeat(${Math.min(
-												currentQuiz.explanation.points.length,
-												3,
-											)}, 1fr)`,
-											gap: 24,
-											marginTop: 20,
-										}}
-									>
-										{currentQuiz.explanation.points
-											.slice(0, 3)
-											.map((pt, idx) => (
-												<div
-													key={idx}
-													style={{
-														background: '#f8fafc',
-														border: '2px solid #e2e8f0',
-														borderTop: '4px solid #2563eb',
-														borderRadius: 20,
-														padding: '24px 30px',
-														display: 'flex',
-														alignItems: 'center',
-														gap: 20,
-														boxShadow: '0 6px 16px rgba(15, 23, 42, 0.04)',
-													}}
-												>
-													<span style={{fontSize: 48}}>{pt.icon}</span>
-													<div>
-														<div
-															style={{
-																fontSize: 20,
-																fontWeight: 900,
-																color: '#64748b',
-																letterSpacing: 1,
-																textTransform: 'uppercase',
-															}}
-														>
-															{pt.label}
-														</div>
-														<div
-															style={{
-																fontSize: 34,
-																fontWeight: 900,
-																color: '#0f172a',
-																marginTop: 4,
-																lineHeight: 1.3,
-															}}
-														>
-															{pt.text}
-														</div>
-													</div>
-												</div>
-											))}
-									</div>
-								)}
-						</div>
-					) : (
-						<div
-							style={{
-								display: 'grid',
-								gridTemplateColumns: '1.35fr 0.95fr',
-								gap: 28,
-								flex: 1,
-							}}
-						>
-							{/* In-Depth Explanation Box: Elegant White Studio Card */}
+					{/* Explanation Area: Full-Width Pristine White Card (Zero Small Cards, Rich Explanation) */}
+					<div
+						style={{
+							background: '#ffffff',
+							borderRadius: 24,
+							border: '2px solid #cbd5e1',
+							borderTop: '6px solid #16a34a',
+							padding: '36px 48px',
+							boxShadow: '0 12px 35px rgba(15, 23, 42, 0.08)',
+							display: 'flex',
+							flexDirection: 'column',
+							justifyContent: 'space-between',
+							flex: 1,
+						}}
+					>
+						<div>
+							{/* Section Header */}
 							<div
 								style={{
-									background: '#ffffff',
-									borderRadius: 24,
-									border: '2px solid #cbd5e1',
-									borderTop: '4px solid #2563eb',
-									borderLeft: '8px solid #2563eb',
-									padding: '44px 52px',
-									boxShadow: '0 12px 35px rgba(15, 23, 42, 0.08)',
 									display: 'flex',
-									flexDirection: 'column',
-									justifyContent: 'flex-start',
-									gap: 28,
+									alignItems: 'center',
+									gap: 16,
+									marginBottom: 24,
 								}}
 							>
-								<div
+								<span style={{fontSize: 42}}>📖</span>
+								<h2
 									style={{
-										display: 'flex',
-										alignItems: 'center',
-										gap: 16,
-									}}
-								>
-									<span style={{fontSize: 46}}>📖</span>
-									<h2
-										style={{
-											margin: 0,
-											fontSize: 48,
-											fontWeight: 900,
-											color: '#1d4ed8',
-											letterSpacing: 0.5,
-										}}
-									>
-										{currentQuiz.explanation.title}
-									</h2>
-								</div>
-
-								{/* Main Paragraph: Crisp Deep Slate Black 54px EXTRA BOLD FONT */}
-								<p
-									style={{
-										fontSize: 54,
-										fontWeight: 800,
-										color: '#0f172a',
-										lineHeight: 1.62,
 										margin: 0,
-										borderLeft: '6px solid #2563eb',
-										paddingLeft: 28,
-									}}
-								>
-									{currentQuiz.explanation.description}
-								</p>
-							</div>
-
-							{/* Right Side Visual on Page 2: ANSWER IMAGE */}
-							<div
-								style={{
-									borderRadius: 24,
-									overflow: 'hidden',
-									border: '3px solid #22c55e',
-									borderTop: '4px solid #86efac',
-									borderBottom: '6px solid #052e16',
-									boxShadow: '0 12px 35px rgba(15, 23, 42, 0.12)',
-									position: 'relative',
-									display: 'flex',
-									background: '#ffffff',
-								}}
-							>
-								<Img
-									src={staticFile(currentQuiz.answerImage)}
-									style={{
-										width: '100%',
-										height: '100%',
-										objectFit: 'cover',
-										transform: `scale(${1 + Math.sin(frame / 20) * 0.02})`,
-									}}
-								/>
-								<div
-									style={{
-										position: 'absolute',
-										bottom: 20,
-										left: 20,
-										right: 20,
-										background: 'rgba(255, 255, 255, 0.95)',
-										backdropFilter: 'blur(10px)',
-										border: '1.5px solid #22c55e',
-										borderRadius: 16,
-										padding: '12px 18px',
-										textAlign: 'center',
-										fontSize: 24,
+										fontSize: 40,
 										fontWeight: 900,
 										color: '#15803d',
-										boxShadow: '0 4px 15px rgba(15, 23, 42, 0.12)',
+										letterSpacing: 0.5,
 									}}
 								>
-									{currentQuiz.answerImageTag}
+									{currentQuiz.explanation.title}
+								</h2>
+							</div>
+
+							{/* Main Detailed Explanation */}
+							<div
+								style={{
+									background: '#f0fdf4',
+									border: '2px solid #bbf7d0',
+									borderLeft: '10px solid #16a34a',
+									borderRadius: 18,
+									padding: '28px 36px',
+									marginBottom: 24,
+								}}
+							>
+								<p
+									style={{
+										fontSize: 50,
+										fontWeight: 900,
+										color: '#0f172a',
+										lineHeight: 1.55,
+										margin: 0,
+									}}
+								>
+									{currentQuiz.explanation.description}
+								</p>
+							</div>
+
+							{/* In-depth Context & Highlights Box (fills the page beautifully) */}
+							<div
+								style={{
+									background: '#f8fafc',
+									border: '2px solid #e2e8f0',
+									borderLeft: '10px solid #2563eb',
+									borderRadius: 18,
+									padding: '24px 36px',
+									display: 'flex',
+									flexDirection: 'column',
+									gap: 10,
+								}}
+							>
+								<div
+									style={{
+										display: 'flex',
+										alignItems: 'center',
+										gap: 12,
+									}}
+								>
+									<span style={{fontSize: 28}}>⚡</span>
+									<span
+										style={{
+											fontSize: 24,
+											fontWeight: 900,
+											color: '#1e40af',
+											letterSpacing: 1.5,
+											textTransform: 'uppercase',
+										}}
+									>
+										విశేషాలు & ప్రాముఖ్యత (KEY INSIGHT)
+									</span>
 								</div>
+								<p
+									style={{
+										fontSize: 38,
+										fontWeight: 800,
+										color: '#334155',
+										lineHeight: 1.5,
+										margin: 0,
+									}}
+								>
+									ఈ ప్రశ్నకు సరైన సమాధానం{' '}
+									<span style={{color: '#16a34a', fontWeight: 900}}>
+										"{currentQuiz.options[currentQuiz.correctIndex]}"
+									</span>
+									. భారత క్రికెట్ జట్టు మరియు టీ20 / ఐపీఎల్ టోర్నమెంట్లలో ఈ అంశం ఎంతో ప్రాముఖ్యత కలిగినది.
+								</p>
 							</div>
 						</div>
-					)}
+
+						{/* Footer Tag */}
+						<div
+							style={{
+								display: 'flex',
+								justifyContent: 'space-between',
+								alignItems: 'center',
+								borderTop: '2px solid #f1f5f9',
+								paddingTop: 16,
+							}}
+						>
+							<span
+								style={{
+									fontSize: 20,
+									fontWeight: 900,
+									color: '#64748b',
+									letterSpacing: 1.5,
+								}}
+							>
+								🏏 INDIAN CRICKET TRIVIA • QUESTION #{quizIndex + 1}
+							</span>
+							<span
+								style={{
+									fontSize: 20,
+									fontWeight: 900,
+									color: '#15803d',
+								}}
+							>
+								100% VERIFIED ANSWER ✅
+							</span>
+						</div>
+					</div>
 				</AbsoluteFill>
 			)}
 		</AbsoluteFill>
