@@ -303,45 +303,55 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 						</div>
 					</div>
 
-					{/* 16:9 Question Banner: Pristine White Floating Card */}
+					{/* ================= AUDIO: TIMER TICKS & TIME UP CHIME ================= */}
+					{[170, 200, 230, 260, 290].map((tickFrame, i) => (
+						<Sequence key={`tick-${i}`} from={tickFrame} durationInFrames={15}>
+							<Audio src={staticFile('Youtube Video/timer_tick.wav')} volume={0.8} />
+						</Sequence>
+					))}
+					<Sequence from={320} durationInFrames={45}>
+						<Audio src={staticFile('Youtube Video/time_up.wav')} volume={0.9} />
+					</Sequence>
+
+					{/* 16:9 Question Banner: Pristine White Floating Card (EXPANDED HEIGHT) */}
 					<div
 						style={{
 							position: 'absolute',
-							top: 66,
-							left: 36,
-							right: 36,
+							top: 72,
+							left: 40,
+							right: 40,
 							zIndex: 10,
 						}}
 					>
 						<div
 							style={{
 								background: '#ffffff',
-								borderRadius: 22,
-								padding: '24px 40px',
+								borderRadius: 24,
+								padding: '28px 50px',
 								border: '2px solid #cbd5e1',
-								borderTop: '4px solid #2563eb',
+								borderTop: '5px solid #2563eb',
 								boxShadow:
-									'0 10px 30px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.04)',
+									'0 12px 35px rgba(15, 23, 42, 0.08), 0 3px 8px rgba(15, 23, 42, 0.04)',
 								textAlign: 'center',
 								position: 'relative',
-								minHeight: 185,
+								height: 250,
 								display: 'flex',
 								flexDirection: 'column',
 								justifyContent: 'center',
 							}}
 						>
-							{/* Question Text: Deep Crisp Slate Black (52px to 62px) */}
+							{/* Question Text: Deep Crisp Slate Black (54px to 66px) */}
 							<div
 								style={{
 									fontSize:
 										currentQuiz.question.length > 65
-											? 52
+											? 54
 											: currentQuiz.question.length > 45
-												? 56
-												: 62,
+												? 60
+												: 66,
 									fontWeight: 900,
 									color: '#0f172a',
-									lineHeight: 1.34,
+									lineHeight: 1.36,
 									letterSpacing: 0.3,
 									display: 'inline-block',
 								}}
@@ -364,137 +374,18 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 						</div>
 					</div>
 
-					{/* ================= 5-SECOND CENTERED TIMER BAR (NO IMAGES REQUIRED) ================= */}
+					{/* ================= 2x2 KBC-STYLE OPTIONS GRID (COMPACT SLEEK HEIGHT) ================= */}
 					<div
 						style={{
 							position: 'absolute',
-							top: 275,
-							left: 36,
-							right: 36,
-							display: 'flex',
-							justifyContent: 'center',
-							alignItems: 'center',
-							zIndex: 10,
-							opacity: interpolate(
-								frame,
-								[timerStart - 15, timerStart],
-								[0, 1],
-								{extrapolateLeft: 'clamp', extrapolateRight: 'clamp'},
-							),
-						}}
-					>
-						<div
-							style={{
-								background: '#ffffff',
-								padding: '8px 36px',
-								borderRadius: 40,
-								border: '2px solid #cbd5e1',
-								borderTop: '3px solid #2563eb',
-								boxShadow: '0 8px 25px rgba(15, 23, 42, 0.08)',
-								display: 'flex',
-								alignItems: 'center',
-								gap: 20,
-								transform: `scale(${tickPulse})`,
-							}}
-						>
-							<span
-								style={{
-									fontSize: 26,
-									fontWeight: 900,
-									color: '#1e40af',
-									letterSpacing: 1,
-								}}
-							>
-								⏳ COUNTDOWN
-							</span>
-
-							{/* Circular SVG Timer */}
-							<div
-								style={{
-									width: 80,
-									height: 80,
-									position: 'relative',
-									display: 'flex',
-									justifyContent: 'center',
-									alignItems: 'center',
-								}}
-							>
-								<svg
-									width="80"
-									height="80"
-									style={{transform: 'rotate(-90deg)'}}
-								>
-									<circle
-										cx="40"
-										cy="40"
-										r="32"
-										stroke="rgba(203, 213, 225, 0.6)"
-										strokeWidth="6"
-										fill="none"
-									/>
-									<circle
-										cx="40"
-										cy="40"
-										r="32"
-										stroke={isTimeUp ? '#16a34a' : '#d97706'}
-										strokeWidth="6"
-										fill="none"
-										strokeDasharray={2 * Math.PI * 32}
-										strokeDashoffset={2 * Math.PI * 32 * (1 - ringProgress)}
-										strokeLinecap="round"
-										style={{
-											filter: isTimeUp
-												? 'drop-shadow(0 0 8px rgba(22, 163, 74, 0.6))'
-												: 'drop-shadow(0 0 8px rgba(217, 119, 6, 0.5))',
-										}}
-									/>
-								</svg>
-
-								<div
-									style={{
-										position: 'absolute',
-										display: 'flex',
-										flexDirection: 'column',
-										alignItems: 'center',
-									}}
-								>
-									<span
-										style={{
-											fontSize: isTimeUp ? 13 : 30,
-											fontWeight: 900,
-											color: isTimeUp ? '#16a34a' : '#0f172a',
-										}}
-									>
-										{isTimeUp ? 'END' : remainingSeconds}
-									</span>
-								</div>
-							</div>
-
-							<span
-								style={{
-									fontSize: 22,
-									fontWeight: 900,
-									color: isTimeUp ? '#16a34a' : '#d97706',
-									letterSpacing: 1.5,
-								}}
-							>
-								{isTimeUp ? 'TIME UP! 🔔' : `${remainingSeconds} SECONDS`}
-							</span>
-						</div>
-					</div>
-
-					{/* ================= 2x2 KBC-STYLE OPTIONS GRID (FULL SCREEN BALANCE, ZERO PHOTOS NEEDED!) ================= */}
-					<div
-						style={{
-							position: 'absolute',
-							top: 385,
-							left: 36,
-							right: 36,
-							bottom: 24,
+							top: 365,
+							left: 40,
+							right: 40,
 							display: 'grid',
 							gridTemplateColumns: '1fr 1fr',
-							gridTemplateRows: '1fr 1fr',
-							gap: 22,
+							gridTemplateRows: '260px 260px',
+							rowGap: 50,
+							columnGap: 60,
 							zIndex: 10,
 						}}
 					>
@@ -616,6 +507,160 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 								</div>
 							);
 						})}
+					</div>
+
+					{/* ================= CENTER CIRCULAR COUNTDOWN TIMER (BROADCAST HUB) ================= */}
+					<div
+						style={{
+							position: 'absolute',
+							top: 650,
+							left: '50%',
+							transform: `translate(-50%, -50%) scale(${
+								interpolate(
+									frame,
+									[timerStart - 15, timerStart],
+									[0.3, 1],
+									{extrapolateLeft: 'clamp', extrapolateRight: 'clamp'},
+								) * tickPulse
+							})`,
+							zIndex: 40,
+							opacity: interpolate(
+								frame,
+								[timerStart - 15, timerStart],
+								[0, 1],
+								{extrapolateLeft: 'clamp', extrapolateRight: 'clamp'},
+							),
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+						}}
+					>
+						{/* Premium Glowing Hub Chassis */}
+						<div
+							style={{
+								width: 170,
+								height: 170,
+								borderRadius: '50%',
+								background:
+									'radial-gradient(circle at 35% 35%, #ffffff 0%, #f8fafc 70%, #e2e8f0 100%)',
+								border: isTimeUp
+									? '4px solid #4ade80'
+									: remainingSeconds <= 2
+										? '4px solid #f87171'
+										: '4px solid #93c5fd',
+								boxShadow: isTimeUp
+									? '0 0 0 10px rgba(34, 197, 94, 0.25), 0 16px 45px rgba(22, 163, 74, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.9)'
+									: remainingSeconds <= 2
+										? '0 0 0 10px rgba(239, 68, 68, 0.25), 0 16px 45px rgba(239, 68, 68, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.9)'
+										: '0 0 0 10px rgba(37, 99, 235, 0.18), 0 16px 45px rgba(15, 23, 42, 0.22), inset 0 2px 4px rgba(255, 255, 255, 0.9)',
+								position: 'relative',
+								display: 'flex',
+								flexDirection: 'column',
+								justifyContent: 'center',
+								alignItems: 'center',
+							}}
+						>
+							{/* Animated Circular SVG Ring */}
+							<svg
+								width="170"
+								height="170"
+								style={{
+									position: 'absolute',
+									top: 0,
+									left: 0,
+									transform: 'rotate(-90deg)',
+								}}
+							>
+								<circle
+									cx="85"
+									cy="85"
+									r="74"
+									stroke="rgba(226, 232, 240, 0.8)"
+									strokeWidth="8"
+									fill="none"
+								/>
+								<circle
+									cx="85"
+									cy="85"
+									r="74"
+									stroke={
+										isTimeUp
+											? '#16a34a'
+											: remainingSeconds <= 2
+												? '#ef4444'
+												: '#2563eb'
+									}
+									strokeWidth="8"
+									fill="none"
+									strokeDasharray={2 * Math.PI * 74}
+									strokeDashoffset={2 * Math.PI * 74 * (1 - ringProgress)}
+									strokeLinecap="round"
+									style={{
+										filter: isTimeUp
+											? 'drop-shadow(0 0 12px rgba(34, 197, 94, 0.8))'
+											: remainingSeconds <= 2
+												? 'drop-shadow(0 0 12px rgba(239, 68, 68, 0.8))'
+												: 'drop-shadow(0 0 10px rgba(37, 99, 235, 0.6))',
+									}}
+								/>
+							</svg>
+
+							{/* Center Digital Counter */}
+							<div
+								style={{
+									display: 'flex',
+									flexDirection: 'column',
+									alignItems: 'center',
+									zIndex: 2,
+								}}
+							>
+								<span
+									style={{
+										fontSize: 12,
+										fontWeight: 900,
+										letterSpacing: 2,
+										color: isTimeUp
+											? '#16a34a'
+											: remainingSeconds <= 2
+												? '#ef4444'
+												: '#1e40af',
+										textTransform: 'uppercase',
+										marginBottom: -2,
+									}}
+								>
+									{isTimeUp ? 'TIME UP' : 'TIMER'}
+								</span>
+
+								<span
+									style={{
+										fontSize: isTimeUp ? 42 : 64,
+										fontWeight: 900,
+										color: isTimeUp
+											? '#16a34a'
+											: remainingSeconds <= 2
+												? '#ef4444'
+												: '#0f172a',
+										lineHeight: 1,
+										fontVariantNumeric: 'tabular-nums',
+									}}
+								>
+									{isTimeUp ? '0' : remainingSeconds}
+								</span>
+
+								<span
+									style={{
+										fontSize: 12,
+										fontWeight: 900,
+										letterSpacing: 2,
+										color: '#64748b',
+										textTransform: 'uppercase',
+										marginTop: 2,
+									}}
+								>
+									{isTimeUp ? 'BELL 🔔' : 'SEC'}
+								</span>
+							</div>
+						</div>
 					</div>
 				</AbsoluteFill>
 			)}
