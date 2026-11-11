@@ -1,0 +1,12 @@
+[
+  {
+    "id": "video1",
+    "title": "భారత క్రికెట్ జట్టు - ఆటగాళ్లు (2026)",
+    "themeId": "midnight-cyan",
+    "bgMusic": "Youtube Free Musics/smooth_ambient_quiz_bgm.mp3",
+    "questionCount": 20,
+    "totalFrames": 13627,
+    "durationSec": 454.23,
+    "timingsFile": "timings_video1.json"
+  }
+]

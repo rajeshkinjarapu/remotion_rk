@@ -9,6 +9,7 @@ import {
 	TOTAL_QUIZ_FRAMES,
 	DEFAULT_TEMPLATE_ID,
 	DEFAULT_BG_MUSIC,
+	QUIZ_VIDEOS,
 } from './TeluguQuiz';
 import {
 	TravelVideo,
@@ -117,6 +118,28 @@ export const Root: React.FC = () => {
 					bgMusic: DEFAULT_BG_MUSIC,
 				}}
 			/>
+
+			{/* ================= BATCH QUIZ VIDEOS (ALL VIDEOS DEFINED IN quiz_videos.json) ================= */}
+			<Folder name="TeluguQuiz-BatchVideos">
+				{QUIZ_VIDEOS.map((vid) => {
+					return (
+						<Composition
+							key={vid.id}
+							id={`TeluguQuiz-${vid.id}`}
+							component={TeluguQuizSeries}
+							durationInFrames={TOTAL_QUIZ_FRAMES}
+							fps={30}
+							width={1920}
+							height={1080}
+							defaultProps={{
+								templateId: vid.themeId,
+								bgMusic: vid.bgMusic,
+								questions: vid.questions,
+							}}
+						/>
+					);
+				})}
+			</Folder>
 		</>
 	);
 };

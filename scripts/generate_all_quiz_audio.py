@@ -5,12 +5,12 @@ import urllib.request
 import urllib.error
 import time
 import re
+import sys
 
 URL = "https://api.smallest.ai/waves/v1/tts"
-OUTPUT_DIR = "public/audio/quiz"
 ACCOUNTS_FILE = "smallest_accounts.json"
-
-os.makedirs(OUTPUT_DIR, exist_ok=True)
+VIDEOS_FILE = "src/TeluguQuiz/quiz_videos.json"
+FALLBACK_QUESTIONS_FILE = "src/TeluguQuiz/questions.json"
 
 def load_accounts():
     if not os.path.exists(ACCOUNTS_FILE):
@@ -61,20 +61,21 @@ def num_to_words(n):
     return str(n)
 
 def clean_text_for_tts(text):
-    text = text.replace("'", "").replace('"', "").replace('’', "").replace('‘', "")
-    text = text.replace("టీ20", "టీ twenty")
-    text = text.replace("T20", "T twenty")
-    text = text.replace("టీ 20", "టీ twenty")
-    text = text.replace("ఐపీఎల్", "IPL")
+    text = text.replace("T20", "T twenty").replace("t20", "t twenty")
+    text = text.replace("టీ20", "టీ ట్వంటీ").replace("టీ 20", "టీ ట్వంటీ")
+    text = text.replace("ODI", "O D I").replace("IPL", "I P L").replace("ఐపీఎల్", "ఐ పీ ఎల్")
     
-    def repl(m):
-        return num_to_words(int(m.group(0))) + " "
-    
-    return re.sub(r"\d+", repl, text).strip()
+    def replace_num(match):
+        val = int(match.group(0))
+        return num_to_words(val)
+        
+    text = re.sub(r'\b\d+\b', replace_num, text)
+    text = re.sub(r'[\\\/\|\_\#\*\@\$\^\&]', ' ', text)
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
 
-def generate_voice(text, filename, speed=1.05):
+def generate_voice(text, filepath, speed=1.05):
     global current_account_index
-    filepath = os.path.join(OUTPUT_DIR, filename)
     total_accounts = len(ACCOUNTS)
     
     for offset in range(total_accounts):
@@ -125,20 +126,46 @@ def generate_voice(text, filename, speed=1.05):
             
     raise RuntimeError("❌ All accounts in smallest_accounts.json have exhausted credits or failed!")
 
-def main():
-    with open("src/TeluguQuiz/questions.json", "r", encoding="utf-8") as f:
+def load_quiz_videos():
+    if os.path.exists(VIDEOS_FILE):
+        with open(VIDEOS_FILE, "r", encoding="utf-8") as f:
+            videos = json.load(f)
+            if isinstance(videos, list) and len(videos) > 0 and "questions" in videos[0]:
+                return videos
+    # Fallback to single video from questions.json
+    with open(FALLBACK_QUESTIONS_FILE, "r", encoding="utf-8") as f:
         questions = json.load(f)[:20]
-        
-    timings = []
+    return [{
+        "id": "video1",
+        "title": "భారత క్రికెట్ జట్టు - ఆటగాళ్లు (2026)",
+        "themeId": "midnight-cyan",
+        "bgMusic": "Youtube Free Musics/smooth_ambient_quiz_bgm.mp3",
+        "questions": questions
+    }]
+
+def process_video(video, force=False):
+    vid_id = video.get("id", "video1")
+    title = video.get("title", "Telugu Quiz")
+    theme_id = video.get("themeId", "midnight-cyan")
+    bg_music = video.get("bgMusic", "Youtube Free Musics/smooth_ambient_quiz_bgm.mp3")
+    questions = video.get("questions", [])
     
-    print(f"\nStarting TTS generation with auto-failover across {len(ACCOUNTS)} account(s)...")
+    out_dir = os.path.join("public", "audio", vid_id)
+    os.makedirs(out_dir, exist_ok=True)
+    
+    print(f"\n=======================================================")
+    print(f"🎬 PROCESSING BATCH: {vid_id.upper()} - {title}")
+    print(f"   Questions: {len(questions)} | Theme: {theme_id}")
+    print(f"   Audio Dir: {out_dir}")
+    print(f"=======================================================")
+    
+    timings = []
     
     for i, q in enumerate(questions):
         num_word = num_to_words(i + 1)
         cleaned_q = clean_text_for_tts(q["question"])
         opts = [clean_text_for_tts(o) for o in q["options"]]
         
-        # Complete Question + 4 Options Audio
         q_speech = (
             f"Question number {num_word}. {cleaned_q}. "
             f"Option A: {opts[0]}. "
@@ -146,64 +173,114 @@ def main():
             f"Option C: {opts[2]}. "
             f"Option D: {opts[3]}."
         )
-        q_filename = f"q{i}_question.wav"
         
-        print(f"\n--- Q{i+1}: '{q_speech[:75]}...' ---")
-        q_dur = generate_voice(q_speech, q_filename, speed=1.06)
+        q_filename = f"q{i}_question.wav"
+        q_path = os.path.join(out_dir, q_filename)
+        
+        if os.path.exists(q_path) and not force:
+            with wave.open(q_path, "rb") as w:
+                q_dur = w.getnframes() / w.getframerate()
+            print(f"  Q{i+1}: [Cached Audio] {q_dur:.1f}s")
+        else:
+            print(f"  Q{i+1}: Generating '{q_speech[:60]}...'")
+            q_dur = generate_voice(q_speech, q_path, speed=1.06)
+            
         q_frames = int(round(q_dur * 30))
         
         # Answer Audio
         ans_filename = f"q{i}_answer.wav"
-        ans_path = os.path.join(OUTPUT_DIR, ans_filename)
-        if os.path.exists(ans_path):
+        ans_path = os.path.join(out_dir, ans_filename)
+        
+        if os.path.exists(ans_path) and not force:
             with wave.open(ans_path, "rb") as w:
                 ans_dur = w.getnframes() / w.getframerate()
         else:
             correct_opt = q["options"][q["correctIndex"]]
             cleaned_ans = clean_text_for_tts(correct_opt)
             ans_speech = f"సరైన సమాధానం Option {q['correctLetter']}, {cleaned_ans}"
-            ans_dur = generate_voice(ans_speech, ans_filename, speed=1.08)
+            ans_dur = generate_voice(ans_speech, ans_path, speed=1.08)
+            
         ans_frames = int(round(ans_dur * 30))
         
-        # Calculate dynamic timeline
         q_audio_start = 15
         timer_start = q_audio_start + q_frames + 15
-        timer_duration = 150 # 5 seconds countdown
+        timer_duration = 150 # 5s countdown
         timer_end = timer_start + timer_duration
         ans_audio_start = timer_end + 15
-        hold_frames = 45 # 1.5 seconds hold
+        hold_frames = 45 # 1.5s hold
         total_duration = ans_audio_start + ans_frames + hold_frames
         
         item = {
             "quizIndex": i,
-            "qAudio": f"audio/quiz/{q_filename}",
+            "qAudio": f"audio/{vid_id}/{q_filename}",
             "qDurSec": round(q_dur, 2),
             "qFrames": q_frames,
             "qAudioStart": q_audio_start,
             "timerStart": timer_start,
             "timerEnd": timer_end,
-            "ansAudio": f"audio/quiz/{ans_filename}",
+            "ansAudio": f"audio/{vid_id}/{ans_filename}",
             "ansDurSec": round(ans_dur, 2),
             "ansFrames": ans_frames,
             "ansAudioStart": ans_audio_start,
             "holdFrames": hold_frames,
             "durationInFrames": total_duration,
         }
-        
-        print(f"  Q{i+1} Timing: Q+Opts Audio={q_dur:.1f}s ({q_frames}f), Timer@{timer_start/30:.1f}s-@{timer_end/30:.1f}s, Ans={ans_dur:.1f}s, Total={total_duration/30:.1f}s ({total_duration}f)")
         timings.append(item)
-        time.sleep(0.2)
+        time.sleep(0.05)
         
-    with open("src/TeluguQuiz/quiz_timings.json", "w", encoding="utf-8") as f:
+    timings_path = f"src/TeluguQuiz/timings_{vid_id}.json"
+    with open(timings_path, "w", encoding="utf-8") as f:
         json.dump(timings, f, indent=2)
         
-    total_video_frames = sum(t["durationInFrames"] for t in timings)
-    total_sec = total_video_frames / 30
-    print(f"\n==========================================")
-    print(f"ALL 20 QUESTIONS GENERATED SUCCESSFULLY WITH OPTIONS!")
-    print(f"Total Video Frames: {total_video_frames} ({int(total_sec // 60)}m {int(total_sec % 60)}s)")
-    print(f"Saved manifest to src/TeluguQuiz/quiz_timings.json")
-    print(f"==========================================")
+    # Also update default quiz_timings.json if video1
+    if vid_id == "video1":
+        with open("src/TeluguQuiz/quiz_timings.json", "w", encoding="utf-8") as f:
+            json.dump(timings, f, indent=2)
+            
+    total_frames = sum(t["durationInFrames"] for t in timings)
+    total_sec = total_frames / 30
+    print(f"✅ {vid_id.upper()} COMPLETE: {len(timings)} questions | {total_frames} frames ({int(total_sec//60)}m {int(total_sec%60)}s)")
+    print(f"   Saved timings to {timings_path}")
+    
+    return {
+        "id": vid_id,
+        "title": title,
+        "themeId": theme_id,
+        "bgMusic": bg_music,
+        "questionCount": len(questions),
+        "totalFrames": total_frames,
+        "durationSec": round(total_sec, 2),
+        "timingsFile": f"timings_{vid_id}.json"
+    }
+
+def main():
+    videos = load_quiz_videos()
+    target_video = None
+    force = False
+    
+    for arg in sys.argv[1:]:
+        if arg.startswith("--video="):
+            target_video = arg.split("=")[1]
+        elif arg == "--force":
+            force = True
+            
+    batch_meta = []
+    
+    for v in videos:
+        if target_video and v.get("id") != target_video:
+            continue
+        meta = process_video(v, force=force)
+        batch_meta.append(meta)
+        
+    with open("src/TeluguQuiz/batch_meta.json", "w", encoding="utf-8") as f:
+        json.dump(batch_meta, f, indent=2, ensure_ascii=False)
+        
+    print(f"\n=======================================================")
+    print(f"🎉 BATCH META SAVED: src/TeluguQuiz/batch_meta.json")
+    print(f"Total videos processed: {len(batch_meta)}")
+    for m in batch_meta:
+        print(f"  • [{m['id']}] {m['title']}: {m['questionCount']} Qs, {m['durationSec']}s, Theme={m['themeId']}")
+    print(f"=======================================================\n")
 
 if __name__ == "__main__":
     main()

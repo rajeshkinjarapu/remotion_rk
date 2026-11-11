@@ -6,20 +6,24 @@ on:
       - main
   workflow_dispatch:
     inputs:
-      composition:
-        description: 'రెండు కాంపోజిషన్లలో ఏది రెండర్ చేయాలి? (Select Composition)'
+      target:
+        description: 'ఏ వీడియో రెండర్ చేయాలి? (Select Target to Render)'
         required: true
         type: choice
         default: 'TeluguQuiz-20MCQ-FullVideo'
         options:
           - 'TeluguQuiz-20MCQ-FullVideo'
+          - 'All-Batch-Videos'
+          - 'TeluguQuiz-video1'
+          - 'TeluguQuiz-video2'
+          - 'TeluguQuiz-video3'
           - 'TeluguQuiz-SinglePreview'
 
 jobs:
   render:
     name: 🎬 Render Video on GitHub Cloud
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
 
     steps:
       - name: 📥 Checkout Repository
@@ -33,20 +37,28 @@ jobs:
       - name: 📦 Install Dependencies
         run: bun install
 
-      - name: 🎥 Render Video
+      - name: 🎥 Render Video(s)
         run: |
           mkdir -p out
-          COMPOSITION="TeluguQuiz-20MCQ-FullVideo"
+          TARGET="TeluguQuiz-20MCQ-FullVideo"
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            COMPOSITION="${{ github.event.inputs.composition }}"
+            TARGET="${{ github.event.inputs.target }}"
           fi
 
-          echo "🚀 Rendering Composition: $COMPOSITION..."
-          bunx remotion render "$COMPOSITION" "out/${COMPOSITION}.mp4" --concurrency=2
+          if [ "$TARGET" = "All-Batch-Videos" ]; then
+            echo "🚀 Rendering All Batch Videos in Sequence..."
+            for comp in "TeluguQuiz-video1" "TeluguQuiz-video2" "TeluguQuiz-video3"; do
+              echo "--- Rendering $comp ---"
+              bunx remotion render "$comp" "out/${comp}.mp4" --concurrency=2 || true
+            done
+          else
+            echo "🚀 Rendering Target: $TARGET..."
+            bunx remotion render "$TARGET" "out/${TARGET}.mp4" --concurrency=2
+          fi
 
-      - name: 📤 Upload Rendered Video
+      - name: 📤 Upload Rendered Video Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: TeluguQuiz-Rendered-Video
+          name: TeluguQuiz-Rendered-Videos
           path: out/*.mp4
           retention-days: 14

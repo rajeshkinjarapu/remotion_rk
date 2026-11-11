@@ -14,6 +14,7 @@ import {loadFont} from '@remotion/google-fonts/AnekTelugu';
 import {z} from 'zod';
 import questionsData from './questions.json';
 import quizTimingsData from './quiz_timings.json';
+import quizVideosData from './quiz_videos.json';
 import {QUIZ_THEMES, QuizTheme} from './themes';
 
 const {fontFamily: teluguFont} = loadFont();
@@ -80,11 +81,23 @@ export const teluguQuizSchema = z.object({
 	bgMusic: z.string().default(DEFAULT_BG_MUSIC),
 });
 
+export interface QuizVideoBundle {
+	id: string;
+	title: string;
+	themeId: string;
+	bgMusic: string;
+	questions: QuizQuestionItem[];
+}
+
+export const QUIZ_VIDEOS: QuizVideoBundle[] = quizVideosData as unknown as QuizVideoBundle[];
+
 export type TeluguQuizProps = {
 	quizIndex?: number;
 	templateId?: string;
 	includeBgMusic?: boolean;
 	bgMusic?: string;
+	questions?: QuizQuestionItem[];
+	timings?: QuizTimingItem[];
 };
 
 export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
@@ -92,12 +105,16 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 	templateId = DEFAULT_TEMPLATE_ID,
 	includeBgMusic = true,
 	bgMusic = DEFAULT_BG_MUSIC,
+	questions,
+	timings,
 }) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 
-	const currentQuiz = QUIZ_QUESTIONS[quizIndex] || QUIZ_QUESTIONS[0];
-	const currentTiming = QUIZ_TIMINGS[quizIndex] || QUIZ_TIMINGS[0];
+	const questionsList = questions || QUIZ_QUESTIONS;
+	const timingsList = timings || QUIZ_TIMINGS;
+	const currentQuiz = questionsList[quizIndex] || questionsList[0];
+	const currentTiming = timingsList[quizIndex] || timingsList[0];
 
 	// ==================== SINGLE CONSISTENT TEMPLATE FOR ENTIRE VIDEO ====================
 	const currentTheme: QuizTheme = useMemo(() => {
@@ -706,13 +723,20 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 export const TeluguQuizSeries: React.FC<{
 	templateId?: string;
 	bgMusic?: string;
+	questions?: QuizQuestionItem[];
+	timings?: QuizTimingItem[];
 }> = ({
 	templateId = DEFAULT_TEMPLATE_ID,
 	bgMusic = DEFAULT_BG_MUSIC,
+	questions,
+	timings,
 }) => {
+	const questionsList = questions || QUIZ_QUESTIONS;
+	const timingsList = timings || QUIZ_TIMINGS;
+
 	return (
 		<AbsoluteFill>
-			{/* Continuous Smooth Background Music Across Full 20-MCQ Video */}
+			{/* Continuous Smooth Background Music Across Full Video */}
 			{bgMusic && (
 				<Audio
 					src={staticFile(bgMusic)}
@@ -726,14 +750,16 @@ export const TeluguQuizSeries: React.FC<{
 				/>
 			)}
 			<Series>
-				{QUIZ_QUESTIONS.map((_, i) => {
-					const timing = QUIZ_TIMINGS[i] || QUIZ_TIMINGS[0];
+				{questionsList.map((_, i) => {
+					const timing = timingsList[i] || timingsList[0];
 					return (
 						<Series.Sequence key={i} durationInFrames={timing.durationInFrames}>
 							<TeluguQuiz
 								quizIndex={i}
 								templateId={templateId}
 								includeBgMusic={false}
+								questions={questionsList}
+								timings={timingsList}
 							/>
 						</Series.Sequence>
 					);
