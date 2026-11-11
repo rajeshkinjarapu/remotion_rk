@@ -4,15 +4,20 @@
   "private": true,
   "scripts": {
     "start": "remotion preview",
-    "build": "remotion render Cricket-Q1 out/Cricket-Q1.mp4"
+    "build": "remotion render TeluguQuiz-20MCQ-FullVideo out/TeluguQuiz-20MCQ.mp4",
+    "build:travel": "remotion render GunturRayagada-Full out/GunturRayagada-Full.mp4"
   },
   "dependencies": {
     "@remotion/bundler": "^4.0.260",
     "@remotion/cli": "^4.0.260",
+    "@remotion/google-fonts": "^4.0.542",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "remotion": "^4.0.260",
     "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18",
+    "@types/react-dom": "^18"
   }
 }
-

@@ -1,4 +1,9 @@
 node_modules/
 out/
 .remotion/
-
+test_*.png
+test_*.wav
+temp.wav
+__pycache__/
+*.pyc
+smallest_accounts.json

@@ -1,46 +1,25 @@
 name: Render Telugu Quiz Video (Cloud)
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
     inputs:
-      render_mode:
-        description: 'రెండు రకాల రెండర్ మోడ్లు (Render Mode)'
+      composition:
+        description: 'రెండు కాంపోజిషన్లలో ఏది రెండర్ చేయాలి? (Select Composition)'
         required: true
         type: choice
-        default: 'Single Question'
+        default: 'TeluguQuiz-20MCQ-FullVideo'
         options:
-          - 'Single Question'
-          - 'Custom Range'
-          - 'All 50 Questions'
-      question_number:
-        description: 'Single Question మోడ్ అయితే క్వశ్చన్ నెంబర్ (1 to 50)'
-        required: false
-        type: number
-        default: 1
-      range_start:
-        description: 'Custom Range మోడ్ అయితే ప్రారంభ క్వశ్చన్ (Start: 1 to 50)'
-        required: false
-        type: number
-        default: 1
-      range_end:
-        description: 'Custom Range మోడ్ అయితే ముగింపు క్వశ్చన్ (End: 1 to 50)'
-        required: false
-        type: number
-        default: 5
-      codec:
-        description: 'వీడియో కోడెక్ (Video Codec)'
-        required: false
-        type: choice
-        default: 'h264'
-        options:
-          - 'h264'
-          - 'h265'
+          - 'TeluguQuiz-20MCQ-FullVideo'
+          - 'TeluguQuiz-SinglePreview'
 
 jobs:
   render:
-    name: 🎬 Render Quiz Video on GitHub Cloud
+    name: 🎬 Render Video on GitHub Cloud
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
 
     steps:
       - name: 📥 Checkout Repository
@@ -54,40 +33,20 @@ jobs:
       - name: 📦 Install Dependencies
         run: bun install
 
-      - name: 🎥 Render Video(s)
+      - name: 🎥 Render Video
         run: |
           mkdir -p out
-          MODE="${{ github.event.inputs.render_mode }}"
-          CODEC="${{ github.event.inputs.codec }}"
-
-          if [ "$MODE" = "Single Question" ]; then
-            Q_NUM="${{ github.event.inputs.question_number }}"
-            echo "🎬 Rendering Single Question: Cricket-Q${Q_NUM}..."
-            bunx remotion render "Cricket-Q${Q_NUM}" "out/TeluguQuiz_Q${Q_NUM}.mp4" --codec="$CODEC"
-
-          elif [ "$MODE" = "Custom Range" ]; then
-            START="${{ github.event.inputs.range_start }}"
-            END="${{ github.event.inputs.range_end }}"
-            echo "🎬 Rendering Range: Questions $START to $END..."
-            for (( i=$START; i<=$END; i++ ))
-            do
-              echo "--- Rendering Cricket-Q$i ---"
-              bunx remotion render "Cricket-Q$i" "out/TeluguQuiz_Q$i.mp4" --codec="$CODEC"
-            done
-
-          elif [ "$MODE" = "All 50 Questions" ]; then
-            echo "🎬 Rendering All 50 Questions..."
-            for (( i=1; i<=50; i++ ))
-            do
-              echo "--- Rendering Cricket-Q$i ---"
-              bunx remotion render "Cricket-Q$i" "out/TeluguQuiz_Q$i.mp4" --codec="$CODEC"
-            done
+          COMPOSITION="TeluguQuiz-20MCQ-FullVideo"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            COMPOSITION="${{ github.event.inputs.composition }}"
           fi
 
-      - name: 📤 Upload Rendered Video Artifacts
+          echo "🚀 Rendering Composition: $COMPOSITION..."
+          bunx remotion render "$COMPOSITION" "out/${COMPOSITION}.mp4" --concurrency=2
+
+      - name: 📤 Upload Rendered Video
         uses: actions/upload-artifact@v4
         with:
-          name: TeluguQuiz-Videos
+          name: TeluguQuiz-Rendered-Video
           path: out/*.mp4
           retention-days: 14
-
