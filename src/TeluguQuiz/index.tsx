@@ -86,6 +86,7 @@ export interface QuizVideoBundle {
 	title: string;
 	themeId: string;
 	bgMusic: string;
+	timings?: QuizTimingItem[];
 	questions: QuizQuestionItem[];
 }
 

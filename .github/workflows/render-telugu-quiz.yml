@@ -10,20 +10,22 @@ on:
         description: 'ఏ వీడియో రెండర్ చేయాలి? (Select Target to Render)'
         required: true
         type: choice
-        default: 'TeluguQuiz-20MCQ-FullVideo'
+        default: 'All-Batch-Videos'
         options:
-          - 'TeluguQuiz-20MCQ-FullVideo'
           - 'All-Batch-Videos'
-          - 'TeluguQuiz-video1'
-          - 'TeluguQuiz-video2'
-          - 'TeluguQuiz-video3'
+          - 'TeluguQuiz-topic1-first-train'
+          - 'TeluguQuiz-topic2-origin-railways'
+          - 'TeluguQuiz-topic3-first-rail-route'
+          - 'TeluguQuiz-topic4-railway-development'
+          - 'TeluguQuiz-topic5-nationalisation'
+          - 'TeluguQuiz-20MCQ-FullVideo'
           - 'TeluguQuiz-SinglePreview'
 
 jobs:
   render:
     name: 🎬 Render Video on GitHub Cloud
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
 
     steps:
       - name: 📥 Checkout Repository
@@ -40,14 +42,14 @@ jobs:
       - name: 🎥 Render Video(s)
         run: |
           mkdir -p out
-          TARGET="TeluguQuiz-20MCQ-FullVideo"
+          TARGET="All-Batch-Videos"
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             TARGET="${{ github.event.inputs.target }}"
           fi
 
           if [ "$TARGET" = "All-Batch-Videos" ]; then
-            echo "🚀 Rendering All Batch Videos in Sequence..."
-            for comp in "TeluguQuiz-video1" "TeluguQuiz-video2" "TeluguQuiz-video3"; do
+            echo "🚀 Rendering All 5 Batch Videos in Sequence..."
+            for comp in "TeluguQuiz-topic1-first-train" "TeluguQuiz-topic2-origin-railways" "TeluguQuiz-topic3-first-rail-route" "TeluguQuiz-topic4-railway-development" "TeluguQuiz-topic5-nationalisation"; do
               echo "--- Rendering $comp ---"
               bunx remotion render "$comp" "out/${comp}.mp4" --concurrency=2 || true
             done

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "dev": "remotion preview",
     "start": "remotion preview",
     "build": "remotion render TeluguQuiz-20MCQ-FullVideo out/TeluguQuiz-20MCQ.mp4",
     "build:travel": "remotion render GunturRayagada-Full out/GunturRayagada-Full.mp4"

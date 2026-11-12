@@ -122,12 +122,17 @@ export const Root: React.FC = () => {
 			{/* ================= BATCH QUIZ VIDEOS (ALL VIDEOS DEFINED IN quiz_videos.json) ================= */}
 			<Folder name="TeluguQuiz-BatchVideos">
 				{QUIZ_VIDEOS.map((vid) => {
+					const sanitizedId = vid.id.replace(/_/g, '-');
+					const totalFrames = vid.timings && vid.timings.length > 0
+						? vid.timings.reduce((acc, t) => acc + t.durationInFrames, 0)
+						: vid.questions.length * 370;
+
 					return (
 						<Composition
-							key={vid.id}
-							id={`TeluguQuiz-${vid.id}`}
+							key={sanitizedId}
+							id={`TeluguQuiz-${sanitizedId}`}
 							component={TeluguQuizSeries}
-							durationInFrames={TOTAL_QUIZ_FRAMES}
+							durationInFrames={totalFrames}
 							fps={30}
 							width={1920}
 							height={1080}
@@ -135,6 +140,7 @@ export const Root: React.FC = () => {
 								templateId: vid.themeId,
 								bgMusic: vid.bgMusic,
 								questions: vid.questions,
+								timings: vid.timings,
 							}}
 						/>
 					);

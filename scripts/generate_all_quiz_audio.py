@@ -228,6 +228,7 @@ def process_video(video, force=False):
         timings.append(item)
         time.sleep(0.05)
         
+    video["timings"] = timings
     timings_path = f"src/TeluguQuiz/timings_{vid_id}.json"
     with open(timings_path, "w", encoding="utf-8") as f:
         json.dump(timings, f, indent=2)
@@ -274,6 +275,9 @@ def main():
         
     with open("src/TeluguQuiz/batch_meta.json", "w", encoding="utf-8") as f:
         json.dump(batch_meta, f, indent=2, ensure_ascii=False)
+        
+    with open(VIDEOS_FILE, "w", encoding="utf-8") as f:
+        json.dump(videos, f, indent=2, ensure_ascii=False)
         
     print(f"\n=======================================================")
     print(f"🎉 BATCH META SAVED: src/TeluguQuiz/batch_meta.json")
