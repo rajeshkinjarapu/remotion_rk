@@ -5923,5 +5923,4045 @@
         "durationInFrames": 1039
       }
     ]
+  },
+  {
+    "id": "topic6-railway-board",
+    "title": "Railway Board చరిత్ర (History of Railway Board)",
+    "themeId": "midnight-cyan",
+    "bgMusic": "Youtube Free Musics/smooth_ambient_quiz_bgm.mp3",
+    "questions": [
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "భారతీయ రైల్వే బోర్డు (Railway Board) ఏ సంవత్సరంలో అధికారికంగా స్థాపించబడింది?",
+        "questionImage": "Youtube Video/t6_q1.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a1.jpg",
+        "answerImageTag": "⭐ 1905 మార్చి",
+        "options": [
+          "1890",
+          "1901",
+          "1905 మార్చి",
+          "1924"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "1905 మార్చి - సరైన సమాధానం",
+          "description": "భారతీయ రైల్వేల పరిపాలన మరియు పర్యవేక్షణ కోసం 1905 మార్చిలో రైల్వే బోర్డును ఏర్పాటు చేశారు.",
+          "points": [
+            {
+              "icon": "📅",
+              "label": "స్థాపన",
+              "text": "1905 మార్చిలో పూర్తి అధికారాలతో రైల్వే బోర్డు ఏర్పాటైంది."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "1905 మార్చి"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "రైల్వే బోర్డు ఏర్పాటుకు సిఫారసు చేసిన కమిటీ ఏది?",
+        "questionImage": "Youtube Video/t6_q2.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a2.jpg",
+        "answerImageTag": "⭐ థామస్ రాబర్ట్‌సన్ కమిటీ",
+        "options": [
+          "అక్‌వర్త్ కమిటీ",
+          "థామస్ రాబర్ట్‌సన్ కమిటీ",
+          "హంటర్స్ కమిటీ",
+          "వివేక్ దేబ్‌రాయ్ కమిటీ"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "థామస్ రాబర్ట్‌సన్ కమిటీ - సరైన సమాధానం",
+          "description": "1901 లో నియమించబడిన సర్ థామస్ రాబర్ట్‌సన్ కమిటీ సిఫారసుల మేరకు రైల్వే బోర్డు ఏర్పాటైంది.",
+          "points": [
+            {
+              "icon": "📜",
+              "label": "కమిటీ",
+              "text": "భారత రైల్వేల పనితీరు మెరుగుదలకు థామస్ రాబర్ట్‌సన్ నివేదిక ఇచ్చారు."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "థామస్ రాబర్ట్‌సన్ కమిటీ"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "రైల్వే బోర్డు ఏర్పడిన సమయంలో భారత వైస్రాయ్ ఎవరు?",
+        "questionImage": "Youtube Video/t6_q3.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a3.jpg",
+        "answerImageTag": "⭐ లార్డ్ కర్జన్",
+        "options": [
+          "లార్డ్ డల్హౌసీ",
+          "లార్డ్ రిప్పన్",
+          "లార్డ్ కర్జన్",
+          "లార్డ్ మింటో"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "లార్డ్ కర్జన్ - సరైన సమాధానం",
+          "description": "వైస్రాయ్ లార్డ్ కర్జన్ హయాంలో ప్రజా పనుల శాఖ నుండి రైల్వే విభాగాన్ని వేరు చేసి రైల్వే బోర్డును స్థాపించారు.",
+          "points": [
+            {
+              "icon": "👑",
+              "label": "వైస్రాయ్",
+              "text": "లార్డ్ కర్జన్ పాలనలో రైల్వే పాలనలో కీలక సంస్కరణలు జరిగాయి."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "లార్డ్ కర్జన్"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "1905 లో ప్రారంభమైన మొదటి రైల్వే బోర్డులో ఎంతమంది సభ్యులు ఉండేవారు?",
+        "questionImage": "Youtube Video/t6_q4.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a4.jpg",
+        "answerImageTag": "⭐ ఒక చైర్మన్ మరియు ఇద్దరు సభ్యులు (మొత్తం 3)",
+        "options": [
+          "ఒకే ఒక్క చైర్మన్",
+          "ఒక చైర్మన్ మరియు ఇద్దరు సభ్యులు (మొత్తం 3)",
+          "ఐదుగురు సభ్యులు",
+          "ఏడుగురు సభ్యులు"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "మొత్తం 3 సభ్యులు - సరైన సమాధానం",
+          "description": "తొలి రైల్వే బోర్డు ఒక చైర్మన్ మరియు ఇద్దరు సభ్యులతో వాణిజ్య, పరిశ్రమల శాఖ ఆధ్వర్యంలో పనిచేసింది.",
+          "points": [
+            {
+              "icon": "👥",
+              "label": "కూర్పు",
+              "text": "ప్రభుత్వ రైల్వే చీఫ్ ఇంజనీర్ చైర్మన్‌గా వ్యవహరించేవారు."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "ఒక చైర్మన్ మరియు ఇద్దరు సభ్యులు (మొత్తం 3)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "రైల్వే బోర్డు తొలి చైర్మన్‌గా ఎవరు పనిచేశారు?",
+        "questionImage": "Youtube Video/t6_q5.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a5.jpg",
+        "answerImageTag": "⭐ ఎఫ్.ఆర్. అప్‌కాట్ (F.R. Upcott)",
+        "options": [
+          "ఎఫ్.ఆర్. అప్‌కాట్ (F.R. Upcott)",
+          "విలియం అక్‌వర్త్",
+          "జాన్ మథాయ్",
+          "ఎఫ్.సి. బధ్వార్"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "ఎఫ్.ఆర్. అప్‌కాట్ - సరైన సమాధానం",
+          "description": "సర్ ఫ్రెడరిక్ రాబర్ట్ అప్‌కాట్ 1905 లో ఏర్పాటైన రైల్వే బోర్డుకు మొట్టమొదటి చైర్మన్‌గా నియమితులయ్యారు.",
+          "points": [
+            {
+              "icon": "👤",
+              "label": "తొలి చైర్మన్",
+              "text": "1905 నుండి 1908 వరకు ఆయన రైల్వే బోర్డుకు నేతృత్వం వహించారు."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "ఎఫ్.ఆర్. అప్‌కాట్ (F.R. Upcott)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "రైల్వే బోర్డు ప్రధాన కార్యాలయం (రైల్ భవన్) ఎక్కడ ఉంది?",
+        "questionImage": "Youtube Video/t6_q6.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a6.jpg",
+        "answerImageTag": "⭐ న్యూఢిల్లీ",
+        "options": [
+          "కోల్‌కతా",
+          "ముంబై",
+          "న్యూఢిల్లీ",
+          "సిమ్లా"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "న్యూఢిల్లీ - సరైన సమాధానం",
+          "description": "రైల్వే మంత్రిత్వ శాఖ మరియు రైల్వే బోర్డు ప్రధాన కార్యాలయం న్యూఢిల్లీలోని రైసినా రోడ్‌లోని 'రైల్ భవన్'లో ఉంది.",
+          "points": [
+            {
+              "icon": "🏢",
+              "label": "రైల్ భవన్",
+              "text": "భారత రైల్వే విధాన నిర్ణయాలన్నీ ఇక్కడి నుండే జరుగుతాయి."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "న్యూఢిల్లీ"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "స్వతంత్ర భారతదేశంలో రైల్వే బోర్డుకు తొలి భారతీయ చైర్మన్ ఎవరు?",
+        "questionImage": "Youtube Video/t6_q7.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a7.jpg",
+        "answerImageTag": "⭐ ఎఫ్.సి. బధ్వార్ (F.C. Badhwar)",
+        "options": [
+          "ఎఫ్.సి. బధ్వార్ (F.C. Badhwar)",
+          "కె.సి. నియోగి",
+          "అశ్విని లోహాని",
+          "వి.కె. యాదవ్"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "ఎఫ్.సి. బధ్వార్ - సరైన సమాధానం",
+          "description": "ఫతే చంద్ బధ్వార్ 1951 లో రైల్వే బోర్డుకు తొలి భారతీయ చైర్మన్‌గా బాధ్యతలు స్వీకరించారు.",
+          "points": [
+            {
+              "icon": "🇮🇳",
+              "label": "రికార్డు",
+              "text": "భారత రైల్వే బోర్డు అత్యున్నత పదవిని అధిరోహించిన తొలి భారతీయుడు."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "ఎఫ్.సి. బధ్వార్ (F.C. Badhwar)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "రైల్వే బోర్డు చైర్మన్ & CEO పదవిని అధిరోహించిన మొట్టమొదటి మహిళ ఎవరు?",
+        "questionImage": "Youtube Video/t6_q8.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a8.jpg",
+        "answerImageTag": "⭐ జయ వర్మ సిన్హా",
+        "options": [
+          "మమతా బెనర్జీ",
+          "జయ వర్మ సిన్హా",
+          "సురేఖా యాదవ్",
+          "విజయలక్ష్మి విశ్వనాథన్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "జయ వర్మ సిన్హా - సరైన సమాధానం",
+          "description": "118 ఏళ్ల రైల్వే బోర్డు చరిత్రలో 2023 సెప్టెంబర్ 1న జయ వర్మ సిన్హా తొలి మహిళా చైర్‌పర్సన్ & CEO గా చరిత్ర సృష్టించారు.",
+          "points": [
+            {
+              "icon": "👩‍💼",
+              "label": "చారిత్రక నియామకం",
+              "text": "IRTS అధికారిణి అయిన జయ వర్మ సిన్హా ఈ ఘనత సాధించారు."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "జయ వర్మ సిన్హా"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "1922 లో రైల్వే బోర్డులో 'చీఫ్ కమిషనర్ ఆఫ్ రైల్వేస్' పదవిని ఏ కమిటీ సిఫారసుతో సృష్టించారు?",
+        "questionImage": "Youtube Video/t6_q9.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a9.jpg",
+        "answerImageTag": "⭐ అక్‌వర్త్ కమిటీ",
+        "options": [
+          "రాబర్ట్‌సన్ కమిటీ",
+          "అక్‌వర్త్ కమిటీ",
+          "ఇంచ్‌కేప్ కమిటీ",
+          "మాంటేగ్ కమిటీ"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "అక్‌వర్త్ కమిటీ - సరైన సమాధానం",
+          "description": "రైల్వే బోర్డును పునర్వ్యవస్థీకరించి సాంకేతిక నిర్ణయాధికారాల కోసం చీఫ్ కమిషనర్ పదవిని ఏర్పాటు చేశారు.",
+          "points": [
+            {
+              "icon": "📜",
+              "label": "సంస్కరణ",
+              "text": "1951 వరకు చీఫ్ కమిషనర్ పదవి కొనసాగి, తర్వాత చైర్మన్ హోదాగా మారింది."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "అక్‌వర్త్ కమిటీ"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "రైల్వే బోర్డు పరిశోధన మరియు ప్రమాణాల విభాగం RDSO ఎక్కడ ఉంది?",
+        "questionImage": "Youtube Video/t6_q10.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a10.jpg",
+        "answerImageTag": "⭐ లక్నో",
+        "options": [
+          "న్యూఢిల్లీ",
+          "లక్నో",
+          "పూణే",
+          "చెన్నై"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "లక్నో - సరైన సమాధానం",
+          "description": "రీసెర్చ్ డిజైన్స్ అండ్ స్టాండర్డ్స్ ఆర్గనైజేషన్ (RDSO) ఉత్తరప్రదేశ్‌లోని లక్నోలో ఉంది.",
+          "points": [
+            {
+              "icon": "🔬",
+              "label": "పరిశోధన",
+              "text": "రైల్వే బోర్డుకు సాంకేతిక సలహాదారుగా RDSO పనిచేస్తుంది."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "లక్నో"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "1905 లో రైల్వే బోర్డు ఏర్పడక ముందు భారతీయ రైల్వేల పాలన ఏ శాఖ కింద ఉండేది?",
+        "questionImage": "Youtube Video/t6_q11.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a11.jpg",
+        "answerImageTag": "⭐ ప్రజా పనుల శాఖ (Public Works Department - PWD)",
+        "options": [
+          "రక్షణ శాఖ",
+          "ప్రజా పనుల శాఖ (Public Works Department - PWD)",
+          "విదేశాంగ శాఖ",
+          "హోం శాఖ"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "ప్రజా పనుల శాఖ (PWD) - సరైన సమాధానం",
+          "description": "1854 నుండి 1905 వరకు PWD లోని రైల్వే బ్రాంచ్ రైల్వే కార్యకలాపాలను చూసేది.",
+          "points": [
+            {
+              "icon": "🏗️",
+              "label": "PWD",
+              "text": "పనిభారం పెరగడంతో ప్రత్యేక రైల్వే బోర్డు అవసరం ఏర్పడింది."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "ప్రజా పనుల శాఖ (Public Works Department - PWD)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "రైల్వే బోర్డు చైర్మన్ భారత ప్రభుత్వంలో ఏ హోదాను కలిగి ఉంటారు?",
+        "questionImage": "Youtube Video/t6_q12.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a12.jpg",
+        "answerImageTag": "⭐ ఎక్స్-అఫీషియో ప్రిన్సిపల్ సెక్రటరీ",
+        "options": [
+          "కేబినెట్ మంత్రి",
+          "ఎక్స్-అఫీషియో ప్రిన్సిపల్ సెక్రటరీ",
+          "డిప్యూటీ కలెక్టర్",
+          "గవర్నర్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "ఎక్స్-అఫీషియో ప్రిన్సిపల్ సెక్రటరీ - సరైన సమాధానం",
+          "description": "రైల్వే బోర్డు చైర్మన్ & CEO భారత ప్రభుత్వానికి ప్రధాన కార్యదర్శి (Principal Secretary) హోదాలో వ్యవహరిస్తారు.",
+          "points": [
+            {
+              "icon": "🎖️",
+              "label": "హోదా",
+              "text": "రైల్వే మంత్రికి నేరుగా నివేదించే అత్యున్నత బ్యూరోక్రాట్."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "ఎక్స్-అఫీషియో ప్రిన్సిపల్ సెక్రటరీ"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "రైల్వే బోర్డు చరిత్రలో మొట్టమొదటిసారిగా 'CEO' (చీఫ్ ఎగ్జిక్యూటివ్ ఆఫీసర్) హోదాను ఎప్పుడు సృష్టించారు?",
+        "questionImage": "Youtube Video/t6_q13.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a13.jpg",
+        "answerImageTag": "⭐ 2020 సెప్టెంబర్",
+        "options": [
+          "2014",
+          "2017",
+          "2020 సెప్టెంబర్",
+          "2023"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "2020 సెప్టెంబర్ - సరైన సమాధానం",
+          "description": "బోర్డు పునర్వ్యవస్థీకరణలో భాగంగా చైర్మన్ పదవిని 'చైర్మన్ & CEO' గా మారుస్తూ వి.కె. యాదవ్‌ను తొలి CEO గా నియమించారు.",
+          "points": [
+            {
+              "icon": "👔",
+              "label": "తొలి CEO",
+              "text": "వినోద్ కుమార్ యాదవ్ తొలి చైర్మన్ & CEO గా పనిచేశారు."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "2020 సెప్టెంబర్"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "భారతీయ రైల్వేల 8 గ్రూప్-A సర్వీసులను విలీనం చేసి ఏర్పాటు చేసిన ఏకీకృత సర్వీసు పేరు ఏమిటి?",
+        "questionImage": "Youtube Video/t6_q14.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a14.jpg",
+        "answerImageTag": "⭐ IRMS (ఇండియన్ రైల్వే మేనేజ్‌మెంట్ సర్వీస్)",
+        "options": [
+          "IRMS (ఇండియన్ రైల్వే మేనేజ్‌మెంట్ సర్వీస్)",
+          "IAS",
+          "IRPS",
+          "IRTS"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "IRMS - సరైన సమాధానం",
+          "description": "విభాగాల మధ్య సమన్వయం పెంచడానికి 2019-20 లో 8 సర్వీసులను కలిపి IRMS ను రైల్వే బోర్డు ఆధ్వర్యంలో ఏర్పాటు చేశారు.",
+          "points": [
+            {
+              "icon": "🤝",
+              "label": "ఏకీకరణ",
+              "text": "UPSC ద్వారా IRMS అధికారుల నియామకం జరుగుతోంది."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "IRMS (ఇండియన్ రైల్వే మేనేజ్‌మెంట్ సర్వీస్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "1929 లో రైల్వే బోర్డులో 'ఫైనాన్షియల్ కమిషనర్' పదవిని ఎందుకు చేర్చారు?",
+        "questionImage": "Youtube Video/t6_q15.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a15.jpg",
+        "answerImageTag": "⭐ ప్రత్యేక రైల్వే బడ్జెట్ మరియు ఆర్థిక నియంత్రణ కోసం",
+        "options": [
+          "రైళ్లను నడపడానికి",
+          "ప్రత్యేక రైల్వే బడ్జెట్ మరియు ఆర్థిక నియంత్రణ కోసం",
+          "టికెట్లు ముద్రించడానికి",
+          "సిబ్బందికి యూనిఫాం కుట్టడానికి"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "ఆర్థిక నియంత్రణ కోసం - సరైన సమాధానం",
+          "description": "రైల్వే బడ్జెట్ వేరైన తర్వాత ఆదాయ వ్యయాల నిర్వహణకు ఫైనాన్షియల్ కమిషనర్ పదవిని బోర్డులో కీలకంగా మార్చారు.",
+          "points": [
+            {
+              "icon": "💰",
+              "label": "ఆర్థిక విభాగం",
+              "text": "నేడు 'మెంబర్ ఫైనాన్స్' ఈ బాధ్యతలను నిర్వర్తిస్తారు."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "ప్రత్యేక రైల్వే బడ్జెట్ మరియు ఆర్థిక నియంత్రణ కోసం"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "1908 లో రైల్వే బోర్డును స్వతంత్ర విభాగంగా మారుస్తూ ఏ చట్టం తెచ్చారు?",
+        "questionImage": "Youtube Video/t6_q16.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a16.jpg",
+        "answerImageTag": "⭐ ఇండియన్ రైల్వే బోర్డ్ యాక్ట్, 1905",
+        "options": [
+          "ఇండియన్ రైల్వే బోర్డ్ యాక్ట్, 1905",
+          "గవర్నమెంట్ ఆఫ్ ఇండియా యాక్ట్, 1935",
+          "రెగ్యులేటింగ్ యాక్ట్, 1773",
+          "చార్టర్ యాక్ట్, 1853"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "ఇండియన్ రైల్వే బోర్డ్ యాక్ట్, 1905 - సరైన సమాధానం",
+          "description": "1890 రైల్వే చట్టంలోని అధికారాలను రైల్వే బోర్డుకు బదిలీ చేస్తూ ఈ చట్టాన్ని రూపొందించారు.",
+          "points": [
+            {
+              "icon": "⚖️",
+              "label": "చట్టబద్ధత",
+              "text": "బోర్డుకు స్వతంత్ర పరిపాలనా అధికారాలు దక్కాయి."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "ఇండియన్ రైల్వే బోర్డ్ యాక్ట్, 1905"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "రైల్వే బోర్డు సీనియర్ అధికారులకు శిక్షణ ఇచ్చే 'నేషనల్ అకాడమీ ఆఫ్ ఇండియన్ రైల్వేస్' (NAIR) ఎక్కడ ఉంది?",
+        "questionImage": "Youtube Video/t6_q17.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a17.jpg",
+        "answerImageTag": "⭐ వడోదర (గుజరాత్)",
+        "options": [
+          "సికింద్రాబాద్",
+          "వడోదర (గుజరాత్)",
+          "జమాల్‌పూర్",
+          "పూణే"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "వడోదర - సరైన సమాధానం",
+          "description": "పూర్వం రైల్వే స్టాఫ్ కాలేజ్‌గా పిలువబడిన NAIR గుజరాత్‌లోని వడోదర ప్రతాప్ విలాస్ ప్యాలెస్‌లో ఉంది.",
+          "points": [
+            {
+              "icon": "🎓",
+              "label": "శిక్షణ కేంద్రం",
+              "text": "రైల్వే అధికారులందరికీ ఇక్కడ ఉన్నత స్థాయి శిక్షణ ఇస్తారు."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "వడోదర (గుజరాత్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "రైల్వే బోర్డులో 1954 లో కొత్తగా చేర్చబడిన విభాగం ఏది?",
+        "questionImage": "Youtube Video/t6_q18.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a18.jpg",
+        "answerImageTag": "⭐ మెంబర్ స్టాఫ్ (సిబ్బంది వ్యవహారాలు)",
+        "options": [
+          "మెంబర్ స్పేస్",
+          "మెంబర్ స్టాఫ్ (సిబ్బంది వ్యవహారాలు)",
+          "మెంబర్ ఏవియేషన్",
+          "మెంబర్ షిప్పింగ్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "మెంబర్ స్టాఫ్ - సరైన సమాధానం",
+          "description": "జాతీయీకరణ తర్వాత లక్షలాది మంది ఉద్యోగుల సంక్షేమం, నియామకాల కోసం ప్రత్యేక సభ్యుడిని నియమించారు.",
+          "points": [
+            {
+              "icon": "👥",
+              "label": "మానవ వనరులు",
+              "text": "రైల్వే ఉద్యోగుల సంక్షేమ విధానాలను రూపొందించారు."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "మెంబర్ స్టాఫ్ (సిబ్బంది వ్యవహారాలు)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "రైల్వే భద్రత కోసం ఏర్పాటైన 'రైల్వే ప్రొటెక్షన్ ఫోర్స్' (RPF) చట్టం ఏ సంవత్సరంలో వచ్చింది?",
+        "questionImage": "Youtube Video/t6_q19.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a19.jpg",
+        "answerImageTag": "⭐ 1957",
+        "options": [
+          "1947",
+          "1957",
+          "1968",
+          "1985"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "1957 - సరైన సమాధానం",
+          "description": "రైల్వే ఆస్తులు, ప్రయాణికుల భద్రత కోసం 1957 RPF చట్టం ద్వారా ప్రత్యేక రక్షణ దళాన్ని ఏర్పాటు చేశారు.",
+          "points": [
+            {
+              "icon": "👮",
+              "label": "భద్రత",
+              "text": "RPF డైరెక్టర్ జనరల్ రైల్వే బోర్డు ఆధ్వర్యంలో పనిచేస్తారు."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "1957"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "రైల్వే బోర్డుకు సాంకేతిక, ఆర్థిక పునర్వ్యవస్థీకరణపై 2015 లో నివేదిక ఇచ్చిన కమిటీ ఏది?",
+        "questionImage": "Youtube Video/t6_q20.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a20.jpg",
+        "answerImageTag": "⭐ వివేక్ దేబ్‌రాయ్ కమిటీ",
+        "options": [
+          "రంగరాజన్ కమిటీ",
+          "వివేక్ దేబ్‌రాయ్ కమిటీ",
+          "కస్తూరిరంగన్ కమిటీ",
+          "మాలేగావ్ కమిటీ"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "వివేక్ దేబ్‌రాయ్ కమిటీ - సరైన సమాధానం",
+          "description": "రైల్వే బోర్డు సంస్కరణలు, ప్రైవేట్ భాగస్వామ్యం, బడ్జెట్ విలీనంపై వివేక్ దేబ్‌రాయ్ కమిటీ కీలక సూచనలు చేసింది.",
+          "points": [
+            {
+              "icon": "📑",
+              "label": "సంస్కరణలు",
+              "text": "వికేంద్రీకరణ మరియు జోన్లకు మరిన్ని అధికారాలు ఇవ్వాలని సూచించింది."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "వివేక్ దేబ్‌రాయ్ కమిటీ"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "రైల్వే బోర్డులో 'కమిషనర్ ఆఫ్ రైల్వే సేఫ్టీ' (CRS) ఏ మంత్రిత్వ శాఖ కింద పనిచేస్తారు?",
+        "questionImage": "Youtube Video/t6_q21.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a21.jpg",
+        "answerImageTag": "⭐ పౌర విమానయాన మంత్రిత్వ శాఖ (Civil Aviation)",
+        "options": [
+          "రైల్వే మంత్రిత్వ శాఖ",
+          "పౌర విమానయాన మంత్రిత్వ శాఖ (Civil Aviation)",
+          "హోం మంత్రిత్వ శాఖ",
+          "రక్షణ మంత్రిత్వ శాఖ"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "పౌర విమానయాన మంత్రిత్వ శాఖ - సరైన సమాధానం",
+          "description": "రైలు ప్రమాదాలపై నిష్పక్షపాత విచారణ జరిపేందుకు CRS ను రైల్వే బోర్డు నుండి వేరుగా పౌర విమానయాన శాఖ కింద ఉంచారు.",
+          "points": [
+            {
+              "icon": "⚖️",
+              "label": "స్వతంత్రత",
+              "text": "కొత్త రైలు మార్గాలకు భద్రతా అనుమతులు ఇచ్చేది CRS."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "పౌర విమానయాన మంత్రిత్వ శాఖ (Civil Aviation)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "2020 పునర్వ్యవస్థీకరణ తర్వాత రైల్వే బోర్డు సభ్యుల సంఖ్యను ఎంతకు తగ్గించారు?",
+        "questionImage": "Youtube Video/t6_q22.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a22.jpg",
+        "answerImageTag": "⭐ చైర్మన్ & CEO తో కలిపి 5 సభ్యులు",
+        "options": [
+          "3 సభ్యులు",
+          "చైర్మన్ & CEO తో కలిపి 5 సభ్యులు",
+          "8 సభ్యులు",
+          "12 సభ్యులు"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "5 సభ్యులు - సరైన సమాధానం",
+          "description": "గతంలో ఉన్న 8 మంది సభ్యుల స్థానంలో చైర్మన్ & CEO తో పాటు 4 ఫంక్షనల్ సభ్యులతో (మొత్తం 5) కుదించారు.",
+          "points": [
+            {
+              "icon": "📋",
+              "label": "సభ్యులు",
+              "text": "ఇన్‌ఫ్రాస్ట్రక్చర్, ట్రాక్షన్ & రోలింగ్ స్టాక్, ఆపరేషన్స్ & బిజినెస్ డెవలప్‌మెంట్, ఫైనాన్స్."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "చైర్మన్ & CEO తో కలిపి 5 సభ్యులు"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "రైల్వే ఉద్యోగుల నియామకాల కోసం రైల్వే బోర్డు కింద పనిచేసే సంస్థ ఏది?",
+        "questionImage": "Youtube Video/t6_q23.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a23.jpg",
+        "answerImageTag": "⭐ RRB (రైల్వే రిక్రూట్‌మెంట్ బోర్డు)",
+        "options": [
+          "SSC",
+          "RRB (రైల్వే రిక్రూట్‌మెంట్ బోర్డు)",
+          "IBPS",
+          "DRDO"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "RRB - సరైన సమాధానం",
+          "description": "దేశవ్యాప్తంగా 21 రైల్వే రిక్రూట్‌మెంట్ బోర్డుల ద్వారా గ్రూప్-C మరియు నాన్-టెక్నికల్ నియామకాలు జరుగుతాయి.",
+          "points": [
+            {
+              "icon": "📝",
+              "label": "నియామకాలు",
+              "text": "రైల్వే రిక్రూట్‌మెంట్ కంట్రోల్ బోర్డు (RRCB) వీటిని సమన్వయం చేస్తుంది."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "RRB (రైల్వే రిక్రూట్‌మెంట్ బోర్డు)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "రైల్వే భద్రతపై సిఫారసులు చేసిన ప్రసిద్ధ 'అనిల్ కాకోద్కర్ కమిటీ' ఏ సంవత్సరంలో ఏర్పడింది?",
+        "questionImage": "Youtube Video/t6_q24.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a24.jpg",
+        "answerImageTag": "⭐ 2011",
+        "options": [
+          "2005",
+          "2011",
+          "2016",
+          "2020"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "2011 - సరైన సమాధానం",
+          "description": "అణు శాస్త్రవేత్త డాక్టర్ అనిల్ కాకోద్కర్ నేతృత్వంలో ఏర్పడిన కమిటీ 'రాష్ట్రీయ రైల్ సంరక్షా కోష్' నిధిని సూచించింది.",
+          "points": [
+            {
+              "icon": "🛡️",
+              "label": "భద్రతా నిధి",
+              "text": "లక్ష కోట్ల రూపాయలతో రైల్వే భద్రతా నిధి ఏర్పాటుకు పునాది పడింది."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "2011"
+            }
+          ]
+        }
+      },
+      {
+        "category": "Railway Board చరిత్ర",
+        "question": "రైల్వే బోర్డు ఆధ్వర్యంలో నడిచే నేషనల్ రైల్ మ్యూజియం ఎక్కడ ఉంది?",
+        "questionImage": "Youtube Video/t6_q25.jpg",
+        "questionImageTag": "🏛️ RAILWAY BOARD",
+        "answerImage": "Youtube Video/t6_a25.jpg",
+        "answerImageTag": "⭐ చాణక్యపురి, న్యూఢిల్లీ",
+        "options": [
+          "చాణక్యపురి, న్యూఢిల్లీ",
+          "హౌరా, కోల్‌కతా",
+          "సికింద్రాబాద్",
+          "చెన్నై"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "చాణక్యపురి, న్యూఢిల్లీ - సరైన సమాధానం",
+          "description": "1977 ఫిబ్రవరి 1న ప్రారంభమైన నేషనల్ రైల్ మ్యూజియంలో ఫెయిరీ క్వీన్ సహా అనేక చారిత్రక రైలు ఇంజన్లు ఉన్నాయి.",
+          "points": [
+            {
+              "icon": "🏛️",
+              "label": "మ్యూజియం",
+              "text": "170 ఏళ్ల భారత రైల్వే వారసత్వ సంపదను ఇక్కడ భద్రపరిచారు."
+            },
+            {
+              "icon": "🏛️",
+              "label": "సమాధానం",
+              "text": "చాణక్యపురి, న్యూఢిల్లీ"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic7-first-electric-train",
+    "title": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు (First Electric Train)",
+    "themeId": "golden-amber",
+    "bgMusic": "Youtube Free Musics/gentle_acoustic_flow.mp3",
+    "questions": [
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "భారతదేశంలో మొట్టమొదటి ఎలక్ట్రిక్ రైలు ఏ తేదీన ప్రారంభమైంది?",
+        "questionImage": "Youtube Video/t7_q1.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a1.jpg",
+        "answerImageTag": "⭐ 1925 ఫిబ్రవరి 3",
+        "options": [
+          "1920 జనవరి 1",
+          "1925 ఫిబ్రవరి 3",
+          "1930 జూన్ 1",
+          "1947 ఆగస్టు 15"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "1925 ఫిబ్రవరి 3 - సరైన సమాధానం",
+          "description": "1925 ఫిబ్రవరి 3న బొంబాయిలో భారతదేశపు తొలి ఎలక్ట్రిక్ ప్యాసింజర్ రైలు ప్రారంభమైంది.",
+          "points": [
+            {
+              "icon": "📅",
+              "label": "తేదీ",
+              "text": "ఆసియాలోనే తొలి ఎలక్ట్రిక్ రైలు సర్వీసులలో ఇది ఒకటి."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "1925 ఫిబ్రవరి 3"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "మొదటి ఎలక్ట్రిక్ రైలు ఏ రెండు స్టేషన్ల మధ్య నడిచింది?",
+        "questionImage": "Youtube Video/t7_q2.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a2.jpg",
+        "answerImageTag": "⭐ బొంబాయి VT నుండి కుర్లా హార్బర్",
+        "options": [
+          "బొంబాయి VT నుండి థానే",
+          "బొంబాయి VT నుండి కుర్లా హార్బర్",
+          "చర్చిగేట్ నుండి విరార్",
+          "హౌరా నుండి బర్ధమాన్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "బొంబాయి VT నుండి కుర్లా హార్బర్ - సరైన సమాధానం",
+          "description": "హార్బర్ బ్రాంచ్ లైన్‌లో బొంబాయి విక్టోరియా టెర్మినస్ నుండి కుర్లా వరకు 16 కి.మీ మేర మొదటి ఎలక్ట్రిక్ రైలు నడిచింది.",
+          "points": [
+            {
+              "icon": "🛤️",
+              "label": "మార్గం",
+              "text": "16 కిలోమీటర్ల సబర్బన్ మార్గంలో తొలి సర్వీస్ మొదలైంది."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "బొంబాయి VT నుండి కుర్లా హార్బర్"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "1925 నాటి మొదటి ఎలక్ట్రిక్ రైలును ఎవరు ప్రారంభించారు?",
+        "questionImage": "Youtube Video/t7_q3.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a3.jpg",
+        "answerImageTag": "⭐ సర్ లెస్లీ విల్సన్ (బొంబాయి గవర్నర్)",
+        "options": [
+          "లార్డ్ రీడింగ్",
+          "సర్ లెస్లీ విల్సన్ (బొంబాయి గవర్నర్)",
+          "లార్డ్ ఇర్విన్",
+          "సర్ జార్జ్ లాయిడ్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "సర్ లెస్లీ విల్సన్ - సరైన సమాధానం",
+          "description": "నాటి బొంబాయి గవర్నర్ సర్ లెస్లీ విల్సన్ జెండా ఊపి తొలి ఎలక్ట్రిక్ రైలును ప్రారంభించారు.",
+          "points": [
+            {
+              "icon": "🎖️",
+              "label": "ప్రారంభం",
+              "text": "బొంబాయి విక్టోరియా టెర్మినస్ వద్ద ఘనంగా ఉత్సవం జరిగింది."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "సర్ లెస్లీ విల్సన్ (బొంబాయి గవర్నర్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "తొలి ఎలక్ట్రిక్ రైలు ఏ విద్యుత్ సరఫరా విధానంలో నడిచింది?",
+        "questionImage": "Youtube Video/t7_q4.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a4.jpg",
+        "answerImageTag": "⭐ 1500 వోల్ట్స్ DC (డైరెక్ట్ కరెంట్)",
+        "options": [
+          "25,000 వోల్ట్స్ AC",
+          "1500 వోల్ట్స్ DC (డైరెక్ట్ కరెంట్)",
+          "440 వోల్ట్స్ AC",
+          "బ్యాటరీ పవర్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "1500 వోల్ట్స్ DC - సరైన సమాధానం",
+          "description": "ప్రారంభంలో 1500 V DC ఓవర్‌హెడ్ ట్రాక్షన్ పద్ధతిని ఉపయోగించారు.",
+          "points": [
+            {
+              "icon": "🔌",
+              "label": "వోల్టేజ్",
+              "text": "తర్వాతి కాలంలో దీనిని 25 kV AC కి మార్చారు."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "1500 వోల్ట్స్ DC (డైరెక్ట్ కరెంట్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "భారతదేశంలో మొదటి లాంగ్-డిస్టెన్స్ ఎలక్ట్రిక్ డీలక్స్ రైలు ఏది?",
+        "questionImage": "Youtube Video/t7_q5.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a5.jpg",
+        "answerImageTag": "⭐ డెక్కన్ క్వీన్ (1930)",
+        "options": [
+          "డెక్కన్ క్వీన్ (1930)",
+          "ఫ్రంటియర్ మెయిల్",
+          "పంజాబ్ మెయిల్",
+          "గ్రాండ్ ట్రంక్ ఎక్స్‌ప్రెస్"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "డెక్కన్ క్వీన్ - సరైన సమాధానం",
+          "description": "1930 జూన్ 1న బొంబాయి VT నుండి పూణే మధ్య ప్రారంభమైన డెక్కన్ క్వీన్ ఎలక్ట్రిక్ లోకోమోటివ్‌తో నడిచిన తొలి ప్రీమియం రైలు.",
+          "points": [
+            {
+              "icon": "👑",
+              "label": "డెక్కన్ క్వీన్",
+              "text": "మహిళలకు ప్రత్యేక బోగీలు, డైనింగ్ కార్ కలిగిన మొదటి రైలు ఇదే."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "డెక్కన్ క్వీన్ (1930)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "మొదటి ఎలక్ట్రిక్ రైలు నడవడానికి ఏ రైల్వే కంపెనీ ట్రాక్‌ను విద్యుదీకరించింది?",
+        "questionImage": "Youtube Video/t7_q6.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a6.jpg",
+        "answerImageTag": "⭐ GIPR (గ్రేట్ ఇండియన్ పెనిన్సులర్ రైల్వే)",
+        "options": [
+          "GIPR (గ్రేట్ ఇండియన్ పెనిన్సులర్ రైల్వే)",
+          "ఈస్ట్ ఇండియన్ రైల్వే",
+          "మద్రాస్ రైల్వే",
+          "బెంగాల్ నాగ్‌పూర్ రైల్వే"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "GIPR - సరైన సమాధానం",
+          "description": "1853 లో తొలి ఆవిరి రైలును నడిపిన GIPR కంపెనీయే 1925 లో తొలి ఎలక్ట్రిక్ రైలును కూడా ప్రారంభించింది.",
+          "points": [
+            {
+              "icon": "🏆",
+              "label": "ద్వంద్వ ఘనత",
+              "text": "ఆవిరి రైలు, ఎలక్ట్రిక్ రైలు రెండింటినీ ప్రారంభించిన సంస్థ GIPR."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "GIPR (గ్రేట్ ఇండియన్ పెనిన్సులర్ రైల్వే)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "1925 లో బొంబాయి సబర్బన్ ఎలక్ట్రిక్ రైళ్లకు విద్యుత్ సరఫరా చేసిన సంస్థ ఏది?",
+        "questionImage": "Youtube Video/t7_q7.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a7.jpg",
+        "answerImageTag": "⭐ టాటా హైడ్రో-ఎలక్ట్రిక్ పవర్ సప్లై కంపెనీ",
+        "options": [
+          "NTPC",
+          "టాటా హైడ్రో-ఎలక్ట్రిక్ పవర్ సప్లై కంపెనీ",
+          "రిలయన్స్ పవర్",
+          "బ్రిటిష్ గ్రిడ్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "టాటా పవర్ - సరైన సమాధానం",
+          "description": "పశ్చిమ కనుమల్లోని జలవిద్యుత్ కేంద్రాల నుండి టాటా సంస్థ బొంబాయి రైల్వేలకు విద్యుత్తును అందించింది.",
+          "points": [
+            {
+              "icon": "💧",
+              "label": "జలవిద్యుత్",
+              "text": "భారత తొలి ఎలక్ట్రిక్ రైళ్లు గ్రీన్ హైడ్రో పవర్‌తో నడిచాయి."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "టాటా హైడ్రో-ఎలక్ట్రిక్ పవర్ సప్లై కంపెనీ"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "పశ్చిమ రైల్వే (BB&CI) పరిధిలో మొదటి ఎలక్ట్రిక్ రైలు ఎప్పుడు, ఎక్కడ ప్రారంభమైంది?",
+        "questionImage": "Youtube Video/t7_q8.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a8.jpg",
+        "answerImageTag": "⭐ 1928 జనవరి 5 (కొలాబా - బోరివలి)",
+        "options": [
+          "1925 ఫిబ్రవరి 3",
+          "1928 జనవరి 5 (కొలాబా - బోరివలి)",
+          "1935 ఆగస్టు 1",
+          "1942 అక్టోబర్ 2"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "1928 జనవరి 5 - సరైన సమాధానం",
+          "description": "1928 లో BB&CI రైల్వే కొలాబా నుండి బోరివలి వరకు ఎలక్ట్రిక్ సబర్బన్ సేవలను ప్రారంభించింది.",
+          "points": [
+            {
+              "icon": "🚊",
+              "label": "వెస్టర్న్ లైన్",
+              "text": "ముంబై పశ్చిమ సబర్బన్ నెట్‌వర్క్‌కు ఇది నాంది పలికింది."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "1928 జనవరి 5 (కొలాబా - బోరివలి)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "దక్షిణ భారతదేశంలో మొదటిసారిగా విద్యుదీకరించబడిన రైలు మార్గం ఏది?",
+        "questionImage": "Youtube Video/t7_q9.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a9.jpg",
+        "answerImageTag": "⭐ మద్రాస్ బీచ్ - తాంబరం (1931)",
+        "options": [
+          "చెన్నై - అరక్కోణం",
+          "మద్రాస్ బీచ్ - తాంబరం (1931)",
+          "సికింద్రాబాద్ - కాజీపేట",
+          "బెంగళూరు - మైసూర్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "మద్రాస్ బీచ్ - తాంబరం (1931) - సరైన సమాధానం",
+          "description": "1931 మే 11న మద్రాస్ బీచ్ నుండి తాంబరం మధ్య మీటర్ గేజ్ ఎలక్ట్రిక్ రైళ్లు ప్రారంభమయ్యాయి.",
+          "points": [
+            {
+              "icon": "🌴",
+              "label": "దక్షిణ భారత్",
+              "text": "దేశంలోనే మీటర్ గేజ్‌పై నడిచిన తొలి ఎలక్ట్రిక్ రైలు ఇదే."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "మద్రాస్ బీచ్ - తాంబరం (1931)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "స్వతంత్ర భారతదేశంలో మొట్టమొదటి 25 kV AC ఎలక్ట్రిక్ రైలు మార్గం ఎక్కడ ప్రారంభమైంది?",
+        "questionImage": "Youtube Video/t7_q10.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a10.jpg",
+        "answerImageTag": "⭐ రాజ్‌ఖర్సావాన్ - డోంగోవాపోసి (1960)",
+        "options": [
+          "ఢిల్లీ - ఆగ్రా",
+          "రాజ్‌ఖర్సావాన్ - డోంగోవాపోసి (1960)",
+          "విజయవాడ - చెన్నై",
+          "హౌరా - ఖరగ్‌పూర్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "రాజ్‌ఖర్సావాన్ - డోంగోవాపోసి - సరైన సమాధానం",
+          "description": "ఆధునిక 25,000 వోల్ట్స్ AC ట్రాక్షన్ సిస్టమ్ 1960 ఆగస్టులో సౌత్ ఈస్టర్న్ రైల్వేలో మొదలైంది.",
+          "points": [
+            {
+              "icon": "⚡",
+              "label": "ఆధునిక AC",
+              "text": "నేడు భారతదేశమంతా ఇదే 25 kV AC టెక్నాలజీ వాడుతున్నారు."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "రాజ్‌ఖర్సావాన్ - డోంగోవాపోసి (1960)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "భారతదేశంలో తయారైన మొట్టమొదటి స్వదేశీ ఎలక్ట్రిక్ లోకోమోటివ్ పేరు ఏమిటి?",
+        "questionImage": "Youtube Video/t7_q11.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a11.jpg",
+        "answerImageTag": "⭐ లోకమాన్య (1961)",
+        "options": [
+          "లోకమాన్య (1961)",
+          "శక్తి",
+          "విద్యుత్",
+          "వందే"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "లోకమాన్య - సరైన సమాధానం",
+          "description": "చిత్తరంజన్ లోకోమోటివ్ వర్క్స్ (CLW) లో తయారైన తొలి DC ఎలక్ట్రిక్ ఇంజన్‌ను జవహర్‌లాల్ నెహ్రూ 'లోకమాన్య' పేరుతో ప్రారంభించారు.",
+          "points": [
+            {
+              "icon": "🏭",
+              "label": "స్వదేశీ ఇంజన్",
+              "text": "1961 అక్టోబర్ 14న ఈ ఇంజన్ పట్టాలెక్కింది."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "లోకమాన్య (1961)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "ఎలక్ట్రిక్ రైలు పైభాగంలో ఉండి ఓవర్‌హెడ్ వైర్ నుండి విద్యుత్తును గ్రహించే పరికరం పేరు ఏమిటి?",
+        "questionImage": "Youtube Video/t7_q12.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a12.jpg",
+        "answerImageTag": "⭐ పాంటోగ్రాఫ్ (Pantograph)",
+        "options": [
+          "ట్రాన్స్‌ఫార్మర్",
+          "పాంటోగ్రాఫ్ (Pantograph)",
+          "ఆల్టర్నేటర్",
+          "డైనమో"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "పాంటోగ్రాఫ్ - సరైన సమాధానం",
+          "description": "ఇంజన్ పైకప్పుపై ఉండే స్ప్రింగ్ ఆధారిత లోహపు చట్రం 'పాంటోగ్రాఫ్' కాంటాక్ట్ వైర్‌ను తాకుతూ విద్యుత్ అందిస్తుంది.",
+          "points": [
+            {
+              "icon": "🔌",
+              "label": "విద్యుత్ సేకరణ",
+              "text": "వేగంగా వెళ్తున్నా వైర్‌తో నిరంతర సంబంధాన్ని కొనసాగిస్తుంది."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "పాంటోగ్రాఫ్ (Pantograph)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "ముంబై సబర్బన్ మార్గాల్లో పాత 1500V DC వ్యవస్థను పూర్తిగా 25,000V AC కి ఎప్పుడు మార్చారు?",
+        "questionImage": "Youtube Video/t7_q13.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a13.jpg",
+        "answerImageTag": "⭐ 2016",
+        "options": [
+          "2000",
+          "2008",
+          "2016",
+          "2022"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "2016 - సరైన సమాధానం",
+          "description": "91 ఏళ్ల DC ట్రాక్షన్ శకానికి ముగింపు పలుకుతూ 2016 ఏప్రిల్‌లో హార్బర్ లైన్ మార్పుతో ముంబై పూర్తిగా AC కి మారింది.",
+          "points": [
+            {
+              "icon": "🔄",
+              "label": "మార్పు",
+              "text": "దీనివల్ల వేగం పెరగడంతో పాటు విద్యుత్ ఆదా సాధ్యమైంది."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "2016"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "మొదటి ఎలక్ట్రిక్ రైలు బోగీలను ఏ కంపెనీ నిర్మించింది?",
+        "questionImage": "Youtube Video/t7_q14.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a14.jpg",
+        "answerImageTag": "⭐ క్యామెల్ లెయిర్డ్ & ఇంగ్లీష్ ఎలక్ట్రిక్ కంపెనీ",
+        "options": [
+          "టాటా మోటార్స్",
+          "క్యామెల్ లెయిర్డ్ & ఇంగ్లీష్ ఎలక్ట్రిక్ కంపెనీ",
+          "సీమెన్స్",
+          "హిటాచీ"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "క్యామెల్ లెయిర్డ్ & ఇంగ్లీష్ ఎలక్ట్రిక్ - సరైన సమాధానం",
+          "description": "ఇంగ్లాండ్‌లోని క్యామెల్ లెయిర్డ్ సంస్థ కోచ్‌లను, ఇంగ్లీష్ ఎలక్ట్రిక్ సంస్థ మోటార్లను రూపొందించాయి.",
+          "points": [
+            {
+              "icon": "🇬🇧",
+              "label": "నిర్మాణం",
+              "text": "4 కోచ్‌లతో కూడిన EMU రేక్‌ను ఉపయోగించారు."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "క్యామెల్ లెయిర్డ్ & ఇంగ్లీష్ ఎలక్ట్రిక్ కంపెనీ"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "భారతదేశంలో సబర్బన్ ఎలక్ట్రిక్ రైళ్లను ఏ పేరుతో పిలుస్తారు?",
+        "questionImage": "Youtube Video/t7_q15.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a15.jpg",
+        "answerImageTag": "⭐ EMU (ఎలక్ట్రిక్ మల్టిపుల్ యూనిట్)",
+        "options": [
+          "DMU",
+          "EMU (ఎలక్ట్రిక్ మల్టిపుల్ యూనిట్)",
+          "WDM",
+          "WAP"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "EMU - సరైన సమాధానం",
+          "description": "ప్రత్యేక ఇంజన్ లేకుండా బోగీల కిందే ట్రాక్షన్ మోటార్లు ఉండే లోకల్ రైళ్లను EMU అంటారు.",
+          "points": [
+            {
+              "icon": "🚆",
+              "label": "EMU",
+              "text": "తక్కువ దూరంలో త్వరగా వేగం అందుకోవడానికి EMU లు అనువైనవి."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "EMU (ఎలక్ట్రిక్ మల్టిపుల్ యూనిట్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "తొలి ఎలక్ట్రిక్ రైలును నడిపిన భారతదేశపు మొట్టమొదటి మహిళా లోకో పైలట్ (డ్రైవర్) ఎవరు?",
+        "questionImage": "Youtube Video/t7_q16.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a16.jpg",
+        "answerImageTag": "⭐ సురేఖా యాదవ్",
+        "options": [
+          "సురేఖా యాదవ్",
+          "ముంతాజ్ ఖాజీ",
+          "భవానా కాంత్",
+          "అవని చతుర్వేది"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "సురేఖా యాదవ్ - సరైన సమాధానం",
+          "description": "1988 లో భారతదేశపు తొలి మహిళా రైలు డ్రైవర్‌గా నిలిచిన సురేఖా యాదవ్, వందే భారత్ నడిపిన తొలి మహిళగా కూడా రికార్డు సృష్టించారు.",
+          "points": [
+            {
+              "icon": "👩‍✈️",
+              "label": "ఆదర్శం",
+              "text": "ఆసియాలోనే తొలి మహిళా లోకో పైలట్‌గా సురేఖా యాదవ్ పేరు పొందారు."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "సురేఖా యాదవ్"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "భారతదేశంలో రైల్వే విద్యుదీకరణ పనులను పర్యవేక్షించే కేంద్ర సంస్థ CORE ఎక్కడ ఉంది?",
+        "questionImage": "Youtube Video/t7_q17.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a17.jpg",
+        "answerImageTag": "⭐ ప్రయాగ్‌రాజ్ (అలహాబాద్)",
+        "options": [
+          "ముంబై",
+          "ప్రయాగ్‌రాజ్ (అలహాబాద్)",
+          "కోల్‌కతా",
+          "నాగ్‌పూర్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "ప్రయాగ్‌రాజ్ - సరైన సమాధానం",
+          "description": "సెంట్రల్ ఆర్గనైజేషన్ ఫర్ రైల్వే ఎలక్ట్రిఫికేషన్ (CORE) ప్రధాన కేంద్రం ప్రయాగ్‌రాజ్‌లో ఉంది.",
+          "points": [
+            {
+              "icon": "⚡",
+              "label": "CORE",
+              "text": "1979 లో ఏర్పాటైన CORE దేశవ్యాప్త ట్రాక్ విద్యుదీకరణను చేపడుతోంది."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "ప్రయాగ్‌రాజ్ (అలహాబాద్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "1925 ఎలక్ట్రిక్ రైలు రాకతో బొంబాయిలో తగ్గిన ప్రధాన సమస్య ఏమిటి?",
+        "questionImage": "Youtube Video/t7_q18.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a18.jpg",
+        "answerImageTag": "⭐ బొగ్గు పొగ కాలుష్యం మరియు ప్రయాణ సమయం",
+        "options": [
+          "నీటి కొరత",
+          "బొగ్గు పొగ కాలుష్యం మరియు ప్రయాణ సమయం",
+          "వర్షాభావం",
+          "పట్టాల తుప్పు"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "పొగ కాలుష్యం & సమయం తగ్గుదల - సరైన సమాధానం",
+          "description": "ఆవిరి ఇంజన్ల నుండి వచ్చే దట్టమైన పొగ, బూడిద నుండి ప్రయాణికులకు విముక్తి లభించడమే కాక వేగం పెరిగింది.",
+          "points": [
+            {
+              "icon": "🌬️",
+              "label": "శుభ్రత",
+              "text": "నగరంలో పొగ లేని ప్రయాణం మొదలైంది."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "బొగ్గు పొగ కాలుష్యం మరియు ప్రయాణ సమయం"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "ఇండియన్ రైల్వేస్‌లో ప్యాసింజర్ ఎలక్ట్రిక్ ఇంజన్ల కోడ్ ఏ అక్షరాలతో మొదలవుతుంది?",
+        "questionImage": "Youtube Video/t7_q19.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a19.jpg",
+        "answerImageTag": "⭐ WAP (ఉదా: WAP-5, WAP-7)",
+        "options": [
+          "WDM",
+          "WAP (ఉదా: WAP-5, WAP-7)",
+          "WAG",
+          "YDM"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "WAP - సరైన సమాధానం",
+          "description": "W = బ్రాడ్ గేజ్, A = AC ఎలక్ట్రిక్, P = ప్యాసింజర్ సర్వీస్ అని అర్థం.",
+          "points": [
+            {
+              "icon": "🔤",
+              "label": "కోడింగ్",
+              "text": "WAP-7 నేడు భారతదేశంలో అత్యంత ప్రజాదరణ పొందిన ప్యాసింజర్ ఇంజన్."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "WAP (ఉదా: WAP-5, WAP-7)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "సౌర విద్యుత్‌తో నడిచే డెమో (DEMU) రైలును భారత రైల్వే ఎక్కడ ప్రారంభించింది?",
+        "questionImage": "Youtube Video/t7_q20.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a20.jpg",
+        "answerImageTag": "⭐ సఫ్దర్‌జంగ్, న్యూఢిల్లీ (2017)",
+        "options": [
+          "సఫ్దర్‌జంగ్, న్యూఢిల్లీ (2017)",
+          "సికింద్రాబాద్",
+          "ముంబై సెంట్రల్",
+          "చెన్నై సెంట్రల్"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "సఫ్దర్‌జంగ్, న్యూఢిల్లీ - సరైన సమాధానం",
+          "description": "బోగీల పైకప్పుపై సోలార్ ప్యానెల్స్ అమర్చిన ప్రపంచపు తొలి రైలును 2017 జూలైలో ఢిల్లీలో ప్రారంభించారు.",
+          "points": [
+            {
+              "icon": "☀️",
+              "label": "సోలార్ పవర్",
+              "text": "బోగీ లోపలి లైట్లు, ఫ్యాన్లు సౌర విద్యుత్‌తో నడుస్తాయి."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "సఫ్దర్‌జంగ్, న్యూఢిల్లీ (2017)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "తొలి ఎలక్ట్రిక్ రైలు ప్రయాణానికి ముంబైలో నిర్మించిన సబర్బన్ ట్రాక్ పొడవు ఎంత?",
+        "questionImage": "Youtube Video/t7_q21.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a21.jpg",
+        "answerImageTag": "⭐ 16 కిలోమీటర్లు (10 మైళ్లు)",
+        "options": [
+          "5 కిలోమీటర్లు",
+          "16 కిలోమీటర్లు (10 మైళ్లు)",
+          "34 కిలోమీటర్లు",
+          "50 కిలోమీటర్లు"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "16 కిలోమీటర్లు - సరైన సమాధానం",
+          "description": "విక్టోరియా టెర్మినస్ నుండి శాండ్‌హర్స్ట్ రోడ్, వడాలా మీదుగా కుర్లా వరకు 16 కి.మీ ట్రాక్ నిర్మించారు.",
+          "points": [
+            {
+              "icon": "📏",
+              "label": "హార్బర్ లైన్",
+              "text": "తర్వాత దీనిని మన్‌ఖుర్ద్, వాషి, పన్వేల్ వరకు విస్తరించారు."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "16 కిలోమీటర్లు (10 మైళ్లు)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "1929 నాటికి బొంబాయి నుండి పూణే వరకు ఘాట్ సెక్షన్ మీదుగా విద్యుదీకరణ ఎందుకు అత్యవసరమైంది?",
+        "questionImage": "Youtube Video/t7_q22.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a22.jpg",
+        "answerImageTag": "⭐ సొరంగాలలో ఆవిరి ఇంజన్ల పొగ ప్రయాణికులకు ఊపిరాడకుండా చేయడం వల్ల",
+        "options": [
+          "బొగ్గు అయిపోవడం వల్ల",
+          "సొరంగాలలో ఆవిరి ఇంజన్ల పొగ ప్రయాణికులకు ఊపిరాడకుండా చేయడం వల్ల",
+          "పూణేలో విద్యుత్ ఎక్కువగా ఉండటం వల్ల",
+          "ఆవిరి ఇంజన్లు తుప్పు పట్టడం వల్ల"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "సొరంగాలలో పొగ నివారణకు - సరైన సమాధానం",
+          "description": "భోర్ ఘాట్ పొడవైన సొరంగాల్లో ఆవిరి ఇంజన్ల పొగ నిండిపోయి ప్రయాణికులు, సిబ్బంది తీవ్ర ఇబ్బంది పడేవారు.",
+          "points": [
+            {
+              "icon": "🚇",
+              "label": "ఘాట్ ట్రాక్షన్",
+              "text": "ఎలక్ట్రిక్ ఇంజన్లతో కొండలు ఎక్కడం, దిగడం సులభమైంది."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "సొరంగాలలో ఆవిరి ఇంజన్ల పొగ ప్రయాణికులకు ఊపిరాడకుండా చేయడం వల్ల"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "ప్రారంభంలో బొంబాయి-పూణే ఎలక్ట్రిక్ మార్గంలో వాడిన ప్రసిద్ధ బ్రిటిష్ ఎలక్ట్రిక్ ఇంజన్ పేరు ఏమిటి?",
+        "questionImage": "Youtube Video/t7_q23.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a23.jpg",
+        "answerImageTag": "⭐ సర్ రోజర్ లమ్లీ (WCP-1)",
+        "options": [
+          "ఫెయిరీ క్వీన్",
+          "సర్ రోజర్ లమ్లీ (WCP-1)",
+          "సాహిబ్",
+          "సుల్తాన్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "సర్ రోజర్ లమ్లీ (WCP-1) - సరైన సమాధానం",
+          "description": "మెట్రోపాలిటన్-విక్కర్స్ తయారుచేసిన WCP-1 లోకోమోటివ్ 'సర్ రోజర్ లమ్లీ' దశాబ్దాల పాటు డెక్కన్ క్వీన్‌ను నడిపింది.",
+          "points": [
+            {
+              "icon": "🚂",
+              "label": "మ్యూజియం పీస్",
+              "text": "ఈ ఇంజన్‌ను నేడు న్యూఢిల్లీ రైల్ మ్యూజియంలో భద్రపరిచారు."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "సర్ రోజర్ లమ్లీ (WCP-1)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "భారతదేశంలో బ్రాడ్ గేజ్ నెట్‌వర్క్ దాదాపు 100% విద్యుదీకరణకు చేరుకోవడం వల్ల ప్రధాన ప్రయోజనం ఏమిటి?",
+        "questionImage": "Youtube Video/t7_q24.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a24.jpg",
+        "answerImageTag": "⭐ విదేశీ ముడి చమురు దిగుమతుల ఖర్చు తగ్గడం",
+        "options": [
+          "రైళ్ల వేగం తగ్గడం",
+          "విదేశీ ముడి చమురు దిగుమతుల ఖర్చు తగ్గడం",
+          "బొగ్గు గనులు మూతపడటం",
+          "టికెట్ ధరలు పదింతలు పెరగడం"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "చమురు దిగుమతుల ఖర్చు తగ్గడం - సరైన సమాధానం",
+          "description": "డీజిల్ వినియోగం తగ్గడం వల్ల వేల కోట్ల రూపాయల విదేశీ మారక ద్రవ్యం ఆదా కావడంతో పాటు కాలుష్యం తగ్గింది.",
+          "points": [
+            {
+              "icon": "💰",
+              "label": "ఆర్థిక ఆదా",
+              "text": "స్వదేశీ విద్యుత్ వినియోగంతో ఇంధన స్వావలంబన పెరిగింది."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "విదేశీ ముడి చమురు దిగుమతుల ఖర్చు తగ్గడం"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు",
+        "question": "2025 సంవత్సరం భారతదేశంలో ఎలక్ట్రిక్ రైళ్ల చరిత్రలో ఏ ప్రత్యేక మైలురాయిని సూచిస్తుంది?",
+        "questionImage": "Youtube Video/t7_q25.jpg",
+        "questionImageTag": "⚡ FIRST ELECTRIC TRAIN",
+        "answerImage": "Youtube Video/t7_a25.jpg",
+        "answerImageTag": "⭐ 100 సంవత్సరాల ఎలక్ట్రిక్ రైళ్ల పూర్తి (శతాబ్ది ఉత్సవం)",
+        "options": [
+          "50 సంవత్సరాలు",
+          "75 సంవత్సరాలు",
+          "100 సంవత్సరాల ఎలక్ట్రిక్ రైళ్ల పూర్తి (శతాబ్ది ఉత్సవం)",
+          "150 సంవత్సరాలు"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "100 సంవత్సరాల పూర్తి - సరైన సమాధానం",
+          "description": "1925 ఫిబ్రవరి 3 నుండి 2025 ఫిబ్రవరి 3 నాటికి భారత రైల్వే ఎలక్ట్రిక్ ప్రయాణం 100 ఏళ్లు పూర్తి చేసుకుంది.",
+          "points": [
+            {
+              "icon": "🎂",
+              "label": "శతాబ్ది",
+              "text": "ఒక చిన్న 16 కి.మీ లైన్ నుండి దేశవ్యాప్త ఎలక్ట్రిక్ నెట్‌వర్క్‌గా ఎదిగింది."
+            },
+            {
+              "icon": "⚡",
+              "label": "సమాధానం",
+              "text": "100 సంవత్సరాల ఎలక్ట్రిక్ రైళ్ల పూర్తి (శతాబ్ది ఉత్సవం)"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic8-first-metro-rail",
+    "title": "భారతదేశంలో మొదటి మెట్రో రైలు (First Metro Rail)",
+    "themeId": "imperial-purple",
+    "bgMusic": "Youtube Free Musics/smooth_ambient_quiz_bgm.mp3",
+    "questions": [
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "భారతదేశంలో మొట్టమొదటి మెట్రో రైలు ఏ నగరంలో ప్రారంభమైంది?",
+        "questionImage": "Youtube Video/t8_q1.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a1.jpg",
+        "answerImageTag": "⭐ కోల్‌కతా",
+        "options": [
+          "ఢిల్లీ",
+          "ముంబై",
+          "కోల్‌కతా",
+          "చెన్నై"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "కోల్‌కతా - సరైన సమాధానం",
+          "description": "భారతదేశపు తొలి అండర్‌గ్రౌండ్ మెట్రో రైలు వ్యవస్థ కోల్‌కతాలో 1984 లో ప్రారంభమైంది.",
+          "points": [
+            {
+              "icon": "🏙️",
+              "label": "నగరం",
+              "text": "కోల్‌కతా మెట్రో దేశంలోనే అత్యంత పురాతన మెట్రో నెట్‌వర్క్."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "కోల్‌కతా"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "కోల్‌కతా మెట్రో రైలు ఏ తేదీన వాణిజ్యపరంగా ప్రారంభించబడింది?",
+        "questionImage": "Youtube Video/t8_q2.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a2.jpg",
+        "answerImageTag": "⭐ 1984 అక్టోబర్ 24",
+        "options": [
+          "1972 డిసెంబర్ 29",
+          "1984 అక్టోబర్ 24",
+          "1995 సెప్టెంబర్ 27",
+          "2002 డిసెంబర్ 24"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "1984 అక్టోబర్ 24 - సరైన సమాధానం",
+          "description": "1984 అక్టోబర్ 24న భారత తొలి మెట్రో రైలు ప్రయాణికుల కోసం అందుబాటులోకి వచ్చింది.",
+          "points": [
+            {
+              "icon": "📅",
+              "label": "తేదీ",
+              "text": "దాదాపు 12 ఏళ్ల నిర్మాణ శ్రమ తర్వాత ఈ సేవలు మొదలయ్యాయి."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "1984 అక్టోబర్ 24"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "మొదటి మెట్రో రైలు కోల్‌కతాలోని ఏ రెండు స్టేషన్ల మధ్య నడిచింది?",
+        "questionImage": "Youtube Video/t8_q3.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a3.jpg",
+        "answerImageTag": "⭐ ఎస్ప్లనేడ్ నుండి భవానీపూర్ (నేతాజీ భవన్)",
+        "options": [
+          "హౌరా నుండి సీల్దా",
+          "ఎస్ప్లనేడ్ నుండి భవానీపూర్ (నేతాజీ భవన్)",
+          "డమ్ డమ్ నుండి టోలీగంజ్",
+          "సాల్ట్ లేక్ నుండి న్యూటౌన్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "ఎస్ప్లనేడ్ నుండి భవానీపూర్ - సరైన సమాధానం",
+          "description": "మొత్తం 5 స్టేషన్లతో 3.4 కిలోమీటర్ల దూరం ఈ తొలి మెట్రో మార్గం నడిచింది.",
+          "points": [
+            {
+              "icon": "📍",
+              "label": "మొదటి రూట్",
+              "text": "ఎస్ప్లనేడ్, పార్క్ స్ట్రీట్, మైదాన్, రవీంద్ర సదన్, భవానీపూర్ స్టేషన్లు."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "ఎస్ప్లనేడ్ నుండి భవానీపూర్ (నేతాజీ భవన్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "కోల్‌కతా మెట్రో రైలు ప్రాజెక్టుకు 1972 డిసెంబర్ 29న శంకుస్థాపన చేసిన ప్రధానమంత్రి ఎవరు?",
+        "questionImage": "Youtube Video/t8_q4.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a4.jpg",
+        "answerImageTag": "⭐ ఇందిరా గాంధీ",
+        "options": [
+          "జవహర్‌లాల్ నెహ్రూ",
+          "ఇందిరా గాంధీ",
+          "రాజీవ్ గాంధీ",
+          "మొరార్జీ దేశాయ్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "ఇందిరా గాంధీ - సరైన సమాధానం",
+          "description": "నాటి ప్రధాని ఇందిరా గాంధీ 1972 లో కోల్‌కతా అండర్‌గ్రౌండ్ రైల్వే ప్రాజెక్టుకు పునాదిరాయి వేశారు.",
+          "points": [
+            {
+              "icon": "🏗️",
+              "label": "శంకుస్థాపన",
+              "text": "భారత్‌లో సబ్‌వే టన్నెల్ నిర్మాణానికి ఇది నాంది."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "ఇందిరా గాంధీ"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "కోల్‌కతాలో మెట్రో రైలు నిర్మించాలనే ఆలోచనను 1949 లో తొలిసారిగా ప్రతిపాదించిన పశ్చిమ బెంగాల్ ముఖ్యమంత్రి ఎవరు?",
+        "questionImage": "Youtube Video/t8_q5.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a5.jpg",
+        "answerImageTag": "⭐ డాక్టర్ బిధాన్ చంద్ర రాయ్",
+        "options": [
+          "జ్యోతి బసు",
+          "డాక్టర్ బిధాన్ చంద్ర రాయ్",
+          "సిద్ధార్థ శంకర్ రే",
+          "మమతా బెనర్జీ"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "డాక్టర్ బిధాన్ చంద్ర రాయ్ - సరైన సమాధానం",
+          "description": "నగర ట్రాఫిక్ రద్దీని తగ్గించేందుకు 1949 లోనే ఫ్రెంచ్ నిపుణులతో బి.సి. రాయ్ సర్వే చేయించారు.",
+          "points": [
+            {
+              "icon": "💡",
+              "label": "దూరదృష్టి",
+              "text": "ఆధునిక పశ్చిమ బెంగాల్ రూపశిల్పిగా పేరు పొందిన బి.సి. రాయ్ ఈ ఆలోచన చేశారు."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "డాక్టర్ బిధాన్ చంద్ర రాయ్"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "భారతదేశపు మొదటి మెట్రో రైలును నడిపిన మొట్టమొదటి డ్రైవర్లు ఎవరు?",
+        "questionImage": "Youtube Video/t8_q6.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a6.jpg",
+        "answerImageTag": "⭐ తపన్ కుమార్ నాథ్ మరియు సంజయ్ సిల్",
+        "options": [
+          "తపన్ కుమార్ నాథ్ మరియు సంజయ్ సిల్",
+          "సురేఖా యాదవ్",
+          "ఇ. శ్రీధరన్",
+          "రవిశంకర్"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "తపన్ కుమార్ నాథ్ & సంజయ్ సిల్ - సరైన సమాధానం",
+          "description": "1984 అక్టోబర్ 24న తొలి మెట్రో రైలును నడిపే అరుదైన గౌరవం ఈ ఇద్దరు మోటార్‌మెన్‌లకు దక్కింది.",
+          "points": [
+            {
+              "icon": "👨‍✈️",
+              "label": "పైలట్లు",
+              "text": "తొలి ట్రిప్‌ను సురక్షితంగా నడిపి చరిత్రలో నిలిచారు."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "తపన్ కుమార్ నాథ్ మరియు సంజయ్ సిల్"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "కోల్‌కతా మెట్రో మొదటి సొరంగ నిర్మాణానికి ఏ సాంకేతిక పద్ధతిని ఉపయోగించారు?",
+        "questionImage": "Youtube Video/t8_q7.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a7.jpg",
+        "answerImageTag": "⭐ కట్ అండ్ కవర్ పద్ధతి (Cut and Cover Method)",
+        "options": [
+          "డైనమైట్ బ్లాస్టింగ్",
+          "కట్ అండ్ కవర్ పద్ధతి (Cut and Cover Method)",
+          "లేజర్ డ్రిల్లింగ్",
+          "నీటి జెట్ కటింగ్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "కట్ అండ్ కవర్ పద్ధతి - సరైన సమాధానం",
+          "description": "రోడ్డును పైనుండి తవ్వి, కాంక్రీట్ బాక్స్ టన్నెల్ నిర్మించి, మళ్లీ పైన రోడ్డు వేసే కట్ అండ్ కవర్ పద్ధతిని ఎక్కువగా వాడారు.",
+          "points": [
+            {
+              "icon": "🚧",
+              "label": "నిర్మాణం",
+              "text": "రద్దీ నగర వీధుల్లో ట్రాఫిక్ మళ్లిస్తూ ఈ పని పూర్తి చేశారు."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "కట్ అండ్ కవర్ పద్ధతి (Cut and Cover Method)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "కోల్‌కతా మెట్రో రైళ్లకు విద్యుత్ సరఫరా ఏ పద్ధతిలో జరుగుతుంది?",
+        "questionImage": "Youtube Video/t8_q8.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a8.jpg",
+        "answerImageTag": "⭐ థర్డ్ రైల్ సిస్టమ్ (750V DC Third Rail)",
+        "options": [
+          "పైన ఉండే వైర్లు (OHE)",
+          "థర్డ్ రైల్ సిస్టమ్ (750V DC Third Rail)",
+          "డీజిల్ జనరేటర్",
+          "సోలార్ ప్యానెల్స్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "థర్డ్ రైల్ సిస్టమ్ - సరైన సమాధానం",
+          "description": "సొరంగం ఎత్తు తక్కువగా ఉండటానికి పట్టాల పక్కనే ఉండే మూడవ రైలు (750V DC) ద్వారా విద్యుత్ తీసుకుంటారు.",
+          "points": [
+            {
+              "icon": "⚡",
+              "label": "థర్డ్ రైల్",
+              "text": "ఓవర్‌హెడ్ వైర్లు లేకుండా కింది నుండే పవర్ కలెక్ట్ చేస్తుంది."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "థర్డ్ రైల్ సిస్టమ్ (750V DC Third Rail)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "భారతదేశంలో రెండవ మెట్రో రైలు వ్యవస్థ ఏ నగరంలో ప్రారంభమైంది?",
+        "questionImage": "Youtube Video/t8_q9.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a9.jpg",
+        "answerImageTag": "⭐ ఢిల్లీ మెట్రో (2002)",
+        "options": [
+          "ముంబై మెట్రో",
+          "ఢిల్లీ మెట్రో (2002)",
+          "బెంగళూరు నమ్మ మెట్రో",
+          "చెన్నై మెట్రో"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "ఢిల్లీ మెట్రో - సరైన సమాధానం",
+          "description": "2002 డిసెంబర్ 24న అటల్ బిహారీ వాజ్‌పేయి షాహదారా - తీస్ హజారీ మధ్య ఢిల్లీ మెట్రోను ప్రారంభించారు.",
+          "points": [
+            {
+              "icon": "🚇",
+              "label": "ఢిల్లీ మెట్రో",
+              "text": "ఇ. శ్రీధరన్ నాయకత్వంలో దేశంలోనే అతిపెద్ద మెట్రో నెట్‌వర్క్‌గా ఎదిగింది."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "ఢిల్లీ మెట్రో (2002)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "'మెట్రో మ్యాన్ ఆఫ్ ఇండియా' అని ఎవరిని పిలుస్తారు?",
+        "questionImage": "Youtube Video/t8_q10.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a10.jpg",
+        "answerImageTag": "⭐ డాక్టర్ ఇ. శ్రీధరన్",
+        "options": [
+          "విశ్వేశ్వరయ్య",
+          "డాక్టర్ ఇ. శ్రీధరన్",
+          "మంగు సింగ్",
+          "సామ్ పిట్రోడా"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "డాక్టర్ ఇ. శ్రీధరన్ - సరైన సమాధానం",
+          "description": "కోల్‌కతా మెట్రో ప్రారంభ దశలోనూ, ఢిల్లీ మెట్రోను ప్రపంచ స్థాయిలో నిర్మించడంలోనూ శ్రీధరన్ కీలక పాత్ర పోషించారు.",
+          "points": [
+            {
+              "icon": "🏅",
+              "label": "గౌరవం",
+              "text": "పద్మవిభూషణ్ పురస్కారంతో భారత ప్రభుత్వం సత్కరించింది."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "డాక్టర్ ఇ. శ్రీధరన్"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "కోల్‌కతా మెట్రో ప్రారంభంలో టికెట్ల కోసం ప్రయాణికులకు ఏమి ఇచ్చేవారు?",
+        "questionImage": "Youtube Video/t8_q11.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a11.jpg",
+        "answerImageTag": "⭐ మాగ్నెటిక్ స్ట్రిప్ పేపర్ టికెట్లు (తర్వాత RFID టోకెన్లు)",
+        "options": [
+          "ఇత్తడి నాణేలు",
+          "మాగ్నెటిక్ స్ట్రిప్ పేపర్ టికెట్లు (తర్వాత RFID టోకెన్లు)",
+          "చేతి ముద్రలు",
+          "లాటరీ కూపన్లు"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "మాగ్నెటిక్ స్ట్రిప్ టికెట్లు - సరైన సమాధానం",
+          "description": "ఆటోమేటిక్ ఫేర్ కలెక్షన్ గేట్ల ద్వారా వెళ్లడానికి మాగ్నెటిక్ టికెట్లు, తర్వాత ప్లాస్టిక్ RFID టోకెన్లు తెచ్చారు.",
+          "points": [
+            {
+              "icon": "🎟️",
+              "label": "AFC గేట్లు",
+              "text": "ఆటోమేటిక్ గేట్ల వ్యవస్థ భారత్‌లో ఇక్కడే మొదలైంది."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "మాగ్నెటిక్ స్ట్రిప్ పేపర్ టికెట్లు (తర్వాత RFID టోకెన్లు)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "కోల్‌కతా మెట్రో భారతదేశంలో ఏ గేజ్ ట్రాక్‌పై నిర్మించబడింది?",
+        "questionImage": "Youtube Video/t8_q12.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a12.jpg",
+        "answerImageTag": "⭐ బ్రాడ్ గేజ్ (1676 mm) (ఈస్ట్-వెస్ట్ లైన్ స్టాండర్డ్ గేజ్)",
+        "options": [
+          "మీటర్ గేజ్",
+          "బ్రాడ్ గేజ్ (1676 mm) (ఈస్ట్-వెస్ట్ లైన్ స్టాండర్డ్ గేజ్)",
+          "న్యారో గేజ్",
+          "మోనోరైల్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "బ్రాడ్ గేజ్ (1676 mm) - సరైన సమాధానం",
+          "description": "తొలి నార్త్-సౌత్ కోల్‌కతా మెట్రో లైన్ భారత రైల్వే ప్రామాణిక బ్రాడ్ గేజ్‌పై నిర్మించబడింది.",
+          "points": [
+            {
+              "icon": "📏",
+              "label": "గేజ్",
+              "text": "తర్వాతి కొత్త మెట్రో ప్రాజెక్టులన్నీ 1435 mm స్టాండర్డ్ గేజ్ వాడుతున్నాయి."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "బ్రాడ్ గేజ్ (1676 mm) (ఈస్ట్-వెస్ట్ లైన్ స్టాండర్డ్ గేజ్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "భారతదేశంలో మొట్టమొదటి అండర్‌వాటర్ మెట్రో సొరంగం ఏ నది కింద నిర్మించబడింది?",
+        "questionImage": "Youtube Video/t8_q13.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a13.jpg",
+        "answerImageTag": "⭐ హుగ్లీ నది (కోల్‌కతా - హౌరా)",
+        "options": [
+          "గంగా నది",
+          "హుగ్లీ నది (కోల్‌కతా - హౌరా)",
+          "యమునా నది",
+          "మూసీ నది"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "హుగ్లీ నది - సరైన సమాధానం",
+          "description": "2024 మార్చిలో హౌరా మైదాన్ - ఎస్ప్లనేడ్ మధ్య హుగ్లీ నది గర్భం కింద నడిచే తొలి మెట్రో ప్రారంభమైంది.",
+          "points": [
+            {
+              "icon": "🌊",
+              "label": "లోతు",
+              "text": "హౌరా మెట్రో స్టేషన్ భూమికి 30 మీటర్ల లోతులో దేశంలోనే లోతైన స్టేషన్."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "హుగ్లీ నది (కోల్‌కతా - హౌరా)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "దక్షిణ భారతదేశంలో మొట్టమొదటి మెట్రో రైలు ఏ నగరంలో ప్రారంభమైంది?",
+        "questionImage": "Youtube Video/t8_q14.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a14.jpg",
+        "answerImageTag": "⭐ బెంగళూరు (నమ్మ మెట్రో - 2011)",
+        "options": [
+          "హైదరాబాద్ మెట్రో",
+          "బెంగళూరు (నమ్మ మెట్రో - 2011)",
+          "చెన్నై మెట్రో",
+          "కొచ్చి మెట్రో"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "బెంగళూరు (నమ్మ మెట్రో) - సరైన సమాధానం",
+          "description": "2011 అక్టోబర్ 20న బైయప్పనహళ్లి నుండి ఎం.జి. రోడ్ మధ్య దక్షిణ భారత తొలి మెట్రో నడిచింది.",
+          "points": [
+            {
+              "icon": "🌴",
+              "label": "నమ్మ మెట్రో",
+              "text": "ప్రస్తుతం బెంగళూరు మెట్రో దక్షిణ భారతంలో అతిపెద్ద మెట్రో నెట్‌వర్క్."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "బెంగళూరు (నమ్మ మెట్రో - 2011)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "భారతదేశంలో డ్రైవర్ రహిత (Driverless) మెట్రో రైలును తొలిసారిగా ఎక్కడ ప్రారంభించారు?",
+        "questionImage": "Youtube Video/t8_q15.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a15.jpg",
+        "answerImageTag": "⭐ ఢిల్లీ మెట్రో (మెజెంటా లైన్ - 2020)",
+        "options": [
+          "కోల్‌కతా మెట్రో",
+          "ఢిల్లీ మెట్రో (మెజెంటా లైన్ - 2020)",
+          "హైదరాబాద్ మెట్రో",
+          "లక్నో మెట్రో"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "ఢిల్లీ మెట్రో - సరైన సమాధానం",
+          "description": "2020 డిసెంబర్ 28న ఢిల్లీ మెట్రో మెజెంటా లైన్‌లో పూర్తి ఆటోమేటిక్ డ్రైవర్‌లెస్ మెట్రోను ప్రారంభించారు.",
+          "points": [
+            {
+              "icon": "🤖",
+              "label": "ఆటోమేషన్",
+              "text": "కమ్యూనికేషన్ బేస్డ్ ట్రైన్ కంట్రోల్ (CBTC) టెక్నాలజీ వాడారు."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "ఢిల్లీ మెట్రో (మెజెంటా లైన్ - 2020)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "తెలంగాణలో హైదరాబాద్ మెట్రో రైలు ఏ సంవత్సరంలో ప్రారంభమైంది?",
+        "questionImage": "Youtube Video/t8_q16.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a16.jpg",
+        "answerImageTag": "⭐ 2017 నవంబర్ 28",
+        "options": [
+          "2014",
+          "2016",
+          "2017 నవంబర్ 28",
+          "2019"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "2017 నవంబర్ 28 - సరైన సమాధానం",
+          "description": "నాగోల్ నుండి మియాపూర్ మధ్య హైదరాబాద్ మెట్రో ప్రారంభమైంది; ఇది PPP విధానంలో నిర్మించబడిన అతిపెద్ద మెట్రో ప్రాజెక్టులలో ఒకటి.",
+          "points": [
+            {
+              "icon": "🏙️",
+              "label": "హైదరాబాద్",
+              "text": "3 కారిడార్లతో దాదాపు 69 కి.మీ మేర విస్తరించి ఉంది."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "2017 నవంబర్ 28"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "భారతీయ రైల్వేల 17వ జోన్‌గా గుర్తింపు పొందిన ఏకైక మెట్రో వ్యవస్థ ఏది?",
+        "questionImage": "Youtube Video/t8_q17.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a17.jpg",
+        "answerImageTag": "⭐ కోల్‌కతా మెట్రో",
+        "options": [
+          "ఢిల్లీ మెట్రో",
+          "కోల్‌కతా మెట్రో",
+          "ముంబై మెట్రో",
+          "చెన్నై మెట్రో"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "కోల్‌కతా మెట్రో - సరైన సమాధానం",
+          "description": "మిగతా మెట్రోలు ప్రత్యేక కార్పొరేషన్లుగా (SPV) పనిచేస్తుండగా, కోల్‌కతా మెట్రో నేరుగా భారతీయ రైల్వే జోన్‌గా పనిచేస్తోంది.",
+          "points": [
+            {
+              "icon": "🏢",
+              "label": "జోన్ హోదా",
+              "text": "2010 డిసెంబర్‌లో దీనికి 17వ రైల్వే జోన్ హోదా లభించింది."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "కోల్‌కతా మెట్రో"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "కోల్‌కతా మెట్రో కోసం తొలి ఎయిర్ కండిషన్డ్ (AC) కోచ్‌లను ఎక్కడ తయారు చేశారు?",
+        "questionImage": "Youtube Video/t8_q18.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a18.jpg",
+        "answerImageTag": "⭐ ICF చెన్నై & NGEF బెంగళూరు",
+        "options": [
+          "ICF చెన్నై & NGEF బెంగళూరు",
+          "జపాన్",
+          "లండన్",
+          "రష్యా"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "ICF చెన్నై & NGEF బెంగళూరు - సరైన సమాధానం",
+          "description": "భారతదేశంలోనే మొట్టమొదటి పూర్తి స్థాయి ఏసీ మెట్రో రేక్‌లను చెన్నై ICF లో రూపొందించారు.",
+          "points": [
+            {
+              "icon": "❄️",
+              "label": "స్వదేశీ తయారీ",
+              "text": "భారత ఇంజనీర్ల ప్రతిభకు తొలి మెట్రో కోచ్‌లు నిదర్శనం."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "ICF చెన్నై & NGEF బెంగళూరు"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "ప్రారంభంలో కోల్‌కతా మెట్రోలో ఎన్ని బోగీలతో రైలు నడిచింది?",
+        "questionImage": "Youtube Video/t8_q19.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a19.jpg",
+        "answerImageTag": "⭐ 4 బోగీలు (తర్వాత 8 కి పెంచారు)",
+        "options": [
+          "2 బోగీలు",
+          "4 బోగీలు (తర్వాత 8 కి పెంచారు)",
+          "12 బోగీలు",
+          "16 బోగీలు"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "4 బోగీలు - సరైన సమాధానం",
+          "description": "1984 లో 4 కోచ్‌ల రైలుతో ప్రారంభమై, నేడు 8 కోచ్‌ల ఆధునిక ఏసీ రేక్‌లుగా మారాయి.",
+          "points": [
+            {
+              "icon": "🚃",
+              "label": "సామర్థ్యం",
+              "text": "ఒక్కో రైలులో సుమారు 2,500 మందికి పైగా ప్రయాణించవచ్చు."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "4 బోగీలు (తర్వాత 8 కి పెంచారు)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "భారతదేశంలో మొట్టమొదటి వాటర్ మెట్రో (Water Metro) ఏ నగరంలో ప్రారంభమైంది?",
+        "questionImage": "Youtube Video/t8_q20.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a20.jpg",
+        "answerImageTag": "⭐ కొచ్చి (కేరళ - 2023)",
+        "options": [
+          "కోల్‌కతా",
+          "కొచ్చి (కేరళ - 2023)",
+          "ముంబై",
+          "విశాఖపట్నం"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "కొచ్చి వాటర్ మెట్రో - సరైన సమాధానం",
+          "description": "కొచ్చి చుట్టుపక్కల దీవులను కలుపుతూ బ్యాటరీ ఆధారిత ఎలక్ట్రిక్ హైబ్రిడ్ బోట్లతో దేశ తొలి వాటర్ మెట్రో ప్రారంభమైంది.",
+          "points": [
+            {
+              "icon": "🚤",
+              "label": "వాటర్ మెట్రో",
+              "text": "మెట్రో స్టేషన్ల తరహా టెర్మినల్స్, టికెటింగ్ విధానం ఇందులో ఉంటాయి."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "కొచ్చి (కేరళ - 2023)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "కోల్‌కతా మెట్రో నిర్మాణానికి సాంకేతిక సహాయం అందించిన దేశం ఏది?",
+        "questionImage": "Youtube Video/t8_q21.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a21.jpg",
+        "answerImageTag": "⭐ సోవియట్ యూనియన్ (రష్యా) మరియు జపాన్",
+        "options": [
+          "సోవియట్ యూనియన్ (రష్యా) మరియు జపాన్",
+          "అమెరికా",
+          "బ్రెజిల్",
+          "ఆస్ట్రేలియా"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "సోవియట్ యూనియన్ & జపాన్ - సరైన సమాధానం",
+          "description": "మాస్కో మెట్రో నిపుణుల సలహాలు, జపాన్ టన్నెలింగ్ యంత్రాల సహాయంతో కోల్‌కతా మెట్రో నిర్మాణం సాగింది.",
+          "points": [
+            {
+              "icon": "🌍",
+              "label": "సహకారం",
+              "text": "విదేశీ సాంకేతికతను భారతీయ పరిస్థితులకు అనుగుణంగా మార్చుకున్నారు."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "సోవియట్ యూనియన్ (రష్యా) మరియు జపాన్"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "భారతదేశంలో మొట్టమొదటి పూర్తి సోలార్ పవర్‌తో నడిచే గ్రీన్ మెట్రో స్టేషన్లు ఏ మెట్రోలో ఉన్నాయి?",
+        "questionImage": "Youtube Video/t8_q22.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a22.jpg",
+        "answerImageTag": "⭐ ఢిల్లీ మెట్రో (DMRC)",
+        "options": [
+          "ఢిల్లీ మెట్రో (DMRC)",
+          "కోల్‌కతా మెట్రో",
+          "ఆగ్రా మెట్రో",
+          "కాన్పూర్ మెట్రో"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "ఢిల్లీ మెట్రో - సరైన సమాధానం",
+          "description": "మధ్యప్రదేశ్‌లోని రేవా సోలార్ ప్లాంట్ నుండి విద్యుత్ తీసుకుంటూ పగటిపూట 90% పైగా సౌర విద్యుత్‌తో ఢిల్లీ మెట్రో నడుస్తోంది.",
+          "points": [
+            {
+              "icon": "☀️",
+              "label": "గ్రీన్ మెట్రో",
+              "text": "కార్బన్ క్రెడిట్స్ సాధించిన ప్రపంచపు తొలి మెట్రోగా గుర్తింపు."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "ఢిల్లీ మెట్రో (DMRC)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "కోల్‌కతా మెట్రోలో ప్రముఖ సాహితీవేత్తల పేర్లతో స్టేషన్లకు నామకరణం చేసిన ప్రధాన లైన్ ఏది?",
+        "questionImage": "Youtube Video/t8_q23.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a23.jpg",
+        "answerImageTag": "⭐ బ్లూ లైన్ (నార్త్-సౌత్ కారిడార్)",
+        "options": [
+          "గ్రీన్ లైన్",
+          "బ్లూ లైన్ (నార్త్-సౌత్ కారిడార్)",
+          "పర్పుల్ లైన్",
+          "ఆరెంజ్ లైన్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "బ్లూ లైన్ - సరైన సమాధానం",
+          "description": "కవి సుభాష్, గీతాంజలి, మాస్టర్‌దా సూర్య సేన్, నేతాజీ వంటి ప్రముఖుల పేర్లు స్టేషన్లకు పెట్టారు.",
+          "points": [
+            {
+              "icon": "📚",
+              "label": "సంస్కృతి",
+              "text": "బెంగాల్ మహనీయుల గౌరవార్థం ఈ పేర్లు పెట్టారు."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "బ్లూ లైన్ (నార్త్-సౌత్ కారిడార్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "భారతదేశంలో మెట్రో రైళ్లలో ప్రవేశపెట్టిన 'నేషనల్ కామన్ మొబిలిటీ కార్డ్' (NCMC) ప్రత్యేకత ఏమిటి?",
+        "questionImage": "Youtube Video/t8_q24.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a24.jpg",
+        "answerImageTag": "⭐ వన్ నేషన్ వన్ కార్డ్ (అన్ని మెట్రోలు, బస్సులలో చెల్లుతుంది)",
+        "options": [
+          "కేవలం ఢిల్లీలో మాత్రమే పనిచేస్తుంది",
+          "వన్ నేషన్ వన్ కార్డ్ (అన్ని మెట్రోలు, బస్సులలో చెల్లుతుంది)",
+          "కేవలం సినిమా టికెట్లకు మాత్రమే",
+          "విమానాశ్రయాలలో మాత్రమే"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "వన్ నేషన్ వన్ కార్డ్ - సరైన సమాధానం",
+          "description": "ఒకే రూపే (RuPay) ఆధారిత స్మార్ట్ కార్డుతో దేశంలోని ఏ నగర మెట్రోలోనైనా ప్రయాణించవచ్చు.",
+          "points": [
+            {
+              "icon": "💳",
+              "label": "స్మార్ట్ కార్డ్",
+              "text": "వేర్వేరు నగరాల్లో వేర్వేరు మెట్రో కార్డులు కొనే అవసరం తగ్గింది."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "వన్ నేషన్ వన్ కార్డ్ (అన్ని మెట్రోలు, బస్సులలో చెల్లుతుంది)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి మెట్రో రైలు",
+        "question": "భారతదేశంలో 1,000 కిలోమీటర్ల ఆపరేషనల్ మెట్రో నెట్‌వర్క్ మైలురాయిని దాటిన సంవత్సరం ఏది?",
+        "questionImage": "Youtube Video/t8_q25.jpg",
+        "questionImageTag": "🚇 FIRST METRO RAIL",
+        "answerImage": "Youtube Video/t8_a25.jpg",
+        "answerImageTag": "⭐ 2025",
+        "options": [
+          "2015",
+          "2020",
+          "2025",
+          "2030"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "2025 - సరైన సమాధానం",
+          "description": "2025 ప్రారంభంలో భారతదేశం 1,000 కి.మీ మెట్రో నెట్‌వర్క్‌ను పూర్తి చేసుకుని ప్రపంచంలో మూడవ అతిపెద్ద మెట్రో దేశంగా నిలిచింది.",
+          "points": [
+            {
+              "icon": "🌍",
+              "label": "ప్రపంచ స్థానం",
+              "text": "చైనా, అమెరికా తర్వాత భారత్ మూడవ స్థానంలో ఉంది."
+            },
+            {
+              "icon": "🚇",
+              "label": "సమాధానం",
+              "text": "2025"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic9-first-railway-station",
+    "title": "భారతదేశంలో మొదటి రైల్వే స్టేషన్ (First Railway Station)",
+    "themeId": "stadium-emerald",
+    "bgMusic": "Youtube Free Musics/smooth_ambient_quiz_bgm.mp3",
+    "questions": [
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "1853 లో భారతదేశంలో మొట్టమొదటి ప్యాసింజర్ రైలు బయలుదేరిన స్టేషన్ ఏది?",
+        "questionImage": "Youtube Video/t9_q1.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a1.jpg",
+        "answerImageTag": "⭐ బోరి బందర్ (Bori Bunder, ముంబై)",
+        "options": [
+          "హౌరా స్టేషన్",
+          "బోరి బందర్ (Bori Bunder, ముంబై)",
+          "రాయపురం స్టేషన్",
+          "న్యూఢిల్లీ స్టేషన్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "బోరి బందర్ - సరైన సమాధానం",
+          "description": "ముంబైలోని బోరి బందర్ (ప్రస్తుత CSMT) భారతదేశపు మొట్టమొదటి ప్యాసింజర్ రైల్వే టెర్మినస్.",
+          "points": [
+            {
+              "icon": "🚉",
+              "label": "తొలి స్టేషన్",
+              "text": "1853 ఏప్రిల్ 16న ఇక్కడి నుండే తొలి రైలు కదిలింది."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "బోరి బందర్ (Bori Bunder, ముంబై)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "నేటికీ తన అసలు భవనంతో సేవలందిస్తున్న భారతదేశంలో అత్యంత పురాతన రైల్వే స్టేషన్ ఏది?",
+        "questionImage": "Youtube Video/t9_q2.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a2.jpg",
+        "answerImageTag": "⭐ రాయపురం రైల్వే స్టేషన్ (చెన్నై - 1856)",
+        "options": [
+          "బోరి బందర్",
+          "రాయపురం రైల్వే స్టేషన్ (చెన్నై - 1856)",
+          "కాన్పూర్ సెంట్రల్",
+          "సికింద్రాబాద్ స్టేషన్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "రాయపురం రైల్వే స్టేషన్ - సరైన సమాధానం",
+          "description": "బోరి బందర్ స్థానంలో కొత్త భవనం కట్టగా, 1856 జూన్ 28న ప్రారంభమైన చెన్నైలోని రాయపురం అసలు భవనం నేటికీ చెక్కుచెదరలేదు.",
+          "points": [
+            {
+              "icon": "🏛️",
+              "label": "పురాతన భవనం",
+              "text": "165 ఏళ్లకు పైగా చరిత్ర కలిగిన సజీవ వారసత్వ స్టేషన్ రాయపురం."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "రాయపురం రైల్వే స్టేషన్ (చెన్నై - 1856)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "1853 నాటి మొదటి రైలు గమ్యస్థానమైన రెండవ స్టేషన్ ఏది?",
+        "questionImage": "Youtube Video/t9_q3.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a3.jpg",
+        "answerImageTag": "⭐ థానే రైల్వే స్టేషన్",
+        "options": [
+          "కళ్యాణ్",
+          "థానే రైల్వే స్టేషన్",
+          "దాదర్",
+          "కుర్లా"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "థానే రైల్వే స్టేషన్ - సరైన సమాధానం",
+          "description": "బోరి బందర్ నుండి బయలుదేరిన తొలి రైలు థానే స్టేషన్ వద్ద ఆగింది.",
+          "points": [
+            {
+              "icon": "🚉",
+              "label": "గమ్యస్థానం",
+              "text": "నేడు థానే ముంబై సబర్బన్ నెట్‌వర్క్‌లో అత్యంత రద్దీ స్టేషన్లలో ఒకటి."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "థానే రైల్వే స్టేషన్"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "'బోరి బందర్' అనే పేరుకు అర్థం ఏమిటి?",
+        "questionImage": "Youtube Video/t9_q4.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a4.jpg",
+        "answerImageTag": "⭐ గోనె సంచులు నిల్వ చేసే ఓడరేవు ప్రాంతం",
+        "options": [
+          "రాజుల కోట",
+          "గోనె సంచులు నిల్వ చేసే ఓడరేవు ప్రాంతం",
+          "బంగారు గని",
+          "పూల తోట"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "గోనె సంచులు నిల్వ చేసే రేవు - సరైన సమాధానం",
+          "description": "హిందీ/మరాఠీలో 'బోరి' అంటే సంచులు, 'బందర్' అంటే ఓడరేవు; ఇక్కడ నుండి పత్తి, ధాన్యం బస్తాలు ఎగుమతి అయ్యేవి.",
+          "points": [
+            {
+              "icon": "⚓",
+              "label": "పేరు వెనుక కథ",
+              "text": "వాణిజ్య సరుకుల రేవు పక్కనే రైల్వే స్టేషన్ నిర్మించారు."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "గోనె సంచులు నిల్వ చేసే ఓడరేవు ప్రాంతం"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "బోరి బందర్ స్థానంలో విక్టోరియా టెర్మినస్ (ప్రస్తుత CSMT) భవనాన్ని నిర్మించడానికి ఎన్ని సంవత్సరాలు పట్టింది?",
+        "questionImage": "Youtube Video/t9_q5.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a5.jpg",
+        "answerImageTag": "⭐ 10 సంవత్సరాలు (1878 - 1888)",
+        "options": [
+          "2 సంవత్సరాలు",
+          "5 సంవత్సరాలు",
+          "10 సంవత్సరాలు (1878 - 1888)",
+          "20 సంవత్సరాలు"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "10 సంవత్సరాలు - సరైన సమాధానం",
+          "description": "1878 లో నిర్మాణం ప్రారంభమై, క్వీన్ విక్టోరియా గోల్డెన్ జూబ్లీ సందర్భంగా 1888 మే లో పూర్తయింది.",
+          "points": [
+            {
+              "icon": "🏛️",
+              "label": "నిర్మాణ కాలం",
+              "text": "అప్పట్లో దీనికి సుమారు 16.14 లక్షల రూపాయలు ఖర్చయింది."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "10 సంవత్సరాలు (1878 - 1888)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "విక్టోరియా టెర్మినస్ (CSMT) భవనాన్ని రూపొందించిన ప్రధాన ఆర్కిటెక్ట్ ఎవరు?",
+        "questionImage": "Youtube Video/t9_q6.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a6.jpg",
+        "answerImageTag": "⭐ ఫ్రెడరిక్ విలియం స్టీవెన్స్",
+        "options": [
+          "ఎడ్విన్ లుటియెన్స్",
+          "ఫ్రెడరిక్ విలియం స్టీవెన్స్",
+          "లీ కార్బూజియర్",
+          "జార్జ్ విట్టెట్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "ఫ్రెడరిక్ విలియం స్టీవెన్స్ - సరైన సమాధానం",
+          "description": "విక్టోరియన్ ఇటాలియన్ గోతిక్ రివైవల్ మరియు భారతీయ సంప్రదాయ శైలి సమ్మేళనంతో స్టీవెన్స్ దీనిని డిజైన్ చేశారు.",
+          "points": [
+            {
+              "icon": "🎨",
+              "label": "శిల్పకళ",
+              "text": "భారతీయ కళాకారులు రాతిపై అద్భుత శిల్పాలను చెక్కారు."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "ఫ్రెడరిక్ విలియం స్టీవెన్స్"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "విక్టోరియా టెర్మినస్ (VT) పేరును 'ఛత్రపతి శివాజీ మహారాజ్ టెర్మినస్' గా ఏ సంవత్సరంలో మార్చారు?",
+        "questionImage": "Youtube Video/t9_q7.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a7.jpg",
+        "answerImageTag": "⭐ 1996 (2017 లో 'మహారాజ్' చేర్చారు)",
+        "options": [
+          "1947",
+          "1985",
+          "1996 (2017 లో 'మహారాజ్' చేర్చారు)",
+          "2004"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "1996 - సరైన సమాధానం",
+          "description": "1996 మార్చిలో ఛత్రపతి శివాజీ టెర్మినస్ (CST) గా మార్చి, 2017 లో 'మహారాజ్' పదాన్ని చేర్చి CSMT గా చేశారు.",
+          "points": [
+            {
+              "icon": "🚩",
+              "label": "నామకరణం",
+              "text": "మరాఠా యోధుడు ఛత్రపతి శివాజీ గౌరవార్థం ఈ పేరు పెట్టారు."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "1996 (2017 లో 'మహారాజ్' చేర్చారు)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "తూర్పు భారతదేశంలో 1854 లో ప్రారంభమైన మొట్టమొదటి రైల్వే స్టేషన్ ఏది?",
+        "questionImage": "Youtube Video/t9_q8.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a8.jpg",
+        "answerImageTag": "⭐ హౌరా రైల్వే స్టేషన్",
+        "options": [
+          "సీల్దా",
+          "హౌరా రైల్వే స్టేషన్",
+          "ఖరగ్‌పూర్",
+          "పాట్నా జంక్షన్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "హౌరా రైల్వే స్టేషన్ - సరైన సమాధానం",
+          "description": "1854 ఆగస్టు 15న హౌరా నుండి హుగ్లీ వరకు తొలి రైలు నడిచింది; నేడు హౌరాలో 23 ప్లాట్‌ఫారమ్‌లు ఉన్నాయి.",
+          "points": [
+            {
+              "icon": "🌉",
+              "label": "హౌరా",
+              "text": "భారతదేశంలో అత్యధిక ప్లాట్‌ఫారమ్‌లు మరియు రద్దీ కలిగిన స్టేషన్."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "హౌరా రైల్వే స్టేషన్"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "దక్షిణ భారతదేశంలో 1856 లో రాయపురం స్టేషన్‌ను ఎవరు ప్రారంభించారు?",
+        "questionImage": "Youtube Video/t9_q9.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a9.jpg",
+        "answerImageTag": "⭐ లార్డ్ హారిస్ (మద్రాస్ గవర్నర్)",
+        "options": [
+          "లార్డ్ హారిస్ (మద్రాస్ గవర్నర్)",
+          "లార్డ్ డల్హౌసీ",
+          "థామస్ మన్రో",
+          "లార్డ్ వెల్లెస్లీ"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "లార్డ్ హారిస్ - సరైన సమాధానం",
+          "description": "మద్రాస్ గవర్నర్ లార్డ్ హారిస్ 1856 జూన్ 28న రాయపురం రైల్వే స్టేషన్‌ను ప్రారంభించారు.",
+          "points": [
+            {
+              "icon": "🏛️",
+              "label": "రాయపురం",
+              "text": "ఇండో-సార్సెనిక్ శైలిలో ఈ స్టేషన్ భవనం నిర్మించబడింది."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "లార్డ్ హారిస్ (మద్రాస్ గవర్నర్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "1853 లో బోరి బందర్ మొదటి రైల్వే స్టేషన్ భవనం ఎలా ఉండేది?",
+        "questionImage": "Youtube Video/t9_q10.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a10.jpg",
+        "answerImageTag": "⭐ చెక్కతో నిర్మించిన సాధారణ షెడ్ (Wooden Bungalow)",
+        "options": [
+          "పాలరాతి ప్యాలెస్",
+          "చెక్కతో నిర్మించిన సాధారణ షెడ్ (Wooden Bungalow)",
+          "10 అంతస్తుల భవనం",
+          "భూగర్భ స్టేషన్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "చెక్కతో నిర్మించిన షెడ్ - సరైన సమాధానం",
+          "description": "ప్రారంభంలో బోరి బందర్ ఒక చిన్న చెక్క బంగ్లా తరహాలో ఉండేది; తర్వాత దాని స్థానంలో భారీ రాతి భవనం కట్టారు.",
+          "points": [
+            {
+              "icon": "🪵",
+              "label": "తొలి నిర్మాణం",
+              "text": "కేవలం టికెట్ కౌంటర్, చిన్న ప్లాట్‌ఫారమ్ మాత్రమే ఉండేవి."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "చెక్కతో నిర్మించిన సాధారణ షెడ్ (Wooden Bungalow)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "తెలంగాణలో మొట్టమొదటిగా నిర్మించబడిన ప్రధాన రైల్వే స్టేషన్లలో ఒకటైన సికింద్రాబాద్ స్టేషన్ ఎప్పుడు ప్రారంభమైంది?",
+        "questionImage": "Youtube Video/t9_q11.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a11.jpg",
+        "answerImageTag": "⭐ 1874 అక్టోబర్ 9",
+        "options": [
+          "1853",
+          "1874 అక్టోబర్ 9",
+          "1900",
+          "1925"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "1874 అక్టోబర్ 9 - సరైన సమాధానం",
+          "description": "నిజాం స్టేట్ రైల్వే కాలంలో 1874 లో సికింద్రాబాద్ రైల్వే స్టేషన్ కోట తరహా ఆర్కిటెక్చర్‌తో నిర్మించబడింది.",
+          "points": [
+            {
+              "icon": "🏰",
+              "label": "నిజాం కాలం",
+              "text": "వాడీ - సికింద్రాబాద్ లైన్ ప్రారంభంతో ఇది అందుబాటులోకి వచ్చింది."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "1874 అక్టోబర్ 9"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "ఉత్తర భారతదేశంలో మొట్టమొదటి రైల్వే స్టేషన్ (అలహాబాద్ - కాన్పూర్ లైన్) ఏ సంవత్సరంలో ప్రారంభమైంది?",
+        "questionImage": "Youtube Video/t9_q12.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a12.jpg",
+        "answerImageTag": "⭐ 1859 మార్చి 3",
+        "options": [
+          "1853",
+          "1859 మార్చి 3",
+          "1865",
+          "1870"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "1859 మార్చి 3 - సరైన సమాధానం",
+          "description": "అలహాబాద్ (ప్రయాగ్‌రాజ్) నుండి కాన్పూర్ వరకు ఉత్తర భారతదేశపు తొలి రైల్వే లైన్ మరియు స్టేషన్లు ప్రారంభమయ్యాయి.",
+          "points": [
+            {
+              "icon": "📍",
+              "label": "ఉత్తర భారత్",
+              "text": "180 కిలోమీటర్ల దూరం ఈ తొలి ఉత్తర భారత మార్గం సాగింది."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "1859 మార్చి 3"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "భారతదేశంలో మొట్టమొదటి మహిళలచే మాత్రమే నిర్వహించబడుతున్న (All-Women) రైల్వే స్టేషన్ ఏది?",
+        "questionImage": "Youtube Video/t9_q13.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a13.jpg",
+        "answerImageTag": "⭐ మాతుంగ రైల్వే స్టేషన్ (ముంబై)",
+        "options": [
+          "మాతుంగ రైల్వే స్టేషన్ (ముంబై)",
+          "గాంధీనగర్ (జైపూర్)",
+          "బేగంపేట (హైదరాబాద్)",
+          "చంద్రగిరి (తిరుపతి)"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "మాతుంగ రైల్వే స్టేషన్ - సరైన సమాధానం",
+          "description": "స్టేషన్ మాస్టర్ నుండి RPF సిబ్బంది వరకు పూర్తిగా మహిళా ఉద్యోగులతో నడుస్తూ మాతుంగ లిమ్కా బుక్ రికార్డు సాధించింది.",
+          "points": [
+            {
+              "icon": "👩‍💼",
+              "label": "మహిళా సాధికారత",
+              "text": "2017 లో సెంట్రల్ రైల్వే ఈ చరిత్రాత్మక నిర్ణయం తీసుకుంది."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "మాతుంగ రైల్వే స్టేషన్ (ముంబై)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "భారతదేశంలో మొట్టమొదటి ప్రైవేట్ భాగస్వామ్యంతో పునర్నిర్మించబడిన ప్రపంచ స్థాయి రైల్వే స్టేషన్ ఏది?",
+        "questionImage": "Youtube Video/t9_q14.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a14.jpg",
+        "answerImageTag": "⭐ రాణి కమలాపతి స్టేషన్ (భోపాల్ - పూర్వపు హబీబ్‌గంజ్)",
+        "options": [
+          "రాణి కమలాపతి స్టేషన్ (భోపాల్ - పూర్వపు హబీబ్‌గంజ్)",
+          "వారణాసి జంక్షన్",
+          "విజయవాడ జంక్షన్",
+          "నాగ్‌పూర్ స్టేషన్"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "రాణి కమలాపతి స్టేషన్ - సరైన సమాధానం",
+          "description": "2021 లో ఎయిర్‌పోర్ట్ తరహా ఆధునిక సౌకర్యాలతో ప్రారంభమైన దేశపు తొలి ISO సర్టిఫైడ్ ప్రైవేట్-పబ్లిక్ స్టేషన్ ఇది.",
+          "points": [
+            {
+              "icon": "✨",
+              "label": "ఆధునికత",
+              "text": "బన్సల్ గ్రూప్ భాగస్వామ్యంతో దీనిని పునర్నిర్మించారు."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "రాణి కమలాపతి స్టేషన్ (భోపాల్ - పూర్వపు హబీబ్‌గంజ్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "భారతదేశంలో అత్యంత ఎత్తైన ప్రదేశంలో ఉన్న రైల్వే స్టేషన్ ఏది?",
+        "questionImage": "Youtube Video/t9_q15.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a15.jpg",
+        "answerImageTag": "⭐ ఘుమ్ (Ghum, డార్జిలింగ్ - 2,258 మీటర్లు)",
+        "options": [
+          "సిమ్లా",
+          "ఊటీ",
+          "ఘుమ్ (Ghum, డార్జిలింగ్ - 2,258 మీటర్లు)",
+          "అరకు"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "ఘుమ్ (Ghum) - సరైన సమాధానం",
+          "description": "డార్జిలింగ్ హిమాలయన్ రైల్వే మార్గంలో సముద్ర మట్టానికి 2,258 మీటర్ల ఎత్తులో ఉన్న ఘుమ్ దేశంలోనే ఎత్తైన స్టేషన్.",
+          "points": [
+            {
+              "icon": "🏔️",
+              "label": "ఎత్తు",
+              "text": "1881 లో నిర్మించబడిన ఈ స్టేషన్‌లో అందమైన మ్యూజియం కూడా ఉంది."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "ఘుమ్ (Ghum, డార్జిలింగ్ - 2,258 మీటర్లు)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "భారతదేశంలో రెండు వేర్వేరు రాష్ట్రాల (మహారాష్ట్ర & గుజరాత్) సరిహద్దులో ఉన్న ఏకైక రైల్వే స్టేషన్ ఏది?",
+        "questionImage": "Youtube Video/t9_q16.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a16.jpg",
+        "answerImageTag": "⭐ నవాపూర్ రైల్వే స్టేషన్",
+        "options": [
+          "నవాపూర్ రైల్వే స్టేషన్",
+          "విజయవాడ జంక్షన్",
+          "బళ్లారి జంక్షన్",
+          "అంబాలా కంటోన్మెంట్"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "నవాపూర్ - సరైన సమాధానం",
+          "description": "నవాపూర్ స్టేషన్ సగం మహారాష్ట్రలో, సగం గుజరాత్ రాష్ట్రంలో విస్తరించి ఉండటం విశేషం.",
+          "points": [
+            {
+              "icon": "🗺️",
+              "label": "సరిహద్దు",
+              "text": "ప్లాట్‌ఫారమ్‌పై రెండు రాష్ట్రాల సరిహద్దు రేఖ స్పష్టంగా ఉంటుంది."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "నవాపూర్ రైల్వే స్టేషన్"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "భారతదేశంలో అత్యధిక రైల్వే మార్గాలు కలిసే (7 దిక్కుల నుండి లైన్లు) అతిపెద్ద జంక్షన్ ఏది?",
+        "questionImage": "Youtube Video/t9_q17.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a17.jpg",
+        "answerImageTag": "⭐ మధుర జంక్షన్ (ఉత్తరప్రదేశ్)",
+        "options": [
+          "విజయవాడ జంక్షన్",
+          "మధుర జంక్షన్ (ఉత్తరప్రదేశ్)",
+          "ఇటార్సీ జంక్షన్",
+          "మొఘల్‌సరాయ్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "మధుర జంక్షన్ - సరైన సమాధానం",
+          "description": "మధుర జంక్షన్ నుండి 7 వేర్వేరు రూట్లలోకి రైలు పట్టాలు వెళతాయి.",
+          "points": [
+            {
+              "icon": "🔀",
+              "label": "జంక్షన్",
+              "text": "ఢిల్లీ, ముంబై, కోల్‌కతా, చెన్నై వైపు వెళ్లే ప్రధాన రైళ్లన్నీ ఇక్కడ కలుస్తాయి."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "మధుర జంక్షన్ (ఉత్తరప్రదేశ్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "భారతదేశంలో 100% సౌర విద్యుత్‌తో నడిచే మొట్టమొదటి రైల్వే స్టేషన్ ఏది?",
+        "questionImage": "Youtube Video/t9_q18.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a18.jpg",
+        "answerImageTag": "⭐ గౌహతి రైల్వే స్టేషన్ (అస్సాం)",
+        "options": [
+          "గౌహతి రైల్వే స్టేషన్ (అస్సాం)",
+          "తిరుపతి స్టేషన్",
+          "జైపూర్ స్టేషన్",
+          "బెంగళూరు సిటీ"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "గౌహతి రైల్వే స్టేషన్ - సరైన సమాధానం",
+          "description": "2018 లో 1 మెగావాట్ సోలార్ ప్లాంట్ ఏర్పాటుతో గౌహతి దేశపు తొలి 100% సోలార్ స్టేషన్‌గా నిలిచింది.",
+          "points": [
+            {
+              "icon": "☀️",
+              "label": "సోలార్ స్టేషన్",
+              "text": "విద్యుత్ ఖర్చును భారీగా ఆదా చేస్తూ ఆదర్శంగా నిలిచింది."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "గౌహతి రైల్వే స్టేషన్ (అస్సాం)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "బోరి బందర్ స్టేషన్ పైభాగంలో ఉన్న ప్రసిద్ధ విగ్రహం దేనికి ప్రతీక?",
+        "questionImage": "Youtube Video/t9_q19.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a19.jpg",
+        "answerImageTag": "⭐ ప్రోగ్రెస్ (Progress - పురోగతి దేవత)",
+        "options": [
+          "స్వేచ్ఛా దేవత",
+          "ప్రోగ్రెస్ (Progress - పురోగతి దేవత)",
+          "న్యాయ దేవత",
+          "సముద్ర దేవత"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "ప్రోగ్రెస్ విగ్రహం - సరైన సమాధానం",
+          "description": "CSMT ప్రధాన గోపురం శిఖరంపై ఒక చేతిలో కాగడా, మరో చేతిలో చక్రం పట్టుకున్న 16.5 అడుగుల 'ప్రోగ్రెస్' విగ్రహం ఉంటుంది.",
+          "points": [
+            {
+              "icon": "🗿",
+              "label": "చిహ్నం",
+              "text": "రైల్వేల ద్వారా కలిగే మానవ ప్రగతికి ఈ శిల్పం ప్రతీక."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "ప్రోగ్రెస్ (Progress - పురోగతి దేవత)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "దక్షిణ చివరన (Southernmost) ఉన్న భారతదేశపు చివరి రైల్వే స్టేషన్ ఏది?",
+        "questionImage": "Youtube Video/t9_q20.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a20.jpg",
+        "answerImageTag": "⭐ కన్యాకుమారి రైల్వే స్టేషన్",
+        "options": [
+          "రామేశ్వరం",
+          "కన్యాకుమారి రైల్వే స్టేషన్",
+          "తిరువనంతపురం",
+          "తూత్తుకుడి"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "కన్యాకుమారి - సరైన సమాధానం",
+          "description": "తమిళనాడులోని కన్యాకుమారి భారత ప్రధాన భూభాగంలో దక్షిణపు అంచున ఉన్న చివరి రైల్వే స్టేషన్.",
+          "points": [
+            {
+              "icon": "🌊",
+              "label": "సరిహద్దు",
+              "text": "బంగాళాఖాతం, అరేబియా, హిందూ మహాసముద్రాల సంగమం వద్ద ఉంది."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "కన్యాకుమారి రైల్వే స్టేషన్"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "ఉత్తర చివరన (Northernmost) కాశ్మీర్ లోయలో ఉన్న ప్రధాన రైల్వే స్టేషన్ ఏది?",
+        "questionImage": "Youtube Video/t9_q21.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a21.jpg",
+        "answerImageTag": "⭐ బారాముల్లా రైల్వే స్టేషన్",
+        "options": [
+          "జమ్మూ తావి",
+          "శ్రీనగర్",
+          "బారాముల్లా రైల్వే స్టేషన్",
+          "కత్రా"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "బారాముల్లా - సరైన సమాధానం",
+          "description": "జమ్మూ కాశ్మీర్ లోయలో ఉత్తర చివరన ఉన్న రైల్వే స్టేషన్ బారాముల్లా.",
+          "points": [
+            {
+              "icon": "❄️",
+              "label": "కాశ్మీర్",
+              "text": "USBRL ప్రాజెక్ట్ ద్వారా దేశంలోని మిగతా ప్రాంతాలతో అనుసంధానమైంది."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "బారాముల్లా రైల్వే స్టేషన్"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "భారతదేశంలో అతి పొడవైన పేరు కలిగిన రైల్వే స్టేషన్ ఏది?",
+        "questionImage": "Youtube Video/t9_q22.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a22.jpg",
+        "answerImageTag": "⭐ వెంకటనరసింహరాజువారిపేట (AP)",
+        "options": [
+          "వెంకటనరసింహరాజువారిపేట (AP)",
+          "శ్రీ సిద్ధారూఢ స్వామిజీ హుబ్బళ్ళి",
+          "ఛత్రపతి శివాజీ మహారాజ్ టెర్మినస్",
+          "పండిట్ దీన్‌దయాళ్ ఉపాధ్యాయ జంక్షన్"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "వెంకటనరసింహరాజువారిపేట - సరైన సమాధానం",
+          "description": "ఆంధ్రప్రదేశ్ - తమిళనాడు సరిహద్దులోని ఈ స్టేషన్ పేరు ఆంగ్లంలో 28 అక్షరాలతో దేశంలోనే పొడవైన స్టేషన్ పేరుగా నిలిచింది.",
+          "points": [
+            {
+              "icon": "🔤",
+              "label": "పొడవైన పేరు",
+              "text": "రేణిగుంట - అరక్కోణం సెక్షన్‌లో ఈ స్టేషన్ ఉంది."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "వెంకటనరసింహరాజువారిపేట (AP)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "భారతదేశంలో అతి చిన్న పేరు (కేవలం 2 అక్షరాలు) కలిగిన రైల్వే స్టేషన్ ఏది?",
+        "questionImage": "Youtube Video/t9_q23.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a23.jpg",
+        "answerImageTag": "⭐ ఇబ్ (Ib, ఒడిశా) మరియు ఓడ్ (Od, గుజరాత్)",
+        "options": [
+          "ఇబ్ (Ib, ఒడిశా) మరియు ఓడ్ (Od, గుజరాత్)",
+          "గోవా",
+          "పూరి",
+          "గయ"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "ఇబ్ (Ib) & ఓడ్ (Od) - సరైన సమాధానం",
+          "description": "ఒడిశాలోని ఝార్సుగూడ సమీపంలోని 'Ib' మరియు గుజరాత్‌లోని 'Od' కేవలం రెండు ఆంగ్ల అక్షరాల పేర్లు కలిగిన స్టేషన్లు.",
+          "points": [
+            {
+              "icon": "✍️",
+              "label": "చిన్న పేరు",
+              "text": "ఇబ్ నది ఒడ్డున ఉండటం వల్ల ఆ స్టేషన్‌కు 'Ib' అని పేరు వచ్చింది."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "ఇబ్ (Ib, ఒడిశా) మరియు ఓడ్ (Od, గుజరాత్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "భారతదేశంలో మొట్టమొదటి భూగర్భ (Underground) ప్రధాన రైల్వే స్టేషన్ ఎక్కడ నిర్మితమైంది?",
+        "questionImage": "Youtube Video/t9_q24.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a24.jpg",
+        "answerImageTag": "⭐ కోల్‌కతా మెట్రో స్టేషన్లు (1984)",
+        "options": [
+          "కోల్‌కతా మెట్రో స్టేషన్లు (1984)",
+          "సికింద్రాబాద్",
+          "విశాఖపట్నం",
+          "పాట్నా"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "కోల్‌కతా మెట్రో స్టేషన్లు - సరైన సమాధానం",
+          "description": "1984 లో ఎస్ప్లనేడ్, పార్క్ స్ట్రీట్ తదితర స్టేషన్లు దేశంలో తొలి పూర్తి స్థాయి అండర్‌గ్రౌండ్ స్టేషన్లుగా నిలిచాయి.",
+          "points": [
+            {
+              "icon": "🚇",
+              "label": "భూగర్భ స్టేషన్",
+              "text": "ముంబై-అహ్మదాబాద్ బుల్లెట్ రైలులో బాంద్రా కుర్లా కాంప్లెక్స్ తొలి అండర్‌గ్రౌండ్ హైస్పీడ్ స్టేషన్ కానుంది."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "కోల్‌కతా మెట్రో స్టేషన్లు (1984)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతదేశంలో మొదటి రైల్వే స్టేషన్",
+        "question": "రైల్వే స్టేషన్ల పేరు చివర ఉండే 'టెర్మినస్' (Terminus) అనే పదానికి అర్థం ఏమిటి?",
+        "questionImage": "Youtube Video/t9_q25.jpg",
+        "questionImageTag": "🚉 FIRST RAILWAY STATION",
+        "answerImage": "Youtube Video/t9_a25.jpg",
+        "answerImageTag": "⭐ పట్టాలు అక్కడితో ముగిసి, రైళ్లు తిరిగి వెనక్కి వెళ్లే స్టేషన్",
+        "options": [
+          "కేవలం గూడ్స్ ఆగే స్టేషన్",
+          "పట్టాలు అక్కడితో ముగిసి, రైళ్లు తిరిగి వెనక్కి వెళ్లే స్టేషన్",
+          "అన్ని రైళ్లు నాన్‌స్టాప్‌గా వెళ్లే స్టేషన్",
+          "విమానాశ్రయానికి అనుసంధానమైన స్టేషన్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "పట్టాలు ముగిసే స్టేషన్ - సరైన సమాధానం",
+          "description": "టెర్మినస్ (ఉదా: CSMT, లోకమాన్య తిలక్ టెర్మినస్) వద్ద ట్రాక్‌లు ముగుస్తాయి; రైళ్లు అక్కడి నుండి ముందుకు వెళ్లలేవు.",
+          "points": [
+            {
+              "icon": "🛑",
+              "label": "టెర్మినస్",
+              "text": "ఇంజన్ దిశ మార్చుకుని తిరిగి వెనుకకు ప్రయాణం ప్రారంభించాలి."
+            },
+            {
+              "icon": "🚉",
+              "label": "సమాధానం",
+              "text": "పట్టాలు అక్కడితో ముగిసి, రైళ్లు తిరిగి వెనక్కి వెళ్లే స్టేషన్"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "topic10-important-milestones",
+    "title": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు (Key Milestones)",
+    "themeId": "crimson-ruby",
+    "bgMusic": "Youtube Free Musics/gentle_acoustic_flow.mp3",
+    "questions": [
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "రైలు బోగీలలో ప్రయాణికుల కోసం మరుగుదొడ్లు (Toilets) ప్రవేశపెట్టడానికి కారణమైన చారిత్రక లేఖ రాసినది ఎవరు?",
+        "questionImage": "Youtube Video/t10_q1.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a1.jpg",
+        "answerImageTag": "⭐ ఓఖిల్ చంద్రసేన్ (1909)",
+        "options": [
+          "మహాత్మా గాంధీ",
+          "ఓఖిల్ చంద్రసేన్ (1909)",
+          "రవీంద్రనాథ్ ఠాగూర్",
+          "గోపాలకృష్ణ గోఖలే"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "ఓఖిల్ చంద్రసేన్ (1909) - సరైన సమాధానం",
+          "description": "1909 లో అహ్మద్‌పూర్ స్టేషన్‌లో పనసపండు తిని కడుపు నొప్పితో రైలు తప్పిపోయిన ఓఖిల్ చంద్రసేన్ రాసిన వ్యంగ్య లేఖతో రైళ్లలో టాయిలెట్లు పెట్టారు.",
+          "points": [
+            {
+              "icon": "✉️",
+              "label": "చారిత్రక లేఖ",
+              "text": "ఆ లేఖ నేటికీ న్యూఢిల్లీ నేషనల్ రైల్ మ్యూజియంలో భద్రంగా ఉంది."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "ఓఖిల్ చంద్రసేన్ (1909)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "భారతీయ రైల్వేలలో మొట్టమొదటి పూర్తి స్థాయి ఎయిర్ కండిషన్డ్ (AC) రైలు ఏ సంవత్సరంలో ప్రారంభమైంది?",
+        "questionImage": "Youtube Video/t10_q2.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a2.jpg",
+        "answerImageTag": "⭐ 1956 (హౌరా - ఢిల్లీ ఏసీ ఎక్స్‌ప్రెస్)",
+        "options": [
+          "1936",
+          "1947",
+          "1956 (హౌరా - ఢిల్లీ ఏసీ ఎక్స్‌ప్రెస్)",
+          "1969"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "1956 - సరైన సమాధానం",
+          "description": "1956 అక్టోబర్ 2న గాంధీ జయంతి సందర్భంగా హౌరా - న్యూఢిల్లీ మధ్య తొలి పూర్తి ఏసీ రైలు (పూర్వా ఎక్స్‌ప్రెస్) మొదలైంది.",
+          "points": [
+            {
+              "icon": "❄️",
+              "label": "ఏసీ ప్రయాణం",
+              "text": "1936 లో ఫ్రంటియర్ మెయిల్‌లో ఐస్ బ్లాక్స్‌తో ఏసీ ప్రయోగం జరిగింది."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "1956 (హౌరా - ఢిల్లీ ఏసీ ఎక్స్‌ప్రెస్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "1969 లో ప్రారంభమైన మొదటి రాజధాని ఎక్స్‌ప్రెస్ గంటకు ఎంత గరిష్ట వేగంతో నడిచి రికార్డు సృష్టించింది?",
+        "questionImage": "Youtube Video/t10_q3.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a3.jpg",
+        "answerImageTag": "⭐ గంటకు 120 కి.మీ (తర్వాత 130 కి.మీ)",
+        "options": [
+          "గంటకు 80 కి.మీ",
+          "గంటకు 100 కి.మీ",
+          "గంటకు 120 కి.మీ (తర్వాత 130 కి.మీ)",
+          "గంటకు 180 కి.మీ"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "గంటకు 120 కి.మీ - సరైన సమాధానం",
+          "description": "1,445 కి.మీ దూరాన్ని కేవలం 17 గంటల 20 నిమిషాల్లో చేరుకుని దేశంలో 100+ kmph వేగం దాటిన తొలి రైలుగా నిలిచింది.",
+          "points": [
+            {
+              "icon": "🚄",
+              "label": "వేగ విప్లవం",
+              "text": "అంతకుముందు 24 గంటలకు పైగా పట్టే ప్రయాణ సమయాన్ని భారీగా తగ్గించింది."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "గంటకు 120 కి.మీ (తర్వాత 130 కి.మీ)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "ప్రపంచంలోనే మొట్టమొదటి హాస్పిటల్ రైలు 'లైఫ్‌లైన్ ఎక్స్‌ప్రెస్' (జీవన్ రేఖ) ఏ సంవత్సరంలో ప్రారంభమైంది?",
+        "questionImage": "Youtube Video/t10_q4.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a4.jpg",
+        "answerImageTag": "⭐ 1991 జూలై 16",
+        "options": [
+          "1985",
+          "1991 జూలై 16",
+          "2001",
+          "2010"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "1991 జూలై 16 - సరైన సమాధానం",
+          "description": "ఇంపాక్ట్ ఇండియా ఫౌండేషన్ మరియు భారత రైల్వే సంయుక్తంగా ఆపరేషన్ థియేటర్లతో కూడిన కదిలే ఆసుపత్రి రైలును ప్రారంభించాయి.",
+          "points": [
+            {
+              "icon": "🏥",
+              "label": "వైద్య సేవ",
+              "text": "గ్రామీణ ప్రాంతాల్లో లక్షలాది మందికి ఉచిత శస్త్రచికిత్సలు అందించింది."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "1991 జూలై 16"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "సముద్రం మీద నిర్మించబడిన భారతదేశపు మొట్టమొదటి రైల్వే వంతెన ఏది?",
+        "questionImage": "Youtube Video/t10_q5.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a5.jpg",
+        "answerImageTag": "⭐ పంబన్ వంతెన (రామేశ్వరం - 1914)",
+        "options": [
+          "పంబన్ వంతెన (రామేశ్వరం - 1914)",
+          "బకింగ్‌హామ్ బ్రిడ్జ్",
+          "హౌరా వంతెన",
+          "గోదావరి ఆర్చ్ బ్రిడ్జ్"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "పంబన్ వంతెన - సరైన సమాధానం",
+          "description": "1914 ఫిబ్రవరి 24న ప్రారంభమైన పంబన్ వంతెన భారత ప్రధాన భూభాగాన్ని పాక్ జలసంధి మీదుగా రామేశ్వరం ద్వీపంతో కలుపుతుంది.",
+          "points": [
+            {
+              "icon": "🌉",
+              "label": "షెర్జర్ రోలింగ్ లిఫ్ట్",
+              "text": "ఓడలు వెళ్లడానికి మధ్యలో రెండు భాగాలుగా తెరుచుకునే ప్రత్యేక వంతెన."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "పంబన్ వంతెన (రామేశ్వరం - 1914)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "భారతదేశంలో యునెస్కో (UNESCO) ప్రపంచ వారసత్వ హోదా పొందిన పర్వత రైల్వేలు (Mountain Railways) ఎన్ని?",
+        "questionImage": "Youtube Video/t10_q6.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a6.jpg",
+        "answerImageTag": "⭐ 3 (డార్జిలింగ్, నీలగిరి, కల్కా-సిమ్లా)",
+        "options": [
+          "1 (డార్జిలింగ్ మాత్రమే)",
+          "2",
+          "3 (డార్జిలింగ్, నీలగిరి, కల్కా-సిమ్లా)",
+          "5"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "3 పర్వత రైల్వేలు - సరైన సమాధానం",
+          "description": "డార్జిలింగ్ హిమాలయన్ రైల్వే (1999), నీలగిరి మౌంటెన్ రైల్వే (2005), కల్కా-సిమ్లా రైల్వే (2008) యునెస్కో గుర్తింపు పొందాయి.",
+          "points": [
+            {
+              "icon": "🏔️",
+              "label": "వారసత్వం",
+              "text": "మాథెరాన్ హిల్ రైల్వే తాత్కాలిక జాబితాలో ఉంది."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "3 (డార్జిలింగ్, నీలగిరి, కల్కా-సిమ్లా)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "భారతదేశంలో మొదటి డబుల్ డెక్కర్ ప్యాసింజర్ రైలు (సింహగఢ్ ఎక్స్‌ప్రెస్) ఏ నగరాల మధ్య ప్రారంభమైంది?",
+        "questionImage": "Youtube Video/t10_q7.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a7.jpg",
+        "answerImageTag": "⭐ ముంబై - పూణే (1978)",
+        "options": [
+          "ఢిల్లీ - జైపూర్",
+          "ముంబై - పూణే (1978)",
+          "హౌరా - ధన్‌బాద్",
+          "చెన్నై - బెంగళూరు"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "ముంబై - పూణే (1978) - సరైన సమాధానం",
+          "description": "1978 ఏప్రిల్ 12న నాన్-ఏసీ డబుల్ డెక్కర్ కోచ్‌లతో సింహగఢ్ ఎక్స్‌ప్రెస్ ప్రారంభమైంది.",
+          "points": [
+            {
+              "icon": "🚃",
+              "label": "డబుల్ డెక్కర్",
+              "text": "2011 లో హౌరా - ధన్‌బాద్ మధ్య తొలి ఏసీ డబుల్ డెక్కర్ మొదలైంది."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "ముంబై - పూణే (1978)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "రైలు టికెట్ రిజర్వేషన్‌లో 'తత్కాల్' (Tatkal) పథకాన్ని ఏ సంవత్సరంలో ప్రవేశపెట్టారు?",
+        "questionImage": "Youtube Video/t10_q8.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a8.jpg",
+        "answerImageTag": "⭐ 1997 (నితీష్ కుమార్ రైల్వే మంత్రిగా ఉన్నప్పుడు)",
+        "options": [
+          "1986",
+          "1997 (నితీష్ కుమార్ రైల్వే మంత్రిగా ఉన్నప్పుడు)",
+          "2004",
+          "2012"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "1997 - సరైన సమాధానం",
+          "description": "అత్యవసర ప్రయాణాల కోసం చివరి నిమిషంలో టికెట్లు పొందేందుకు 1997 డిసెంబర్‌లో తత్కాల్ స్కీమ్ మొదలైంది.",
+          "points": [
+            {
+              "icon": "⚡",
+              "label": "తత్కాల్",
+              "text": "ప్రయాణానికి ఒక రోజు ముందు ఉదయం 10 (AC), 11 (Non-AC) గంటలకు బుకింగ్ తెరుచుకుంటుంది."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "1997 (నితీష్ కుమార్ రైల్వే మంత్రిగా ఉన్నప్పుడు)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "భారతీయ రైల్వేలో ప్రయాణికులకు నాన్‌స్టాప్ పాయింట్-టు-పాయింట్ ప్రయాణం అందించే 'దురంతో ఎక్స్‌ప్రెస్' ఎప్పుడు మొదలైంది?",
+        "questionImage": "Youtube Video/t10_q9.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a9.jpg",
+        "answerImageTag": "⭐ 2009 (సీల్దా - న్యూఢిల్లీ)",
+        "options": [
+          "2000",
+          "2009 (సీల్దా - న్యూఢిల్లీ)",
+          "2014",
+          "2019"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "2009 - సరైన సమాధానం",
+          "description": "బెంగాలీలో 'దురంతో' అంటే 'నిరంతరాయమైన' అని అర్థం; 2009 సెప్టెంబర్‌లో మమతా బెనర్జీ దీనిని ప్రారంభించారు.",
+          "points": [
+            {
+              "icon": "🚀",
+              "label": "వేగం",
+              "text": "మధ్యలో వాణిజ్య స్టాపులు లేకుండా అత్యంత వేగంగా గమ్యస్థానానికి చేర్చుతుంది."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "2009 (సీల్దా - న్యూఢిల్లీ)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "భారతదేశంలో అత్యంత పొడవైన రైలు-రోడ్డు వంతెన (Rail-cum-Road Bridge) ఏది?",
+        "questionImage": "Youtube Video/t10_q10.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a10.jpg",
+        "answerImageTag": "⭐ బోగీబీల్ వంతెన (బ్రహ్మపుత్ర నది, అస్సాం - 4.94 కి.మీ)",
+        "options": [
+          "రాజమండ్రి గోదావరి వంతెన",
+          "బోగీబీల్ వంతెన (బ్రహ్మపుత్ర నది, అస్సాం - 4.94 కి.మీ)",
+          "వేంబనాడ్ వంతెన",
+          "మహాత్మా గాంధీ సేతు"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "బోగీబీల్ వంతెన - సరైన సమాధానం",
+          "description": "2018 డిసెంబర్‌లో ప్రారంభమైన 4.94 కిలోమీటర్ల బోగీబీల్ వంతెన కింద 2 రైలు లైన్లు, పైన 3 లేన్ల రోడ్డు కలిగి ఉంది.",
+          "points": [
+            {
+              "icon": "🌉",
+              "label": "బ్రహ్మపుత్ర",
+              "text": "అస్సాం మరియు అరుణాచల్ ప్రదేశ్ మధ్య వ్యూహాత్మక అనుసంధానం."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "బోగీబీల్ వంతెన (బ్రహ్మపుత్ర నది, అస్సాం - 4.94 కి.మీ)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "భారతదేశంలో అత్యంత పొడవైన రైల్వే సొరంగం (Longest Railway Tunnel) ఏది?",
+        "questionImage": "Youtube Video/t10_q11.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a11.jpg",
+        "answerImageTag": "⭐ T-50 సొరంగం (12.77 కి.మీ, జమ్మూ-కాశ్మీర్)",
+        "options": [
+          "పీర్ పంజాల్ సొరంగం (11.215 కి.మీ)",
+          "T-50 సొరంగం (12.77 కి.మీ, జమ్మూ-కాశ్మీర్)",
+          "కర్బుడే సొరంగం (కొంకణ్)",
+          "రాపూరు సొరంగం (ఆంధ్రప్రదేశ్)"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "T-50 సొరంగం (12.77 కి.మీ) - సరైన సమాధానం",
+          "description": "ఉదంపూర్-శ్రీనగర్-బారాముల్లా లైన్‌లో ఖారీ - సుంబార్ మధ్య నిర్మించిన T-50 పీర్ పంజాల్ రికార్డును అధిగమించి దేశంలోనే అతి పొడవైన రైలు సొరంగంగా నిలిచింది.",
+          "points": [
+            {
+              "icon": "🚇",
+              "label": "రికార్డు",
+              "text": "2024 లో ప్రారంభమైన ఈ టన్నెల్ 12.77 కిలోమీటర్ల పొడవు ఉంది."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "T-50 సొరంగం (12.77 కి.మీ, జమ్మూ-కాశ్మీర్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "భారతీయ రైల్వేలలో ఆవిరి ఇంజన్ల (Steam Locomotives) సాధారణ వాణిజ్య సేవలను ఎప్పుడు నిలిపివేశారు?",
+        "questionImage": "Youtube Video/t10_q12.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a12.jpg",
+        "answerImageTag": "⭐ 1995 (బ్రాడ్ గేజ్ మెయిన్ లైన్‌లో)",
+        "options": [
+          "1975",
+          "1985",
+          "1995 (బ్రాడ్ గేజ్ మెయిన్ లైన్‌లో)",
+          "2005"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "1995 - సరైన సమాధానం",
+          "description": "142 ఏళ్ల ఆవిరి శకానికి ముగింపు పలుకుతూ 1995 డిసెంబర్‌లో బ్రాడ్ గేజ్ స్టీమ్ ఇంజన్లకు వీడ్కోలు పలికారు (హెరిటేజ్ రైళ్లు మినహా).",
+          "points": [
+            {
+              "icon": "🚂",
+              "label": "వీడ్కోలు",
+              "text": "ఫిరోజ్‌పూర్ డివిజన్‌లో చివరి బ్రాడ్ గేజ్ స్టీమ్ రైలు నడిచింది."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "1995 (బ్రాడ్ గేజ్ మెయిన్ లైన్‌లో)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "రైలు ప్రమాదంలో మరణించిన ప్రయాణికుల కుటుంబాలకు పరిహారం చెల్లించే విధానాన్ని ఏ సంవత్సరంలో ప్రవేశపెట్టారు?",
+        "questionImage": "Youtube Video/t10_q13.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a13.jpg",
+        "answerImageTag": "⭐ 1943 (ఇండియన్ రైల్వేస్ అమెండ్‌మెంట్ యాక్ట్)",
+        "options": [
+          "1890",
+          "1924",
+          "1943 (ఇండియన్ రైల్వేస్ అమెండ్‌మెంట్ యాక్ట్)",
+          "1989"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "1943 - సరైన సమాధానం",
+          "description": "1943 చట్ట సవరణ ద్వారా రైలు ప్రమాద బాధితులకు చట్టబద్ధమైన ఆర్థిక పరిహారం అందించే నిబంధన చేర్చారు.",
+          "points": [
+            {
+              "icon": "⚖️",
+              "label": "హక్కు",
+              "text": "నేడు IRCTC ద్వారా 45 పైసలకే 10 లక్షల ప్రయాణ బీమా కూడా లభిస్తోంది."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "1943 (ఇండియన్ రైల్వేస్ అమెండ్‌మెంట్ యాక్ట్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "భారతదేశంలో మొట్టమొదటి ప్రైవేట్ ఆపరేటర్ నిర్వహించే తేజస్ ఎక్స్‌ప్రెస్ ఏ నగరాల మధ్య ప్రారంభమైంది?",
+        "questionImage": "Youtube Video/t10_q14.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a14.jpg",
+        "answerImageTag": "⭐ లక్నో - న్యూఢిల్లీ (2019)",
+        "options": [
+          "ముంబై - గోవా",
+          "లక్నో - న్యూఢిల్లీ (2019)",
+          "చెన్నై - మధురై",
+          "అహ్మదాబాద్ - ముంబై"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "లక్నో - న్యూఢిల్లీ (2019) - సరైన సమాధానం",
+          "description": "2019 అక్టోబర్ 4న IRCTC ఆధ్వర్యంలో నడిచిన లక్నో - ఢిల్లీ తేజస్ ఎక్స్‌ప్రెస్ రైలు ఆలస్యమైతే ప్రయాణికులకు పరిహారం ఇచ్చిన తొలి రైలు.",
+          "points": [
+            {
+              "icon": "⏱️",
+              "label": "సమయపాలన",
+              "text": "గంట కంటే ఎక్కువ ఆలస్యమైతే ప్రయాణికులకు డబ్బు వాపసు ఇచ్చే విధానం తెచ్చారు."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "లక్నో - న్యూఢిల్లీ (2019)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "రైలు ప్రమాదాల నైతిక బాధ్యత వహిస్తూ 1956 లో రాజీనామా చేసిన ఆదర్శ రైల్వే మంత్రి ఎవరు?",
+        "questionImage": "Youtube Video/t10_q15.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a15.jpg",
+        "answerImageTag": "⭐ లాల్ బహదూర్ శాస్త్రి",
+        "options": [
+          "జాన్ మథాయ్",
+          "లాల్ బహదూర్ శాస్త్రి",
+          "జగ్జీవన్ రామ్",
+          "గుల్జారీలాల్ నందా"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "లాల్ బహదూర్ శాస్త్రి - సరైన సమాధానం",
+          "description": "1956 నవంబర్‌లో తమిళనాడులోని అరియలూర్ రైలు ప్రమాదానికి నైతిక బాధ్యత వహిస్తూ శాస్త్రి రాజీనామా చేసి ప్రజాస్వామ్యంలో ఉన్నత ప్రమాణాలు నెలకొల్పారు.",
+          "points": [
+            {
+              "icon": "🙏",
+              "label": "నైతిక విలువలు",
+              "text": "భారత రాజకీయ చరిత్రలో అత్యున్నత నైతిక రాజీనామాగా ఇది నిలిచింది."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "లాల్ బహదూర్ శాస్త్రి"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "భారతదేశంలో అత్యంత పొడవైన రైలు వంతెన (కేవలం రైలు కోసం) ఏది?",
+        "questionImage": "Youtube Video/t10_q16.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a16.jpg",
+        "answerImageTag": "⭐ వేంబనాడ్ రైల్ వంతెన (కేరళ - 4.62 కి.మీ)",
+        "options": [
+          "వేంబనాడ్ రైల్ వంతెన (కేరళ - 4.62 కి.మీ)",
+          "హేవ్‌లాక్ వంతెన (రాజమండ్రి)",
+          "నెహ్రూ సేతు (సోన్ నది)",
+          "మహానది వంతెన"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "వేంబనాడ్ రైల్ వంతెన - సరైన సమాధానం",
+          "description": "కొచ్చిలోని ఎడపల్లి నుండి వల్లార్పాదం కంటైనర్ టెర్మినల్ వరకు వేంబనాడ్ సరస్సుపై 4.62 కి.మీ పొడవున ఈ వంతెన నిర్మించారు.",
+          "points": [
+            {
+              "icon": "🌉",
+              "label": "పొడవు",
+              "text": "కేవలం గూడ్స్ కంటైనర్ రైళ్ల రవాణా కోసం దీనిని నిర్మించారు."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "వేంబనాడ్ రైల్ వంతెన (కేరళ - 4.62 కి.మీ)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "భారతీయ రైల్వేలో 'గతిమాన్ ఎక్స్‌ప్రెస్' 2016 లో ఏ ప్రత్యేక రికార్డుతో ప్రారంభమైంది?",
+        "questionImage": "Youtube Video/t10_q17.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a17.jpg",
+        "answerImageTag": "⭐ గంటకు 160 కి.మీ వేగంతో నడిచిన తొలి సెమీ-హైస్పీడ్ రైలు",
+        "options": [
+          "అత్యంత నెమ్మదిగా వెళ్లే రైలు",
+          "గంటకు 160 కి.మీ వేగంతో నడిచిన తొలి సెమీ-హైస్పీడ్ రైలు",
+          "బొగ్గుతో నడిచే ఎక్స్‌ప్రెస్",
+          "కేవలం సరుకుల రైలు"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "160 కి.మీ వేగం సాధించిన తొలి రైలు - సరైన సమాధానం",
+          "description": "హజ్రత్ నిజాముద్దీన్ - ఝాన్సీ (తొలుత ఆగ్రా) మధ్య గంటకు 160 కి.మీ వేగంతో నడిచి శతాబ్ది రికార్డును అధిగమించింది.",
+          "points": [
+            {
+              "icon": "⚡",
+              "label": "స్పీడ్",
+              "text": "వందే భారత్ రాకముందు భారతదేశపు అత్యంత వేగవంతమైన రైలు ఇదే."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "గంటకు 160 కి.మీ వేగంతో నడిచిన తొలి సెమీ-హైస్పీడ్ రైలు"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "2021 లో భారతీయ రైల్వే నడిపిన అత్యంత పొడవైన గూడ్స్ రైలు పేరు ఏమిటి?",
+        "questionImage": "Youtube Video/t10_q18.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a18.jpg",
+        "answerImageTag": "⭐ వాసుకి (Vasuki - 3.5 కి.మీ) & సూపర్ వాసుకి",
+        "options": [
+          "శేషనాగ్",
+          "వాసుకి (Vasuki - 3.5 కి.మీ) & సూపర్ వాసుకి",
+          "అనకొండ",
+          "భీమ్"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "వాసుకి & సూపర్ వాసుకి - సరైన సమాధానం",
+          "description": "5 గూడ్స్ రైళ్లను కలిపి 3.5 కి.మీ పొడవున్న వాసుకి, తర్వాత 6 ఇంజన్లు 295 వ్యాగన్లతో 27,000 టన్నుల బొగ్గు మోసిన సూపర్ వాసుకి రికార్డు సృష్టించాయి.",
+          "points": [
+            {
+              "icon": "🐍",
+              "label": "భారీ రైలు",
+              "text": "దక్షిణ తూర్పు మధ్య రైల్వే (SECR) లో ఈ ప్రయోగం విజయవంతమైంది."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "వాసుకి (Vasuki - 3.5 కి.మీ) & సూపర్ వాసుకి"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "మహాత్మా గాంధీ దక్షిణాఫ్రికా నుండి తిరిగి వచ్చాక భారతదేశంలో సామాన్యుల కష్టాలను తెలుసుకోవడానికి ఏ తరగతి బోగీల్లో ప్రయాణించారు?",
+        "questionImage": "Youtube Video/t10_q19.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a19.jpg",
+        "answerImageTag": "⭐ మూడవ తరగతి (Third Class)",
+        "options": [
+          "ఫస్ట్ క్లాస్",
+          "సెకండ్ క్లాస్",
+          "మూడవ తరగతి (Third Class)",
+          "సెలూన్ కోచ్"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "మూడవ తరగతి - సరైన సమాధానం",
+          "description": "1915 తర్వాత దేశవ్యాప్తంగా మూడవ తరగతి పెట్టెల్లో ప్రయాణిస్తూ భారతీయులను జాతీయోద్యమంలో ఏకం చేశారు.",
+          "points": [
+            {
+              "icon": "🇮🇳",
+              "label": "స్వాతంత్ర్య పోరాటం",
+              "text": "భారత స్వాతంత్ర్య ఉద్యమంలో రైల్వేలు నాయకులను ప్రజలతో కలిపే వారధిగా పనిచేశాయి."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "మూడవ తరగతి (Third Class)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "భారతదేశంలో 150 ఏళ్ల రైల్వే ఉత్సవాలు ఏ సంవత్సరంలో ఘనంగా నిర్వహించారు?",
+        "questionImage": "Youtube Video/t10_q20.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a20.jpg",
+        "answerImageTag": "⭐ 2002 - 2003",
+        "options": [
+          "1997",
+          "2000",
+          "2002 - 2003",
+          "2010"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "2002 - 2003 - సరైన సమాధానం",
+          "description": "1853 ఏప్రిల్ 16 నుండి 2003 ఏప్రిల్ 16 నాటికి 150 సంవత్సరాలు పూర్తయిన సందర్భంగా ప్రత్యేక నాణేలు, స్టాంపులు విడుదల చేశారు.",
+          "points": [
+            {
+              "icon": "🎉",
+              "label": "150 ఏళ్లు",
+              "text": "ఈ వేడుకల్లోనే 'భోలు' ఏనుగును మస్కట్‌గా పరిచయం చేశారు."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "2002 - 2003"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "భారతీయ రైల్వేలో ప్రయాణికులకు కిసాన్ రైలు (Kisan Rail) సేవలను ఎప్పుడు ప్రారంభించారు?",
+        "questionImage": "Youtube Video/t10_q21.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a21.jpg",
+        "answerImageTag": "⭐ 2020 ఆగస్టు 7 (దేవ్‌లాలి - దానాపూర్)",
+        "options": [
+          "2014",
+          "2018",
+          "2020 ఆగస్టు 7 (దేవ్‌లాలి - దానాపూర్)",
+          "2024"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "2020 ఆగస్టు 7 - సరైన సమాధానం",
+          "description": "రైతుల పండ్లు, కూరగాయలు, పాలు పాడవకుండా త్వరగా మార్కెట్లకు చేరవేయడానికి కిసాన్ రైలు మొదలైంది.",
+          "points": [
+            {
+              "icon": "🌾",
+              "label": "రైతు నేస్తం",
+              "text": "అనంతపురం నుండి ఆదర్శ్ నగర్ (ఢిల్లీ) మధ్య దక్షిణ భారత తొలి కిసాన్ రైలు నడిచింది."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "2020 ఆగస్టు 7 (దేవ్‌లాలి - దానాపూర్)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "ఆంధ్రప్రదేశ్‌లోని రాజమండ్రి వద్ద గోదావరి నదిపై 1900 లో నిర్మించిన పురాతన రైలు వంతెన పేరు ఏమిటి?",
+        "questionImage": "Youtube Video/t10_q22.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a22.jpg",
+        "answerImageTag": "⭐ హేవ్‌లాక్ వంతెన (Havelock Bridge)",
+        "options": [
+          "హేవ్‌లాక్ వంతెన (Havelock Bridge)",
+          "ప్రకాశం బ్యారేజ్",
+          "ధవళేశ్వరం ఆనకట్ట",
+          "కనకదుర్గ వారధి"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "హేవ్‌లాక్ వంతెన - సరైన సమాధానం",
+          "description": "ఇంజనీర్ ఫ్రెడరిక్ విలియం వాల్టన్ రూపొందించిన హేవ్‌లాక్ వంతెన 97 ఏళ్ల పాటు సేవలందించి 1997 లో రిటైర్ అయింది.",
+          "points": [
+            {
+              "icon": "🌉",
+              "label": "గోదావరి",
+              "text": "56 రాతి స్తంభాలతో 2.75 కి.మీ పొడవున నిర్మించిన అద్భుత వంతెన."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "హేవ్‌లాక్ వంతెన (Havelock Bridge)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "భారతీయ రైల్వేలలో స్త్రీల భద్రత కోసం ప్రారంభించిన ప్రత్యేక ఆపరేషన్ పేరు ఏమిటి?",
+        "questionImage": "Youtube Video/t10_q23.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a23.jpg",
+        "answerImageTag": "⭐ మేరీ సహేలీ (Meri Saheli)",
+        "options": [
+          "ఆపరేషన్ సురక్ష",
+          "మేరీ సహేలీ (Meri Saheli)",
+          "మిషన్ శక్తి",
+          "నారీ రక్ష"
+        ],
+        "correctIndex": 1,
+        "correctLetter": "B",
+        "explanation": {
+          "title": "మేరీ సహేలీ - సరైన సమాధానం",
+          "description": "ఒంటరిగా ప్రయాణించే మహిళా ప్రయాణికుల భద్రత కోసం RPF మహిళా బృందాలు 'మేరీ సహేలీ' కార్యక్రమాన్ని నిర్వహిస్తున్నాయి.",
+          "points": [
+            {
+              "icon": "🛡️",
+              "label": "మహిళా భద్రత",
+              "text": "ప్రయాణం ప్రారంభం నుండి గమ్యస్థానం చేరే వరకు రక్షణ కల్పిస్తారు."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "మేరీ సహేలీ (Meri Saheli)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "తప్పిపోయిన పిల్లలను రక్షించి వారి తల్లిదండ్రులకు అప్పగించడానికి RPF చేపట్టిన ఆపరేషన్ ఏది?",
+        "questionImage": "Youtube Video/t10_q24.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a24.jpg",
+        "answerImageTag": "⭐ ఆపరేషన్ నన్హే ఫరిస్తే (Operation Nanhe Farishte)",
+        "options": [
+          "ఆపరేషన్ నన్హే ఫరిస్తే (Operation Nanhe Farishte)",
+          "ఆపరేషన్ విజయ్",
+          "ఆపరేషన్ గంగ",
+          "ఆపరేషన్ మిలాప్"
+        ],
+        "correctIndex": 0,
+        "correctLetter": "A",
+        "explanation": {
+          "title": "ఆపరేషన్ నన్హే ఫరిస్తే - సరైన సమాధానం",
+          "description": "ఈ కార్యక్రమం ద్వారా రైల్వే స్టేషన్లలో వేలాది మంది తప్పిపోయిన చిన్నారులను రక్షించి కుటుంబాలతో కలిపారు.",
+          "points": [
+            {
+              "icon": "👶",
+              "label": "మానవత్వం",
+              "text": "రైల్వే రక్షణ దళం యొక్క అత్యంత ప్రశంసనీయ సేవా కార్యక్రమం."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "ఆపరేషన్ నన్హే ఫరిస్తే (Operation Nanhe Farishte)"
+            }
+          ]
+        }
+      },
+      {
+        "category": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు",
+        "question": "ప్రపంచంలోనే ఒకే యాజమాన్యం కింద నడుస్తున్న అత్యంత పెద్ద రైల్వే నెట్‌వర్క్‌లలో భారత రైల్వే ఎన్నవ స్థానంలో ఉంది?",
+        "questionImage": "Youtube Video/t10_q25.jpg",
+        "questionImageTag": "🏆 KEY MILESTONES",
+        "answerImage": "Youtube Video/t10_a25.jpg",
+        "answerImageTag": "⭐ 4వ స్థానం (ఆసియాలో 2వ స్థానం)",
+        "options": [
+          "1వ స్థానం",
+          "2వ స్థానం",
+          "4వ స్థానం (ఆసియాలో 2వ స్థానం)",
+          "10వ స్థానం"
+        ],
+        "correctIndex": 2,
+        "correctLetter": "C",
+        "explanation": {
+          "title": "4వ స్థానం - సరైన సమాధానం",
+          "description": "అమెరికా, చైనా, రష్యా తర్వాత సుమారు 68,000+ రూట్ కిలోమీటర్లతో భారత రైల్వే ప్రపంచంలో 4వ అతిపెద్ద రైల్వే నెట్‌వర్క్.",
+          "points": [
+            {
+              "icon": "🌍",
+              "label": "ప్రపంచ స్థానం",
+              "text": "ప్రతిరోజూ 2 కోట్లకు పైగా ప్రయాణికులను గమ్యస్థానాలకు చేరుస్తోంది."
+            },
+            {
+              "icon": "🏆",
+              "label": "సమాధానం",
+              "text": "4వ స్థానం (ఆసియాలో 2వ స్థానం)"
+            }
+          ]
+        }
+      }
+    ]
   }
 ]

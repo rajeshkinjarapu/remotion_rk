@@ -18,6 +18,11 @@ on:
           - 'TeluguQuiz-topic3-first-rail-route'
           - 'TeluguQuiz-topic4-railway-development'
           - 'TeluguQuiz-topic5-nationalisation'
+          - 'TeluguQuiz-topic6-railway-board'
+          - 'TeluguQuiz-topic7-first-electric-train'
+          - 'TeluguQuiz-topic8-first-metro-rail'
+          - 'TeluguQuiz-topic9-first-railway-station'
+          - 'TeluguQuiz-topic10-important-milestones'
           - 'TeluguQuiz-20MCQ-FullVideo'
           - 'TeluguQuiz-SinglePreview'
 
@@ -25,7 +30,7 @@ jobs:
   render:
     name: 🎬 Render Video on GitHub Cloud
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 240
 
     steps:
       - name: 📥 Checkout Repository
@@ -48,8 +53,8 @@ jobs:
           fi
 
           if [ "$TARGET" = "All-Batch-Videos" ]; then
-            echo "🚀 Rendering All 5 Batch Videos in Sequence..."
-            for comp in "TeluguQuiz-topic1-first-train" "TeluguQuiz-topic2-origin-railways" "TeluguQuiz-topic3-first-rail-route" "TeluguQuiz-topic4-railway-development" "TeluguQuiz-topic5-nationalisation"; do
+            echo "🚀 Rendering All 10 Batch Videos in Sequence..."
+            for comp in "TeluguQuiz-topic1-first-train" "TeluguQuiz-topic2-origin-railways" "TeluguQuiz-topic3-first-rail-route" "TeluguQuiz-topic4-railway-development" "TeluguQuiz-topic5-nationalisation" "TeluguQuiz-topic6-railway-board" "TeluguQuiz-topic7-first-electric-train" "TeluguQuiz-topic8-first-metro-rail" "TeluguQuiz-topic9-first-railway-station" "TeluguQuiz-topic10-important-milestones"; do
               echo "--- Rendering $comp ---"
               bunx remotion render "$comp" "out/${comp}.mp4" --concurrency=2 || true
             done

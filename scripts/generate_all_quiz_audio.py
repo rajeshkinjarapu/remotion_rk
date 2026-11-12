@@ -6,6 +6,8 @@ import urllib.error
 import time
 import re
 import sys
+import functools
+print = functools.partial(print, flush=True)
 
 URL = "https://api.smallest.ai/waves/v1/tts"
 ACCOUNTS_FILE = "smallest_accounts.json"
@@ -32,38 +34,64 @@ print(f"Loaded {len(ACCOUNTS)} Smallest.ai account(s) from {ACCOUNTS_FILE}:")
 for a in ACCOUNTS:
     print(f"  • {a.get('name', 'Account')}: Voice={a.get('voiceId')}")
 
-NUM_MAP = {
+ONES = {
     0: "zero", 1: "one", 2: "two", 3: "three", 4: "four",
     5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine",
     10: "ten", 11: "eleven", 12: "twelve", 13: "thirteen", 14: "fourteen",
-    15: "fifteen", 16: "sixteen", 17: "seventeen", 18: "eighteen", 19: "nineteen",
+    15: "fifteen", 16: "sixteen", 17: "seventeen", 18: "eighteen", 19: "nineteen"
+}
+TENS = {
     20: "twenty", 30: "thirty", 40: "forty", 50: "fifty",
-    60: "sixty", 70: "seventy", 80: "eighty", 90: "ninety",
-    100: "one hundred", 360: "three sixty",
-    2024: "two thousand twenty four", 2025: "two thousand twenty five",
-    2026: "two thousand twenty six", 2027: "two thousand twenty seven"
+    60: "sixty", 70: "seventy", 80: "eighty", 90: "ninety"
 }
 
+def two_digits_to_words(n):
+    if n in ONES:
+        return ONES[n]
+    tens = (n // 10) * 10
+    ones = n % 10
+    if ones == 0:
+        return TENS.get(tens, str(tens))
+    return f"{TENS.get(tens, str(tens))} {ONES.get(ones, str(ones))}"
+
 def num_to_words(n):
-    if n in NUM_MAP:
-        return NUM_MAP[n]
     if n < 100:
-        tens = (n // 10) * 10
-        ones = n % 10
-        return f"{NUM_MAP[tens]} {NUM_MAP[ones]}"
-    if 2000 <= n <= 2099:
-        remainder = n - 2000
-        if remainder in NUM_MAP:
-            return f"two thousand {NUM_MAP[remainder]}"
-        tens = (remainder // 10) * 10
-        ones = remainder % 10
-        return f"two thousand {NUM_MAP[tens]} {NUM_MAP[ones]}"
+        return two_digits_to_words(n)
+    if 100 <= n <= 999:
+        h = n // 100
+        rem = n % 100
+        h_word = ONES[h]
+        if rem == 0:
+            return f"{h_word} hundred"
+        elif rem < 10:
+            return f"{h_word} zero {ONES[rem]}"
+        else:
+            return f"{h_word} {two_digits_to_words(rem)}"
+    if 1000 <= n <= 9999:
+        if n % 1000 == 0:
+            return f"{ONES[n // 1000]} thousand"
+        if 2001 <= n <= 2009:
+            return f"two thousand {ONES[n % 100]}"
+        first_two = n // 100
+        last_two = n % 100
+        first_word = two_digits_to_words(first_two)
+        if last_two == 0:
+            return f"{first_word} hundred"
+        elif last_two < 10:
+            return f"{first_word} zero {ONES[last_two]}"
+        else:
+            return f"{first_word} {two_digits_to_words(last_two)}"
+    if n == 25000:
+        return "twenty five thousand"
     return str(n)
 
 def clean_text_for_tts(text):
+    # Remove commas inside numbers: 25,000 -> 25000, 1,000 -> 1000
+    text = re.sub(r'(\d+),(\d+)', r'\1\2', text)
     text = text.replace("T20", "T twenty").replace("t20", "t twenty")
     text = text.replace("టీ20", "టీ ట్వంటీ").replace("టీ 20", "టీ ట్వంటీ")
     text = text.replace("ODI", "O D I").replace("IPL", "I P L").replace("ఐపీఎల్", "ఐ పీ ఎల్")
+    text = text.replace("AC", "A C").replace("DC", "D C").replace("kV", "k V")
     
     def replace_num(match):
         val = int(match.group(0))
