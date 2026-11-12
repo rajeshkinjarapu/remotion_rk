@@ -105,9 +105,9 @@ export const Root: React.FC = () => {
 
 			{/* Quick Preview for a Single Question */}
 			<Composition
-				id="TeluguQuiz-SinglePreview"
+				id="TeluguQuiz"
 				component={TeluguQuiz}
-				durationInFrames={QUIZ_TIMINGS[0].durationInFrames}
+				durationInFrames={630}
 				fps={30}
 				width={1920}
 				height={1080}
@@ -118,6 +118,41 @@ export const Root: React.FC = () => {
 					bgMusic: DEFAULT_BG_MUSIC,
 				}}
 			/>
+
+			<Composition
+				id="TeluguQuiz-SinglePreview"
+				component={TeluguQuiz}
+				durationInFrames={QUIZ_TIMINGS[0]?.durationInFrames || 630}
+				fps={30}
+				width={1920}
+				height={1080}
+				schema={teluguQuizSchema}
+				defaultProps={{
+					quizIndex: 0,
+					templateId: DEFAULT_TEMPLATE_ID,
+					bgMusic: DEFAULT_BG_MUSIC,
+				}}
+			/>
+
+			{/* All 50 Cricket Questions Individual Compositions */}
+			<Folder name="TeluguCricket50">
+				{QUIZ_QUESTIONS.map((_, idx) => (
+					<Composition
+						key={idx}
+						id={`Cricket-Q${idx + 1}`}
+						component={TeluguQuiz}
+						durationInFrames={630}
+						fps={30}
+						width={1920}
+						height={1080}
+						defaultProps={{
+							quizIndex: idx,
+							templateId: DEFAULT_TEMPLATE_ID,
+							bgMusic: DEFAULT_BG_MUSIC,
+						}}
+					/>
+				))}
+			</Folder>
 
 			{/* ================= BATCH QUIZ VIDEOS (ALL VIDEOS DEFINED IN quiz_videos.json) ================= */}
 			<Folder name="TeluguQuiz-BatchVideos">

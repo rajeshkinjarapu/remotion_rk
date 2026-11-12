@@ -2,6 +2,7 @@ import React, {useMemo} from 'react';
 import {
 	AbsoluteFill,
 	Audio,
+	Img,
 	Sequence,
 	Series,
 	interpolate,
@@ -10,14 +11,11 @@ import {
 	useCurrentFrame,
 	useVideoConfig,
 } from 'remotion';
-import {loadFont} from '@remotion/google-fonts/AnekTelugu';
 import {z} from 'zod';
 import questionsData from './questions.json';
 import quizTimingsData from './quiz_timings.json';
 import quizVideosData from './quiz_videos.json';
 import {QUIZ_THEMES, QuizTheme} from './themes';
-
-const {fontFamily: teluguFont} = loadFont();
 
 export interface QuizQuestionItem {
 	category: string;
@@ -43,43 +41,19 @@ export interface QuizQuestionItem {
 
 export interface QuizTimingItem {
 	quizIndex: number;
-	qAudio: string;
-	qDurSec: number;
-	qFrames: number;
-	qAudioStart: number;
-	timerStart: number;
-	timerEnd: number;
-	ansAudio: string;
-	ansDurSec: number;
-	ansFrames: number;
-	ansAudioStart: number;
-	holdFrames: number;
+	qAudio?: string;
+	qDurSec?: number;
+	qFrames?: number;
+	qAudioStart?: number;
+	timerStart?: number;
+	timerEnd?: number;
+	ansAudio?: string;
+	ansDurSec?: number;
+	ansFrames?: number;
+	ansAudioStart?: number;
+	holdFrames?: number;
 	durationInFrames: number;
 }
-
-export const QUIZ_QUESTIONS: QuizQuestionItem[] = (
-	questionsData as unknown as QuizQuestionItem[]
-).slice(0, 20);
-
-export const QUIZ_TIMINGS: QuizTimingItem[] = quizTimingsData as QuizTimingItem[];
-
-export const TOTAL_QUIZ_FRAMES = QUIZ_TIMINGS.reduce(
-	(acc, t) => acc + t.durationInFrames,
-	0,
-);
-
-export const DEFAULT_TEMPLATE_ID = 'royal-blue';
-export const DEFAULT_BG_MUSIC = 'Youtube Free Musics/smooth_ambient_quiz_bgm.mp3';
-
-export const teluguQuizSchema = z.object({
-	quizIndex: z
-		.number()
-		.min(0)
-		.max(QUIZ_QUESTIONS.length - 1)
-		.default(0),
-	templateId: z.string().default(DEFAULT_TEMPLATE_ID),
-	bgMusic: z.string().default(DEFAULT_BG_MUSIC),
-});
 
 export interface QuizVideoBundle {
 	id: string;
@@ -90,13 +64,39 @@ export interface QuizVideoBundle {
 	questions: QuizQuestionItem[];
 }
 
-export const QUIZ_VIDEOS: QuizVideoBundle[] = quizVideosData as unknown as QuizVideoBundle[];
+export const QUIZ_QUESTIONS: QuizQuestionItem[] =
+	questionsData as unknown as QuizQuestionItem[];
+
+export const QUIZ_TIMINGS: QuizTimingItem[] =
+	quizTimingsData as unknown as QuizTimingItem[];
+
+export const TOTAL_QUIZ_FRAMES = QUIZ_TIMINGS && QUIZ_TIMINGS.length > 0
+	? QUIZ_TIMINGS.reduce((acc, t) => acc + (t.durationInFrames || 630), 0)
+	: QUIZ_QUESTIONS.length * 630;
+
+export const DEFAULT_TEMPLATE_ID = 'cricket-blue';
+export const DEFAULT_BG_MUSIC = 'Youtube Free Musics/smooth_ambient_quiz_bgm.mp3';
+
+export const QUIZ_VIDEOS: QuizVideoBundle[] =
+	quizVideosData as unknown as QuizVideoBundle[];
+
+export const teluguQuizSchema = z.object({
+	quizIndex: z
+		.number()
+		.min(0)
+		.max(QUIZ_QUESTIONS.length - 1)
+		.default(0),
+	templateId: z.string().default(DEFAULT_TEMPLATE_ID),
+	bgMusic: z.string().default(DEFAULT_BG_MUSIC),
+	showPhotos: z.boolean().default(false),
+});
 
 export type TeluguQuizProps = {
 	quizIndex?: number;
 	templateId?: string;
 	includeBgMusic?: boolean;
 	bgMusic?: string;
+	showPhotos?: boolean;
 	questions?: QuizQuestionItem[];
 	timings?: QuizTimingItem[];
 };
@@ -104,8 +104,9 @@ export type TeluguQuizProps = {
 export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 	quizIndex = 0,
 	templateId = DEFAULT_TEMPLATE_ID,
-	includeBgMusic = true,
+	includeBgMusic = false,
 	bgMusic = DEFAULT_BG_MUSIC,
+	showPhotos = false,
 	questions,
 	timings,
 }) => {
@@ -115,60 +116,43 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 	const questionsList = questions || QUIZ_QUESTIONS;
 	const timingsList = timings || QUIZ_TIMINGS;
 	const currentQuiz = questionsList[quizIndex] || questionsList[0];
-	const currentTiming = timingsList[quizIndex] || timingsList[0];
+	const currentTiming = timingsList && timingsList[quizIndex] ? timingsList[quizIndex] : null;
 
-	// ==================== SINGLE CONSISTENT TEMPLATE FOR ENTIRE VIDEO ====================
-	const currentTheme: QuizTheme = useMemo(() => {
-		const found = QUIZ_THEMES.find(
-			(t) => t.id === templateId || t.name.toLowerCase() === templateId.toLowerCase(),
-		);
-		return found || QUIZ_THEMES[0];
-	}, [templateId]);
+	// 20 Automatic Dynamic Themes (Rotates automatically across 20 distinct themes per question)
+	const themeIndex = quizIndex % QUIZ_THEMES.length;
+	const currentTheme = useMemo(() => {
+		if (currentQuiz.theme) {
+			const found = QUIZ_THEMES.find(
+				(t) =>
+					t.id === currentQuiz.theme ||
+					t.name.toLowerCase() === currentQuiz.theme?.toLowerCase(),
+			);
+			if (found) return found;
+		}
+		return QUIZ_THEMES[themeIndex] || QUIZ_THEMES[0];
+	}, [currentQuiz.theme, themeIndex]);
 
-	// ==================== DYNAMIC TIMINGS SYNCED WITH AUDIO ====================
-	const {
-		qAudio,
-		qAudioStart,
-		qFrames,
-		timerStart,
-		timerEnd,
-		ansAudio,
-		ansAudioStart,
-		ansFrames,
-		durationInFrames,
-	} = currentTiming;
+	// ==================== TIMELINE CONFIGURATION ====================
+	// If timing object is provided (e.g. from voiceover generation), use dynamic sync
+	// Otherwise use the standard 630 frames (Page 1 = 330 frames, Page 2 = 300 frames)
+	const page1End = currentTiming?.timerEnd ? currentTiming.timerEnd + 15 : 335;
+	const transitionStart = currentTiming?.timerEnd || 330;
+	const isPage2Active = frame >= transitionStart;
 
-	const isTimeUp = frame >= timerEnd;
-	const isTimerActive = frame >= timerStart && frame < timerEnd;
-
-	// Timer remaining seconds (5, 4, 3, 2, 1, 0)
-	const remainingSeconds = isTimeUp
-		? 0
-		: frame < timerStart
-			? 5
-			: Math.max(1, Math.ceil((timerEnd - frame) / 30));
-
-	const ringProgress = interpolate(frame, [timerStart, timerEnd], [1, 0], {
-		extrapolateLeft: 'clamp',
-		extrapolateRight: 'clamp',
-	});
-
-	// Dynamic tick pulse on each second
-	const tickPulse = isTimerActive
-		? 1 + Math.sin((((frame - timerStart) % 30) / 30) * Math.PI) * 0.18
-		: 1;
-
-	// Question Typewriter
+	// Question Typewriter calculation using Intl.Segmenter for proper Telugu graphemes
 	const graphemes = useMemo(() => {
 		if (typeof Intl !== 'undefined' && Intl.Segmenter) {
 			const segmenter = new Intl.Segmenter('te', {granularity: 'grapheme'});
-			return Array.from(segmenter.segment(currentQuiz.question), (s) => s.segment);
+			return Array.from(
+				segmenter.segment(currentQuiz.question),
+				(s) => s.segment,
+			);
 		}
 		return Array.from(currentQuiz.question);
 	}, [currentQuiz.question]);
 
-	const typeStart = 10;
-	const typeDuration = Math.min(qFrames, 70);
+	const typeStart = 20;
+	const typeDuration = 60; // 2 seconds to type full question
 	const typedProgress = interpolate(
 		frame,
 		[typeStart, typeStart + typeDuration],
@@ -179,546 +163,880 @@ export const TeluguQuiz: React.FC<TeluguQuizProps> = ({
 	const displayedQuestion = graphemes.slice(0, visibleCharCount).join('');
 	const isTyping = frame >= typeStart && frame < typeStart + typeDuration;
 
+	// Timer calculation on Page 1 (5 seconds countdown)
+	const timerStart = currentTiming?.timerStart || 170;
+	const timerEnd = currentTiming?.timerEnd || 320;
+	const isTimeUp = frame >= timerEnd;
 
-	// 4 Letter Badges with Distinct Colors
-	const optionLetterStyles = [
-		{
-			bg: 'linear-gradient(135deg, #0284c7 0%, #0369a1 100%)',
-			border: '#38bdf8',
-			glow: 'rgba(56, 189, 248, 0.5)',
-		},
-		{
-			bg: 'linear-gradient(135deg, #d97706 0%, #b45309 100%)',
-			border: '#fde047',
-			glow: 'rgba(250, 204, 21, 0.5)',
-		},
-		{
-			bg: 'linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%)',
-			border: '#c084fc',
-			glow: 'rgba(192, 132, 252, 0.5)',
-		},
-		{
-			bg: 'linear-gradient(135deg, #e11d48 0%, #be123c 100%)',
-			border: '#fb7185',
-			glow: 'rgba(251, 113, 133, 0.5)',
-		},
-	];
+	const remainingSeconds = isTimeUp
+		? 0
+		: Math.max(1, Math.ceil((timerEnd - frame) / 30));
 
-	// Timer theme color transitions
-	const timerAccentColor = isTimeUp
-		? '#10B981'
-		: remainingSeconds <= 2
-			? '#EF4444'
-			: remainingSeconds <= 3
-				? '#F59E0B'
-				: '#38BDF8';
+	const ringProgress = interpolate(frame, [timerStart, timerEnd], [1, 0], {
+		extrapolateLeft: 'clamp',
+		extrapolateRight: 'clamp',
+	});
 
-	const timerGlowColor = isTimeUp
-		? 'rgba(16, 185, 129, 0.65)'
-		: remainingSeconds <= 2
-			? 'rgba(239, 68, 68, 0.65)'
-			: remainingSeconds <= 3
-				? 'rgba(245, 158, 11, 0.55)'
-				: 'rgba(56, 189, 248, 0.5)';
+	const tickPulse =
+		frame >= timerStart && frame < timerEnd
+			? 1 + Math.sin((((frame - timerStart) % 30) / 30) * Math.PI) * 0.12
+			: 1;
+
+	// Page transitions
+	const page1Opacity = interpolate(
+		frame,
+		[transitionStart, transitionStart + 15],
+		[1, 0],
+		{extrapolateLeft: 'clamp', extrapolateRight: 'clamp'},
+	);
+	const page1Scale = interpolate(
+		frame,
+		[transitionStart, transitionStart + 15],
+		[1, 0.94],
+		{extrapolateLeft: 'clamp', extrapolateRight: 'clamp'},
+	);
+
+	const page2Spring = spring({
+		frame: frame - (transitionStart + 5),
+		fps,
+		config: {damping: 13, mass: 0.9},
+	});
+
+	// Option timings (One by one vertical entry)
+	const optionEntryFrames = [90, 110, 130, 150];
 
 	return (
 		<AbsoluteFill
 			style={{
-				backgroundColor: '#090D1A',
-				fontFamily: `${teluguFont}, 'Segoe UI', system-ui, sans-serif`,
-				color: '#FFFFFF',
+				backgroundColor: '#ffffff',
+				fontFamily: "'Anek Telugu', sans-serif",
+				color: '#0f172a',
 				overflow: 'hidden',
 			}}
 		>
-			{/* ================= AUDIO: SMOOTH AMBIENT BACKGROUND MUSIC ================= */}
-			{includeBgMusic && bgMusic && (
-				<Audio
-					src={staticFile(bgMusic)}
-					volume={(f) =>
-						interpolate(f, [0, 45], [0, 0.11], {
-							extrapolateLeft: 'clamp',
-							extrapolateRight: 'clamp',
-						})
-					}
-					loop
-				/>
-			)}
+			{/* Fonts */}
+			<style>{`
+				@font-face {
+					font-family: 'Anek Telugu';
+					src: url('${staticFile('Youtube Video/AnekTelugu-Bold.ttf')}') format('truetype');
+					font-weight: 700;
+					font-style: normal;
+				}
+				@font-face {
+					font-family: 'Mandali';
+					src: url('${staticFile('Youtube Video/Mandali.ttf')}') format('truetype');
+					font-weight: 700;
+					font-style: normal;
+				}
+			`}</style>
 
-			{/* ================= AUDIO: QUESTION VOICEOVER ================= */}
-			<Sequence from={qAudioStart} durationInFrames={qFrames}>
-				<Audio src={staticFile(qAudio)} volume={1} />
-			</Sequence>
-
-			{/* ================= AUDIO: 5-SECOND TIMER TICKS ================= */}
-			{[0, 30, 60, 90, 120].map((offset, i) => (
-				<Sequence
-					key={`tick-${i}`}
-					from={timerStart + offset}
-					durationInFrames={18}
-				>
-					<Audio src={staticFile('Quiz Video/timer_tick.wav')} volume={0.8} />
-				</Sequence>
-			))}
-
-			{/* ================= AUDIO: TIME-UP BUZZER CHIME ================= */}
-			<Sequence from={timerEnd} durationInFrames={45}>
-				<Audio src={staticFile('Quiz Video/time_up.wav')} volume={0.85} />
-			</Sequence>
-
-			{/* ================= AUDIO: CORRECT ANSWER VOICEOVER ================= */}
-			<Sequence from={ansAudioStart} durationInFrames={ansFrames}>
-				<Audio src={staticFile(ansAudio)} volume={1} />
-			</Sequence>
-
-			{/* ================= CINEMATIC BACKGROUND ================= */}
+			{/* ================= 16:9 ELEGANT WHITE STUDIO BROADCAST BACKGROUND ================= */}
 			<AbsoluteFill
 				style={{
-					background: currentTheme.bgGradient,
-				}}
-			/>
-
-			{/* Left Spotlight Beam */}
-			<div
-				style={{
-					position: 'absolute',
-					top: -180,
-					left: -140,
-					width: 900,
-					height: 900,
-					borderRadius: '50%',
-					background: currentTheme.beam1Color,
-					filter: 'blur(130px)',
-					opacity: 0.9,
-				}}
-			/>
-
-			{/* Right Spotlight Beam */}
-			<div
-				style={{
-					position: 'absolute',
-					bottom: -180,
-					right: -140,
-					width: 900,
-					height: 900,
-					borderRadius: '50%',
-					background: currentTheme.beam2Color,
-					filter: 'blur(130px)',
-					opacity: 0.85,
-				}}
-			/>
-
-			{/* Vignette */}
-			<div
-				style={{
-					position: 'absolute',
-					inset: 0,
 					background:
-						'radial-gradient(ellipse 90% 80% at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.65) 100%)',
+						'radial-gradient(ellipse 95% 75% at 50% 15%, #ffffff 0%, #f8fafc 50%, #e2e8f0 100%)',
+				}}
+			/>
+
+			{/* Soft Ambient Studio Beams */}
+			<div
+				style={{
+					position: 'absolute',
+					top: -100,
+					left: '10%',
+					width: 580,
+					height: 1250,
+					background:
+						'linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(255, 255, 255, 0) 70%)',
+					transform: 'rotate(-25deg)',
+					pointerEvents: 'none',
+				}}
+			/>
+			<div
+				style={{
+					position: 'absolute',
+					top: -100,
+					right: '10%',
+					width: 580,
+					height: 1250,
+					background:
+						'linear-gradient(-135deg, rgba(245, 158, 11, 0.08) 0%, rgba(255, 255, 255, 0) 70%)',
+					transform: 'rotate(25deg)',
 					pointerEvents: 'none',
 				}}
 			/>
 
-			{/* ================= TOP PERSISTENT BROADCAST HEADING BADGE ================= */}
+			{/* Subtle Micro Dots Texture */}
 			<div
 				style={{
 					position: 'absolute',
-					top: 18,
-					left: '50%',
-					transform: 'translateX(-50%)',
-					height: 64,
-					zIndex: 50,
-					display: 'inline-flex',
-					alignItems: 'center',
-					justifyContent: 'center',
-					gap: 16,
-					background:
-						'linear-gradient(135deg, rgba(15, 23, 42, 0.94) 0%, rgba(30, 41, 59, 0.96) 100%)',
-					backdropFilter: 'blur(20px)',
-					WebkitBackdropFilter: 'blur(20px)',
-					border: `2.5px solid ${currentTheme.accent}`,
-					borderRadius: 999,
-					padding: '0 42px',
-					boxShadow: `0 0 30px rgba(56, 189, 248, 0.4), 0 10px 25px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25)`,
+					inset: 0,
+					backgroundImage:
+						'radial-gradient(rgba(100, 116, 139, 0.18) 1.5px, transparent 1.5px)',
+					backgroundSize: '36px 36px',
+					opacity: 0.65,
 				}}
-			>
-				<span style={{fontSize: 30, filter: 'drop-shadow(0 0 8px rgba(255, 255, 255, 0.4))'}}>
-					🏏
-				</span>
-				<span
-					style={{
-						fontSize: 28,
-						fontWeight: 900,
-						color: '#FFFFFF',
-						letterSpacing: '0.04em',
-						textShadow:
-							'0 2px 12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.2)',
-						whiteSpace: 'nowrap',
-					}}
-				>
-					{currentQuiz.category}
-				</span>
-			</div>
+			/>
 
-			{/* ================= MAIN CONTENT CONTAINER (NO EMPTY MIDDLE SPACE) ================= */}
-			<div
-				style={{
-					position: 'absolute',
-					top: 98,
-					left: 56,
-					right: 56,
-					display: 'flex',
-					flexDirection: 'column',
-					gap: 26,
-					zIndex: 30,
-				}}
-			>
-				{/* 1. HERO QUESTION CARD (Enlarged Height, Elegant 2-Line Wrap, Sharp Typography) */}
-				<div
+			{/* ================= PAGE 1: QUESTION + 2x2 OPTIONS + BOTTOM TIMER ================= */}
+			{frame <= page1End + 15 && (
+				<AbsoluteFill
 					style={{
-						height: 320,
-						background:
-							'linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%)',
-						backdropFilter: 'blur(20px)',
-						WebkitBackdropFilter: 'blur(20px)',
-						borderRadius: 26,
-						border: '1.5px solid rgba(255, 255, 255, 0.15)',
-						borderTop: `5px solid ${currentTheme.accent}`,
-						boxShadow: `0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px ${currentTheme.badgeGlow}`,
-						padding: '28px 60px',
-						display: 'flex',
-						flexDirection: 'column',
-						justifyContent: 'center',
-						alignItems: 'center',
-						textAlign: 'center',
-						position: 'relative',
+						opacity: page1Opacity,
+						transform: `scale(${page1Scale})`,
+						pointerEvents: frame > page1End ? 'none' : 'auto',
 					}}
 				>
-					{/* Clean Number Badge: "1." instead of "ప్రశ్న 1" */}
+					{/* Top Header: Centered Category / Heading Ribbon */}
 					<div
 						style={{
 							position: 'absolute',
-							top: -18,
-							left: 44,
-							background: currentTheme.badgeBg,
-							border: `1.5px solid ${currentTheme.badgeBorder}`,
-							borderRadius: 14,
-							padding: '6px 22px',
-							fontSize: 24,
-							fontWeight: 900,
-							color: '#FFFFFF',
-							boxShadow: `0 8px 20px ${currentTheme.badgeGlow}`,
-							letterSpacing: '0.04em',
+							top: 18,
+							left: 40,
+							right: 40,
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+							zIndex: 10,
 						}}
 					>
-						{`${quizIndex + 1}.`}
+						<div
+							style={{
+								background: '#ffffff',
+								border: '2px solid #cbd5e1',
+								borderTop: '3px solid #2563eb',
+								padding: '8px 44px',
+								borderRadius: 30,
+								fontSize: 24,
+								fontWeight: 900,
+								color: '#0f172a',
+								letterSpacing: 1.5,
+								boxShadow: '0 6px 20px rgba(15, 23, 42, 0.08)',
+								display: 'flex',
+								alignItems: 'center',
+								gap: 12,
+							}}
+						>
+							<span style={{fontSize: 26}}>🏏</span>
+							<span>{currentQuiz.category}</span>
+						</div>
 					</div>
 
-					{/* Question Text: Graceful 2-Line Wrapping with Optimal Line Height */}
+					{/* ================= AUDIO: TIMER TICKS & TIME UP CHIME ================= */}
+					{[0, 30, 60, 90, 120].map((offset, i) => (
+						<Sequence
+							key={`tick-${i}`}
+							from={timerStart + offset}
+							durationInFrames={15}
+						>
+							<Audio src={staticFile('Youtube Video/timer_tick.wav')} volume={0.8} />
+						</Sequence>
+					))}
+					<Sequence from={timerEnd} durationInFrames={45}>
+						<Audio src={staticFile('Youtube Video/time_up.wav')} volume={0.9} />
+					</Sequence>
+
+					{/* 16:9 Question Banner: Pristine White Floating Card (EXPANDED HEIGHT) */}
 					<div
 						style={{
-							fontFamily: teluguFont,
-							fontSize:
-								currentQuiz.question.length > 50
-									? 58
-									: currentQuiz.question.length > 32
-										? 64
-										: 70,
-							fontWeight: 800,
-							color: '#FFFFFF',
-							lineHeight: 1.45,
-							maxWidth: 1600,
-							width: '100%',
-							textAlign: 'center',
-							wordBreak: 'break-word',
-							whiteSpace: 'normal',
-							textShadow:
-								'0 2px 14px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 255, 255, 0.1)',
+							position: 'absolute',
+							top: 72,
+							left: 40,
+							right: 40,
+							zIndex: 10,
 						}}
 					>
-						{displayedQuestion}
-						{isTyping && (
-							<span
+						<div
+							style={{
+								background: '#ffffff',
+								borderRadius: 24,
+								padding: '28px 50px',
+								border: '2px solid #cbd5e1',
+								borderTop: '5px solid #2563eb',
+								boxShadow:
+									'0 12px 35px rgba(15, 23, 42, 0.08), 0 3px 8px rgba(15, 23, 42, 0.04)',
+								textAlign: 'center',
+								position: 'relative',
+								height: 250,
+								display: 'flex',
+								flexDirection: 'column',
+								justifyContent: 'center',
+							}}
+						>
+							{/* Question Box Content: Dedicated Starting Q.NO Badge + Text */}
+							<div
 								style={{
-									color: currentTheme.accent,
-									fontWeight: 900,
-									marginLeft: 4,
-									opacity: frame % 10 < 5 ? 1 : 0,
-									textShadow: `0 0 10px ${currentTheme.accent}`,
+									display: 'flex',
+									alignItems: 'center',
+									justifyContent: 'center',
+									gap: 28,
+									width: '100%',
 								}}
 							>
-								|
-							</span>
-						)}
+								{/* Dedicated Q.NO Starting Badge Box */}
+								<div
+									style={{
+										background: 'linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%)',
+										color: '#ffffff',
+										borderRadius: 18,
+										border: '3px solid #93c5fd',
+										padding: '12px 28px',
+										fontSize: 48,
+										fontWeight: 900,
+										boxShadow: '0 6px 16px rgba(37, 99, 235, 0.35)',
+										display: 'flex',
+										alignItems: 'center',
+										justifyContent: 'center',
+										flexShrink: 0,
+										letterSpacing: 1,
+									}}
+								>
+									Q.{quizIndex + 1}
+								</div>
+
+								{/* Question Text */}
+								<div
+									style={{
+										fontSize:
+											currentQuiz.question.length > 65
+												? 56
+												: currentQuiz.question.length > 45
+													? 64
+													: 72,
+										fontWeight: 900,
+										color: '#0f172a',
+										lineHeight: 1.34,
+										letterSpacing: 0.3,
+										textAlign: 'left',
+									}}
+								>
+									{displayedQuestion}
+									{/* Blinking Typewriter Cursor */}
+									{isTyping && (
+										<span
+											style={{
+												color: '#2563eb',
+												fontWeight: 900,
+												marginLeft: 4,
+												opacity: frame % 10 < 5 ? 1 : 0,
+											}}
+										>
+											|
+										</span>
+									)}
+								</div>
+							</div>
+						</div>
 					</div>
-				</div>
 
-				{/* 2. LOWER SECTION: 4 OPTIONS (ALL 4 IDENTICALLY ALIGNED IN SYMMETRICAL 2x2 GRID) */}
-				<div
-					style={{
-						display: 'flex',
-						flexDirection: 'column',
-						gap: 26,
-					}}
-				>
-					{/* ROW 1: OPTION A (LEFT) & OPTION B (RIGHT) - EXACT SAME WIDTH */}
-					<div
-						style={{
-							display: 'flex',
-							gap: 40,
-							height: 272,
-						}}
-					>
-						{renderOptionBox(0, 'A', currentQuiz.options[0], optionLetterStyles[0])}
-						{renderOptionBox(1, 'B', currentQuiz.options[1], optionLetterStyles[1])}
-					</div>
-
-					{/* ROW 2: OPTION C (LEFT) & OPTION D (RIGHT) - EXACT SAME WIDTH WITH COMPACT ROUND TIMER */}
-					<div
-						style={{
-							display: 'flex',
-							gap: 40,
-							height: 272,
-						}}
-					>
-						{renderOptionBox(2, 'C', currentQuiz.options[2], optionLetterStyles[2])}
-						{renderOptionBox(3, 'D', currentQuiz.options[3], optionLetterStyles[3], true)}
-					</div>
-				</div>
-			</div>
-
-		</AbsoluteFill>
-	);
-
-	// Helper function to render each balanced option card
-	function renderOptionBox(
-		index: number,
-		letter: string,
-		text: string,
-		letterStyle: {bg: string; border: string; glow: string},
-		hasTimer: boolean = false,
-	) {
-		const isCorrect = currentQuiz.correctIndex === index;
-		const showCorrectHighlight = isTimeUp && isCorrect;
-		const showDim = isTimeUp && !isCorrect;
-
-		// Staggered entry animation
-		const entryFrame = 25 + index * 10;
-		const optSpring = spring({
-			frame: frame - entryFrame,
-			fps,
-			config: {damping: 16, stiffness: 130},
-		});
-
-		return (
-			<div
-				key={index}
-				style={{
-					flex: 1,
-					opacity: showDim ? 0.35 : optSpring,
-					transform: `scale(${interpolate(optSpring, [0, 1], [0.94, 1])}) translateY(${interpolate(
-						optSpring,
-						[0, 1],
-						[20, 0],
-					)}px)`,
-					background: showCorrectHighlight
-						? 'linear-gradient(135deg, rgba(6, 78, 59, 0.95) 0%, rgba(6, 95, 70, 0.98) 100%)'
-						: 'linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.94) 100%)',
-					backdropFilter: 'blur(16px)',
-					WebkitBackdropFilter: 'blur(16px)',
-					borderRadius: 24,
-					border: showCorrectHighlight
-						? '3px solid #10B981'
-						: '1.5px solid rgba(255, 255, 255, 0.14)',
-					boxShadow: showCorrectHighlight
-						? '0 16px 45px rgba(0, 0, 0, 0.6), 0 0 35px rgba(16, 185, 129, 0.65)'
-						: '0 12px 30px rgba(0, 0, 0, 0.4)',
-					padding: '0 36px',
-					display: 'flex',
-					alignItems: 'center',
-					gap: 24,
-					position: 'relative',
-					overflow: 'hidden',
-				}}
-			>
-				{/* Top-Right Glow Accent for Winning Answer */}
-				{showCorrectHighlight && (
+					{/* ================= 2x2 KBC-STYLE OPTIONS GRID ================= */}
 					<div
 						style={{
 							position: 'absolute',
-							top: -50,
-							right: -50,
-							width: 140,
-							height: 140,
-							borderRadius: '50%',
-							background: 'rgba(16, 185, 129, 0.5)',
-							filter: 'blur(40px)',
+							top: 325,
+							left: 40,
+							right: 40,
+							display: 'grid',
+							gridTemplateColumns: '1fr 1fr',
+							gridTemplateRows: '220px 220px',
+							rowGap: 24,
+							columnGap: 40,
+							zIndex: 10,
 						}}
-					/>
-				)}
+					>
+						{currentQuiz.options.map((option, idx) => {
+							const entryFrame = optionEntryFrames[idx] || 90;
+							const optionSpring = spring({
+								frame: frame - entryFrame,
+								fps,
+								config: {damping: 12, mass: 0.8},
+							});
 
-				{/* Letter Badge Coin */}
-				<div
+							const letters = ['A', 'B', 'C', 'D'];
+							const isCorrect = idx === currentQuiz.correctIndex;
+
+							// Elegant White Card Styling
+							let buttonBg = '#ffffff';
+							let borderColor = '#e2e8f0';
+							let borderTop = '2px solid #ffffff';
+							let bottomBevel = '#cbd5e1';
+							let opacity = 1;
+							let scale = 1;
+							let letterBg =
+								'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)';
+							let letterBorder = '#93c5fd';
+							let textColor = '#0f172a';
+							let glow = '0 6px 20px rgba(15, 23, 42, 0.06)';
+
+							if (isTimeUp) {
+								if (isCorrect) {
+									buttonBg =
+										'linear-gradient(135deg, #15803d 0%, #166534 100%)';
+									borderColor = '#4ade80';
+									borderTop = '3px solid #86efac';
+									bottomBevel = '#052e16';
+									letterBg =
+										'linear-gradient(180deg, #22c55e 0%, #15803d 100%)';
+									letterBorder = '#86efac';
+									textColor = '#ffffff';
+									scale = 1.02;
+									glow = '0 6px 0 #052e16, 0 0 35px rgba(34, 197, 94, 0.5)';
+								} else {
+									opacity = 0.32;
+									buttonBg = '#f8fafc';
+									borderColor = '#e2e8f0';
+									bottomBevel = '#f1f5f9';
+									borderTop = 'none';
+									textColor = '#64748b';
+								}
+							}
+
+							return (
+								<div
+									key={idx}
+									style={{
+										transform: `translateY(${interpolate(
+											optionSpring,
+											[0, 1],
+											[40, 0],
+										)}px) scale(${interpolate(optionSpring, [0, 1], [0.94, 1]) * scale})`,
+										opacity: interpolate(optionSpring, [0, 1], [0, opacity]),
+										background: buttonBg,
+										border: `2px solid ${borderColor}`,
+										borderTop,
+										borderBottom: `6px solid ${bottomBevel}`,
+										borderRadius: 24,
+										padding: '0 40px',
+										display: 'flex',
+										alignItems: 'center',
+										justifyContent: 'space-between',
+										boxShadow: glow,
+									}}
+								>
+									<div style={{display: 'flex', alignItems: 'center', gap: 28}}>
+										{/* Metallic Blue / Green Coin */}
+										<div
+											style={{
+												width: 82,
+												height: 82,
+												borderRadius: 24,
+												background: letterBg,
+												border: `2px solid ${letterBorder}`,
+												display: 'flex',
+												justifyContent: 'center',
+												alignItems: 'center',
+												fontSize: 44,
+												fontWeight: 900,
+												color: '#ffffff',
+												boxShadow:
+													'0 6px 14px rgba(0,0,0,0.18), inset 0 2px 0 rgba(255,255,255,0.4)',
+												flexShrink: 0,
+											}}
+										>
+											{letters[idx]}
+										</div>
+
+										{/* Option Text */}
+										<div
+											style={{
+												fontSize: option.length > 25 ? 44 : 50,
+												fontWeight: 900,
+												color: textColor,
+												letterSpacing: 0.3,
+												lineHeight: 1.25,
+											}}
+										>
+											{option}
+										</div>
+									</div>
+
+									{isTimeUp && isCorrect && (
+										<div
+											style={{
+												fontSize: 54,
+												filter:
+													'drop-shadow(0 0 12px rgba(74, 222, 128, 0.95))',
+											}}
+										>
+											✅
+										</div>
+									)}
+								</div>
+							);
+						})}
+					</div>
+
+					{/* ================= BOTTOM COUNTDOWN TIMER (SITS ABOVE GREEN TICKER) ================= */}
+					<div
+						style={{
+							position: 'absolute',
+							bottom: 84,
+							left: '50%',
+							transform: `translateX(-50%) scale(${tickPulse})`,
+							zIndex: 20,
+							display: 'flex',
+							alignItems: 'center',
+							gap: 20,
+							background: '#ffffff',
+							border: '2px solid #cbd5e1',
+							borderTop: isTimeUp
+								? '4px solid #16a34a'
+								: remainingSeconds <= 2
+									? '4px solid #ef4444'
+									: '4px solid #2563eb',
+							borderRadius: 50,
+							padding: '8px 36px',
+							boxShadow: isTimeUp
+								? '0 8px 30px rgba(22, 163, 74, 0.25)'
+								: '0 8px 30px rgba(15, 23, 42, 0.12)',
+							opacity: interpolate(
+								frame,
+								[timerStart - 15, timerStart],
+								[0, 1],
+								{extrapolateLeft: 'clamp', extrapolateRight: 'clamp'},
+							),
+						}}
+					>
+						<span
+							style={{
+								fontSize: 24,
+								fontWeight: 900,
+								color: '#1e40af',
+								letterSpacing: 1.5,
+							}}
+						>
+							⏳ COUNTDOWN
+						</span>
+
+						{/* Circular Timer Ring */}
+						<div
+							style={{
+								width: 64,
+								height: 64,
+								position: 'relative',
+								display: 'flex',
+								justifyContent: 'center',
+								alignItems: 'center',
+							}}
+						>
+							<svg
+								width="64"
+								height="64"
+								style={{transform: 'rotate(-90deg)'}}
+							>
+								<circle
+									cx="32"
+									cy="32"
+									r="26"
+									stroke="#e2e8f0"
+									strokeWidth="6"
+									fill="none"
+								/>
+								<circle
+									cx="32"
+									cy="32"
+									r="26"
+									stroke={
+										isTimeUp
+											? '#16a34a'
+											: remainingSeconds <= 2
+												? '#ef4444'
+												: '#2563eb'
+									}
+									strokeWidth="6"
+									fill="none"
+									strokeDasharray={2 * Math.PI * 26}
+									strokeDashoffset={2 * Math.PI * 26 * (1 - ringProgress)}
+									strokeLinecap="round"
+									style={{
+										filter: isTimeUp
+											? 'drop-shadow(0 0 8px rgba(34, 197, 94, 0.7))'
+											: remainingSeconds <= 2
+												? 'drop-shadow(0 0 8px rgba(239, 68, 68, 0.7))'
+												: 'drop-shadow(0 0 8px rgba(37, 99, 235, 0.5))',
+									}}
+								/>
+							</svg>
+							<span
+								style={{
+									position: 'absolute',
+									fontSize: isTimeUp ? 15 : 28,
+									fontWeight: 900,
+									color: isTimeUp
+										? '#16a34a'
+										: remainingSeconds <= 2
+											? '#ef4444'
+											: '#0f172a',
+									lineHeight: 1,
+								}}
+							>
+								{isTimeUp ? '0' : remainingSeconds}
+							</span>
+						</div>
+
+						<span
+							style={{
+								fontSize: 22,
+								fontWeight: 900,
+								color: isTimeUp
+									? '#16a34a'
+									: remainingSeconds <= 2
+										? '#ef4444'
+										: '#d97706',
+								letterSpacing: 1.5,
+							}}
+						>
+							{isTimeUp ? 'TIME UP! 🔔' : `${remainingSeconds} SECONDS`}
+						</span>
+					</div>
+				</AbsoluteFill>
+			)}
+
+			{/* ================= PAGE 2: ANSWER & IN-DEPTH EXPLANATION PAGE ================= */}
+			{isPage2Active && (
+				<AbsoluteFill
 					style={{
-						width: 82,
-						height: 82,
-						minWidth: 82,
-						borderRadius: 22,
-						background: showCorrectHighlight
-							? 'linear-gradient(135deg, #10B981 0%, #059669 100%)'
-							: letterStyle.bg,
-						border: `2.5px solid ${
-							showCorrectHighlight ? '#A7F3D0' : letterStyle.border
-						}`,
-						boxShadow: `0 0 25px ${
-							showCorrectHighlight ? 'rgba(16, 185, 129, 0.8)' : letterStyle.glow
-						}`,
+						opacity: page2Spring,
+						transform: `translateY(${interpolate(
+							page2Spring,
+							[0, 1],
+							[50, 0],
+						)}px) scale(${interpolate(page2Spring, [0, 1], [0.96, 1])})`,
+						zIndex: 30,
+						padding: '20px 40px 86px 40px',
 						display: 'flex',
-						justifyContent: 'center',
-						alignItems: 'center',
-						fontSize: 42,
-						fontWeight: 900,
-						color: '#FFFFFF',
+						flexDirection: 'column',
+						gap: 16,
 					}}
 				>
-					{letter}
+					{/* Winner Answer Big Card (STARTS RIGHT FROM TOP, EXPANDED TO EDGES!) */}
+					<div
+						style={{
+							background:
+								'linear-gradient(135deg, #15803d 0%, #166534 60%, #14532d 100%)',
+							borderRadius: 24,
+							border: '3px solid #4ade80',
+							borderTop: '4px solid #86efac',
+							borderBottom: '8px solid #052e16',
+							padding: '20px 44px',
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'space-between',
+							boxShadow:
+								'0 12px 0 #052e16, 0 0 45px rgba(34, 197, 94, 0.5), 0 20px 40px rgba(0,0,0,0.8)',
+							transform: `scale(${1 + Math.sin(frame / 6) * 0.01})`,
+						}}
+					>
+						<div style={{display: 'flex', alignItems: 'center', gap: 32}}>
+							{/* Large Glowing Coin */}
+							<div
+								style={{
+									width: 92,
+									height: 92,
+									borderRadius: 26,
+									background:
+										'linear-gradient(180deg, #22c55e 0%, #15803d 100%)',
+									border: '3px solid #86efac',
+									display: 'flex',
+									justifyContent: 'center',
+									alignItems: 'center',
+									fontSize: 52,
+									fontWeight: 900,
+									color: '#ffffff',
+									boxShadow:
+										'0 6px 14px rgba(0,0,0,0.5), inset 0 2px 0 rgba(255,255,255,0.4)',
+								}}
+							>
+								{currentQuiz.correctLetter}
+							</div>
+
+							<div>
+								<div
+									style={{
+										fontSize: 20,
+										fontWeight: 900,
+										color: '#86efac',
+										letterSpacing: 2,
+										textTransform: 'uppercase',
+									}}
+								>
+									CORRECT ANSWER
+								</div>
+								{/* Winner Answer Text */}
+								<div
+									style={{
+										fontSize: 76,
+										fontWeight: 900,
+										color: '#ffffff',
+										textShadow: '0 3px 14px rgba(0,0,0,0.9)',
+										letterSpacing: 0.5,
+									}}
+								>
+									{currentQuiz.options[currentQuiz.correctIndex]}
+								</div>
+							</div>
+						</div>
+
+						<div
+							style={{
+								fontSize: 70,
+								filter: 'drop-shadow(0 0 16px rgba(134, 239, 172, 1))',
+							}}
+						>
+							✅
+						</div>
+					</div>
+
+					{/* Question Recap Strip */}
+					<div
+						style={{
+							background: '#eff6ff',
+							border: '2px solid #bfdbfe',
+							borderLeft: '8px solid #2563eb',
+							borderRadius: 20,
+							padding: '16px 36px',
+							display: 'flex',
+							alignItems: 'center',
+							gap: 16,
+							boxShadow: '0 4px 14px rgba(15, 23, 42, 0.04)',
+						}}
+					>
+						<span style={{fontSize: 32}}>❓</span>
+						<span
+							style={{
+								fontSize: 38,
+								fontWeight: 900,
+								color: '#1e3a8a',
+								lineHeight: 1.3,
+							}}
+						>
+							<span style={{color: '#2563eb', marginRight: 10}}>
+								ప్రశ్న {quizIndex + 1}:
+							</span>
+							{currentQuiz.question}
+						</span>
+					</div>
+
+					{/* Explanation Area: Full-Width Pristine White Card */}
+					<div
+						style={{
+							background: '#ffffff',
+							borderRadius: 24,
+							border: '2px solid #cbd5e1',
+							borderTop: '6px solid #16a34a',
+							padding: '36px 48px',
+							boxShadow: '0 12px 35px rgba(15, 23, 42, 0.08)',
+							display: 'flex',
+							flexDirection: 'column',
+							justifyContent: 'space-between',
+							flex: 1,
+						}}
+					>
+						<div>
+							{/* Section Header */}
+							<div
+								style={{
+									display: 'flex',
+									alignItems: 'center',
+									gap: 16,
+									marginBottom: 24,
+								}}
+							>
+								<span style={{fontSize: 42}}>📖</span>
+								<h2
+									style={{
+										margin: 0,
+										fontSize: 40,
+										fontWeight: 900,
+										color: '#15803d',
+										letterSpacing: 0.5,
+									}}
+								>
+									{currentQuiz.explanation?.title || 'సరైన సమాధానం వివరణ'}
+								</h2>
+							</div>
+
+							{/* Main Detailed Explanation */}
+							<div
+								style={{
+									background: '#f0fdf4',
+									border: '2px solid #bbf7d0',
+									borderLeft: '10px solid #16a34a',
+									borderRadius: 18,
+									padding: '28px 36px',
+									marginBottom: 24,
+								}}
+							>
+								<p
+									style={{
+										fontSize: 50,
+										fontWeight: 900,
+										color: '#0f172a',
+										lineHeight: 1.55,
+										margin: 0,
+									}}
+								>
+									{currentQuiz.explanation?.description || `${currentQuiz.options[currentQuiz.correctIndex]} సరైన సమాధానం.`}
+								</p>
+							</div>
+
+							{/* In-depth Context & Highlights Box */}
+							<div
+								style={{
+									background: '#f8fafc',
+									border: '2px solid #e2e8f0',
+									borderLeft: '10px solid #2563eb',
+									borderRadius: 18,
+									padding: '24px 36px',
+									display: 'flex',
+									flexDirection: 'column',
+									gap: 10,
+								}}
+							>
+								<div
+									style={{
+										display: 'flex',
+										alignItems: 'center',
+										gap: 12,
+									}}
+								>
+									<span style={{fontSize: 28}}>⚡</span>
+									<span
+										style={{
+											fontSize: 24,
+											fontWeight: 900,
+											color: '#1e40af',
+											letterSpacing: 1.5,
+											textTransform: 'uppercase',
+										}}
+									>
+										విశేషాలు & ప్రాముఖ్యత (KEY INSIGHT)
+									</span>
+								</div>
+								<p
+									style={{
+										fontSize: 38,
+										fontWeight: 800,
+										color: '#334155',
+										lineHeight: 1.5,
+										margin: 0,
+									}}
+								>
+									ఈ ప్రశ్నకు సరైన సమాధానం{' '}
+									<span style={{color: '#16a34a', fontWeight: 900}}>
+										"{currentQuiz.options[currentQuiz.correctIndex]}"
+									</span>
+									. ఈ అంశం పోటీ పరీక్షలు మరియు జనరల్ నాలెడ్జ్ పరంగా ఎంతో ముఖ్యమైనది.
+								</p>
+							</div>
+						</div>
+
+						{/* Footer Tag */}
+						<div
+							style={{
+								display: 'flex',
+								justifyContent: 'space-between',
+								alignItems: 'center',
+								borderTop: '2px solid #f1f5f9',
+								paddingTop: 16,
+							}}
+						>
+							<span
+								style={{
+									fontSize: 20,
+									fontWeight: 900,
+									color: '#64748b',
+									letterSpacing: 1.5,
+								}}
+							>
+								🏏 TELUGU QUIZ • QUESTION #{quizIndex + 1}
+							</span>
+							<span
+								style={{
+									fontSize: 20,
+									fontWeight: 900,
+									color: '#15803d',
+								}}
+							>
+								100% VERIFIED ANSWER ✅
+							</span>
+						</div>
+					</div>
+				</AbsoluteFill>
+			)}
+
+			{/* ================= PERSISTENT BOTTOM GREEN TICKER: SUBSCRIBE MARQUEE (TELUGU) ================= */}
+			<div
+				style={{
+					position: 'absolute',
+					bottom: 16,
+					left: 40,
+					right: 40,
+					height: 56,
+					background:
+						'linear-gradient(135deg, #15803d 0%, #16a34a 50%, #15803d 100%)',
+					border: '2px solid #86efac',
+					borderRadius: 18,
+					boxShadow: '0 6px 20px rgba(22, 163, 74, 0.35)',
+					display: 'flex',
+					alignItems: 'center',
+					overflow: 'hidden',
+					zIndex: 50,
+					padding: '0 12px',
+				}}
+			>
+				{/* Fixed Subscribe Badge */}
+				<div
+					style={{
+						background: '#dc2626',
+						color: '#ffffff',
+						borderRadius: 12,
+						padding: '6px 18px',
+						fontSize: 18,
+						fontWeight: 900,
+						display: 'flex',
+						alignItems: 'center',
+						gap: 8,
+						flexShrink: 0,
+						boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+						zIndex: 2,
+						letterSpacing: 1,
+					}}
+				>
+					<span>🔔</span>
+					<span>SUBSCRIBE</span>
 				</div>
 
-				{/* Option Text */}
+				{/* Smooth Scrolling Marquee (Right to Left in Telugu) */}
 				<div
 					style={{
 						flex: 1,
-						fontFamily: teluguFont,
-						fontSize: text.length > 25 ? 42 : text.length > 15 ? 48 : 54,
-						fontWeight: 800,
-						color: showCorrectHighlight ? '#A7F3D0' : '#FFFFFF',
-						lineHeight: 1.25,
-						letterSpacing: '0.01em',
-						textShadow: showCorrectHighlight
-							? '0 0 20px rgba(16, 185, 129, 0.5)'
-							: '0 2px 10px rgba(0, 0, 0, 0.7)',
+						overflow: 'hidden',
+						whiteSpace: 'nowrap',
+						position: 'relative',
+						height: '100%',
+						display: 'flex',
+						alignItems: 'center',
 					}}
 				>
-					{text}
-				</div>
-
-				{/* Compact Round Circular Timer at the right end of Option D */}
-				{hasTimer && !showCorrectHighlight && (
 					<div
 						style={{
-							width: 76,
-							height: 76,
-							minWidth: 76,
-							borderRadius: '50%',
-							background: 'rgba(15, 23, 42, 0.92)',
-							border: `2.5px solid ${timerAccentColor}`,
-							boxShadow: `0 0 18px ${timerGlowColor}`,
-							display: 'flex',
-							justifyContent: 'center',
-							alignItems: 'center',
-							position: 'relative',
-							transform: `scale(${tickPulse})`,
-							transition: 'all 0.15s ease-out',
-						}}
-					>
-						{/* Outer Rotating Dotted Orbit Ring */}
-						<svg
-							width="76"
-							height="76"
-							style={{
-								position: 'absolute',
-								top: 0,
-								left: 0,
-								transform: `rotate(${frame * 3}deg)`,
-							}}
-						>
-							<circle
-								cx="38"
-								cy="38"
-								r="34"
-								stroke="rgba(255, 255, 255, 0.15)"
-								strokeWidth="1.5"
-								strokeDasharray="3 6"
-								fill="none"
-							/>
-						</svg>
-
-						{/* SVG Countdown Depleting Arc */}
-						<svg
-							width="76"
-							height="76"
-							style={{
-								position: 'absolute',
-								top: 0,
-								left: 0,
-								transform: 'rotate(-90deg)',
-							}}
-						>
-							<circle
-								cx="38"
-								cy="38"
-								r="28"
-								stroke="rgba(255, 255, 255, 0.1)"
-								strokeWidth="5"
-								fill="none"
-							/>
-							<circle
-								cx="38"
-								cy="38"
-								r="28"
-								stroke={timerAccentColor}
-								strokeWidth="5"
-								fill="none"
-								strokeLinecap="round"
-								strokeDasharray={2 * Math.PI * 28}
-								strokeDashoffset={2 * Math.PI * 28 * (1 - ringProgress)}
-								style={{
-									filter: `drop-shadow(0 0 6px ${timerAccentColor})`,
-								}}
-							/>
-						</svg>
-
-						{/* Center Countdown Second Digits */}
-						<span
-							style={{
-								fontSize: 30,
-								fontWeight: 900,
-								color: '#FFFFFF',
-								lineHeight: 1,
-								textShadow: `0 0 12px ${timerAccentColor}`,
-								zIndex: 5,
-								fontVariantNumeric: 'tabular-nums',
-							}}
-						>
-							{isTimeUp ? '0' : remainingSeconds}
-						</span>
-					</div>
-				)}
-
-				{/* Winning Answer Checkmark Badge */}
-				{showCorrectHighlight && (
-					<div
-						style={{
-							width: 62,
-							height: 62,
-							minWidth: 62,
-							borderRadius: '50%',
-							background: '#10B981',
-							border: '2px solid #A7F3D0',
-							display: 'flex',
-							justifyContent: 'center',
-							alignItems: 'center',
-							color: '#FFFFFF',
-							fontSize: 36,
+							display: 'inline-block',
+							whiteSpace: 'nowrap',
+							fontSize: 26,
 							fontWeight: 900,
-							boxShadow: '0 0 25px rgba(16, 185, 129, 0.85)',
+							color: '#ffffff',
+							letterSpacing: 1,
+							textShadow: '0 2px 4px rgba(0,0,0,0.4)',
+							transform: `translateX(${1800 - ((frame * 4.5) % 3600)}px)`,
 						}}
 					>
-						✓
+						🏏 ఇలాంటి మరిన్ని క్విజ్ సంబంధించిన వీడియోల కోసం మన ఛానెల్‌ని ఇప్పుడే సబ్‌స్క్రైబ్ చేసుకోండి! 👍 లైక్ చేయండి & మీ మిత్రులతో షేర్ చేయండి! 🔔 Please Subscribe & Support! 🌟
 					</div>
-				)}
+				</div>
 			</div>
-		);
-	}
+		</AbsoluteFill>
+	);
 };
 
 export const TeluguQuizSeries: React.FC<{
@@ -752,9 +1070,10 @@ export const TeluguQuizSeries: React.FC<{
 			)}
 			<Series>
 				{questionsList.map((_, i) => {
-					const timing = timingsList[i] || timingsList[0];
+					const timing = timingsList && timingsList[i] ? timingsList[i] : null;
+					const dur = timing?.durationInFrames || 630;
 					return (
-						<Series.Sequence key={i} durationInFrames={timing.durationInFrames}>
+						<Series.Sequence key={i} durationInFrames={dur}>
 							<TeluguQuiz
 								quizIndex={i}
 								templateId={templateId}
