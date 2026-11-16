@@ -13,6 +13,7 @@ on:
         default: 'ViratVsSmith-SingleScene'
         options:
           - 'ViratVsSmith-SingleScene'
+          - 'ViratVsSmith-CyberDark'
           - 'ViratVsSmith-ModernGreats'
           - 'KohliVsSmith-Scene1-Intro'
           - 'KohliVsSmith-Scene2-Stats'
