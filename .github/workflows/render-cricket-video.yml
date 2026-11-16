@@ -1,6 +1,9 @@
 name: Render Cricket Explainer Video (Cloud)
 
 on:
+  push:
+    tags:
+      - 'render-*'
   workflow_dispatch:
     inputs:
       target:
@@ -19,7 +22,7 @@ on:
 
 jobs:
   render:
-    name: 🎬 Render ${{ github.event.inputs.target }}
+    name: 🎬 Render Cricket Video
     runs-on: ubuntu-latest
     timeout-minutes: 120
 
@@ -43,14 +46,14 @@ jobs:
       - name: 🎥 Render Video
         run: |
           mkdir -p out
-          TARGET="${{ github.event.inputs.target }}"
+          TARGET="${{ github.event.inputs.target || 'ViratVsSmith-SingleScene' }}"
           echo "🚀 Rendering $TARGET on Cloud..."
           bunx remotion render "$TARGET" "out/${TARGET}.mp4" --concurrency=2
 
       - name: 📤 Upload Rendered Video
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ github.event.inputs.target }}
-          path: out/${{ github.event.inputs.target }}.mp4
+          name: virat-vs-smith-rendered-video
+          path: out/*.mp4
           retention-days: 14
 
