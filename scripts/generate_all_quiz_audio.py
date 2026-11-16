@@ -294,15 +294,24 @@ def main():
             force = True
             
     batch_meta = []
-    
+    if os.path.exists("src/TeluguQuiz/batch_meta.json"):
+        try:
+            with open("src/TeluguQuiz/batch_meta.json", "r", encoding="utf-8") as f:
+                batch_meta = json.load(f)
+        except Exception:
+            batch_meta = []
+            
+    existing_meta_map = {m["id"]: m for m in batch_meta}
+
     for v in videos:
         if target_video and v.get("id") != target_video:
             continue
         meta = process_video(v, force=force)
-        batch_meta.append(meta)
+        existing_meta_map[meta["id"]] = meta
         
+    final_meta = list(existing_meta_map.values())
     with open("src/TeluguQuiz/batch_meta.json", "w", encoding="utf-8") as f:
-        json.dump(batch_meta, f, indent=2, ensure_ascii=False)
+        json.dump(final_meta, f, indent=2, ensure_ascii=False)
         
     with open(VIDEOS_FILE, "w", encoding="utf-8") as f:
         json.dump(videos, f, indent=2, ensure_ascii=False)

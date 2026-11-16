@@ -5,8 +5,8 @@
     "themeId": "midnight-cyan",
     "bgMusic": "Youtube Free Musics/smooth_ambient_quiz_bgm.mp3",
     "questionCount": 25,
-    "totalFrames": 19899,
-    "durationSec": 663.3,
+    "totalFrames": 19485,
+    "durationSec": 649.5,
     "timingsFile": "timings_topic1-first-train.json"
   },
   {
@@ -48,5 +48,55 @@
     "totalFrames": 22114,
     "durationSec": 737.13,
     "timingsFile": "timings_topic5-nationalisation.json"
+  },
+  {
+    "id": "topic6-railway-board",
+    "title": "Railway Board చరిత్ర (History of Railway Board)",
+    "themeId": "midnight-cyan",
+    "bgMusic": "Youtube Free Musics/smooth_ambient_quiz_bgm.mp3",
+    "questionCount": 25,
+    "totalFrames": 20065,
+    "durationSec": 668.83,
+    "timingsFile": "timings_topic6-railway-board.json"
+  },
+  {
+    "id": "topic7-first-electric-train",
+    "title": "భారతదేశంలో మొదటి ఎలక్ట్రిక్ రైలు (First Electric Train)",
+    "themeId": "golden-amber",
+    "bgMusic": "Youtube Free Musics/gentle_acoustic_flow.mp3",
+    "questionCount": 25,
+    "totalFrames": 21138,
+    "durationSec": 704.6,
+    "timingsFile": "timings_topic7-first-electric-train.json"
+  },
+  {
+    "id": "topic8-first-metro-rail",
+    "title": "భారతదేశంలో మొదటి మెట్రో రైలు (First Metro Rail)",
+    "themeId": "imperial-purple",
+    "bgMusic": "Youtube Free Musics/smooth_ambient_quiz_bgm.mp3",
+    "questionCount": 25,
+    "totalFrames": 21143,
+    "durationSec": 704.77,
+    "timingsFile": "timings_topic8-first-metro-rail.json"
+  },
+  {
+    "id": "topic9-first-railway-station",
+    "title": "భారతదేశంలో మొదటి రైల్వే స్టేషన్ (First Railway Station)",
+    "themeId": "stadium-emerald",
+    "bgMusic": "Youtube Free Musics/smooth_ambient_quiz_bgm.mp3",
+    "questionCount": 25,
+    "totalFrames": 21160,
+    "durationSec": 705.33,
+    "timingsFile": "timings_topic9-first-railway-station.json"
+  },
+  {
+    "id": "topic10-important-milestones",
+    "title": "భారతీయ రైల్వేలో ముఖ్యమైన మైలురాళ్లు (Key Milestones)",
+    "themeId": "crimson-ruby",
+    "bgMusic": "Youtube Free Musics/gentle_acoustic_flow.mp3",
+    "questionCount": 25,
+    "totalFrames": 23346,
+    "durationSec": 778.2,
+    "timingsFile": "timings_topic10-important-milestones.json"
   }
 ]
