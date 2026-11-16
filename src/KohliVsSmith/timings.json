@@ -1,0 +1,27 @@
+{
+  "scene1_intro": {
+    "file": "audio/kohli_vs_smith/scene1_intro.wav",
+    "durationSec": 45.99,
+    "durationFrames": 1380
+  },
+  "scene2_overall_stats": {
+    "file": "audio/kohli_vs_smith/scene2_overall_stats.wav",
+    "durationSec": 56.21,
+    "durationFrames": 1686
+  },
+  "scene3_sena_records": {
+    "file": "audio/kohli_vs_smith/scene3_sena_records.wav",
+    "durationSec": 100.44,
+    "durationFrames": 3013
+  },
+  "scene4_playing_style": {
+    "file": "audio/kohli_vs_smith/scene4_playing_style.wav",
+    "durationSec": 36.17,
+    "durationFrames": 1085
+  },
+  "scene5_verdict_outro": {
+    "file": "audio/kohli_vs_smith/scene5_verdict_outro.wav",
+    "durationSec": 42.78,
+    "durationFrames": 1283
+  }
+}

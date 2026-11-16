@@ -1,0 +1,56 @@
+name: Render Cricket Explainer Video (Cloud)
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'వీడియో సెలెక్ట్ చేయండి (Target to Render)'
+        required: true
+        type: choice
+        default: 'ViratVsSmith-SingleScene'
+        options:
+          - 'ViratVsSmith-SingleScene'
+          - 'ViratVsSmith-ModernGreats'
+          - 'KohliVsSmith-Scene1-Intro'
+          - 'KohliVsSmith-Scene2-Stats'
+          - 'KohliVsSmith-Scene3-SENA'
+          - 'KohliVsSmith-Scene4-Style'
+          - 'KohliVsSmith-Scene5-Verdict'
+
+jobs:
+  render:
+    name: 🎬 Render ${{ github.event.inputs.target }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🔤 Install Fonts for Telugu & Audio Tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-indic fonts-noto-core ffmpeg
+
+      - name: ⚡ Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: 📦 Install Dependencies
+        run: bun install
+
+      - name: 🎥 Render Video
+        run: |
+          mkdir -p out
+          TARGET="${{ github.event.inputs.target }}"
+          echo "🚀 Rendering $TARGET on Cloud..."
+          bunx remotion render "$TARGET" "out/${TARGET}.mp4" --concurrency=2
+
+      - name: 📤 Upload Rendered Video
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ github.event.inputs.target }}
+          path: out/${{ github.event.inputs.target }}.mp4
+          retention-days: 14
+

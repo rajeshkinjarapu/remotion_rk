@@ -10,6 +10,7 @@ smallest_accounts.json
 
 # Video and rendered media outputs
 *.mp4
+!public/cricket/videos/*.mp4
 *.avi
 *.mov
 *.mkv
