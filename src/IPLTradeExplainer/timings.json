@@ -1,0 +1,55 @@
+{
+  "scene1": {
+    "title": "Scene 1: Hook & Breaking News",
+    "audio_file": "audio/ipl_trade/scene1.wav",
+    "duration_sec": 36.84,
+    "frames": 1135,
+    "start_frame": 0,
+    "end_frame": 1135
+  },
+  "scene2": {
+    "title": "Scene 2: Trade Mechanics & Purse Calculation",
+    "audio_file": "audio/ipl_trade/scene2.wav",
+    "duration_sec": 37.55,
+    "frames": 1156,
+    "start_frame": 1135,
+    "end_frame": 2291
+  },
+  "scene3": {
+    "title": "Scene 3: Head-to-Head Stats Comparison",
+    "audio_file": "audio/ipl_trade/scene3.wav",
+    "duration_sec": 60.96,
+    "frames": 1859,
+    "start_frame": 2291,
+    "end_frame": 4150
+  },
+  "scene4": {
+    "title": "Scene 4: Mumbai Indians (MI) Analysis",
+    "audio_file": "audio/ipl_trade/scene4.wav",
+    "duration_sec": 46.48,
+    "frames": 1424,
+    "start_frame": 4150,
+    "end_frame": 5574
+  },
+  "scene5": {
+    "title": "Scene 5: Punjab Kings (PBKS) Analysis",
+    "audio_file": "audio/ipl_trade/scene5.wav",
+    "duration_sec": 36.98,
+    "frames": 1140,
+    "start_frame": 5574,
+    "end_frame": 6714
+  },
+  "scene6": {
+    "title": "Scene 6: Final Verdict & Outro",
+    "audio_file": "audio/ipl_trade/scene6.wav",
+    "duration_sec": 32.33,
+    "frames": 1000,
+    "start_frame": 6714,
+    "end_frame": 7714
+  },
+  "total": {
+    "total_duration_sec": 257.13,
+    "total_frames": 7714,
+    "fps": 30
+  }
+}

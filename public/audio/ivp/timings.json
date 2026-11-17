@@ -1,0 +1,29 @@
+{
+  "scene1": {
+    "duration": 7.12,
+    "frames": 238,
+    "title": "Scene 1: Hook"
+  },
+  "scene2": {
+    "duration": 15.45,
+    "frames": 488,
+    "title": "Scene 2: India Trophies"
+  },
+  "scene3": {
+    "duration": 15.26,
+    "frames": 482,
+    "title": "Scene 3: Pakistan Trophies"
+  },
+  "scene4": {
+    "duration": 11.64,
+    "frames": 373,
+    "title": "Scene 4: Head to Head"
+  },
+  "scene5": {
+    "duration": 8.22,
+    "frames": 271,
+    "title": "Scene 5: Verdict"
+  },
+  "totalFrames": 1852,
+  "totalDuration": 61.73
+}
