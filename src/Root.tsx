@@ -90,11 +90,11 @@ export const Root: React.FC = () => {
 			<Composition
 				id="Narasannapeta"
 				component={NarasannapetaVideo}
-				durationInFrames={15725}
+				durationInFrames={18503}
 				fps={30}
 				width={1920}
 				height={1080}
-				defaultProps={{ timeScale: 524.18 / 578 }}
+				defaultProps={{ timeScale: 616.77 / 578 }}
 			/>
 
 			{/* Act-by-Act Quick Previews */}
@@ -102,7 +102,7 @@ export const Root: React.FC = () => {
 				{ACTS.map((act, idx) => {
 					const actNum = idx + 1;
 					// Accurate synced frame counts matching the Telugu audio per Act
-					const actSyncedFrames = [2925, 1968, 4119, 2537, 1883, 2175];
+					const actSyncedFrames = [3505, 2267, 4854, 3043, 2180, 2587];
 					return (
 						<Composition
 							key={act.key}
