@@ -2,6 +2,18 @@ import {NewComposition} from './NewComposition';
 import React from 'react';
 import {Composition, Folder} from 'remotion';
 import {
+	KohliVsBabarVideo,
+	KOHLI_BABAR_FPS,
+	KOHLI_BABAR_TOTAL_FRAMES,
+} from './KohliVsBabar';
+import {
+	NarasannapetaVideo,
+	ActPreview,
+	NARASANNAPETA_TOTAL_FRAMES,
+	CHAPTERS,
+	ACTS,
+} from './Narasannapeta';
+import {
 	TeluguQuiz,
 	TeluguQuizSeries,
 	teluguQuizSchema,
@@ -156,10 +168,63 @@ export const Root: React.FC = () => {
 					);
 				})}
 			</Folder>
+			{/* ================= NARASANNAPETA POLITICAL MATRIX (45 CHAPTERS · 6 ACTS) ================= */}
+			<Composition
+				id="Narasannapeta"
+				component={NarasannapetaVideo}
+				durationInFrames={16150}
+				fps={30}
+				width={1920}
+				height={1080}
+				defaultProps={{ timeScale: 537.26 / 578 }}
+			/>
+
+			{/* Act-by-Act Quick Previews */}
+			<Folder name="Narasannapeta-Acts">
+				{ACTS.map((act, idx) => {
+					const actNum = idx + 1;
+					// Accurate synced frame counts matching the Telugu audio per Act
+					const actSyncedFrames = [3040, 2185, 3715, 2625, 2095, 2345];
+					return (
+						<Composition
+							key={act.key}
+							id={`Narasannapeta-Act${actNum}-${act.key}`}
+							component={ActPreview}
+							durationInFrames={actSyncedFrames[idx]}
+							fps={30}
+							width={1920}
+							height={1080}
+							defaultProps={{ actNumber: actNum }}
+						/>
+					);
+				})}
+			</Folder>
+
+			{/* ================= VIRAT KOHLI VS BABAR AZAM (36 CHAPTERS · 6 ACTS) ================= */}
+			<Composition
+				id="KohliVsBabar"
+				component={KohliVsBabarVideo}
+				durationInFrames={KOHLI_BABAR_TOTAL_FRAMES}
+				fps={30}
+				width={1920}
+				height={1080}
+				defaultProps={{ timeScale: 1 }}
+			/>
+
+			<Composition
+				id="KohliVsBabar-15Min"
+				component={KohliVsBabarVideo}
+				durationInFrames={KOHLI_BABAR_TOTAL_FRAMES}
+				fps={30}
+				width={1920}
+				height={1080}
+				defaultProps={{ timeScale: 1 }}
+			/>
+
 			<Composition
 				id="NewComposition"
 				component={NewComposition}
-				durationInFrames={8447}
+				durationInFrames={16150}
 				fps={30}
 				width={1920}
 				height={1080}

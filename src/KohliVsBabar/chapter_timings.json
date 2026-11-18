@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1,
+    "file": "audio/kohli_vs_babar/chapters/ch_01.mp3",
+    "dur_sec": 17.06,
+    "frames": 524
+  },
+  {
+    "id": 2,
+    "file": "audio/kohli_vs_babar/chapters/ch_02.mp3",
+    "dur_sec": 8.06,
+    "frames": 254
+  },
+  {
+    "id": 3,
+    "file": "audio/kohli_vs_babar/chapters/ch_03.mp3",
+    "dur_sec": 7.87,
+    "frames": 248
+  },
+  {
+    "id": 4,
+    "file": "audio/kohli_vs_babar/chapters/ch_04.mp3",
+    "dur_sec": 13.8,
+    "frames": 426
+  },
+  {
+    "id": 5,
+    "file": "audio/kohli_vs_babar/chapters/ch_05.mp3",
+    "dur_sec": 15.6,
+    "frames": 480
+  },
+  {
+    "id": 6,
+    "file": "audio/kohli_vs_babar/chapters/ch_06.mp3",
+    "dur_sec": 7.99,
+    "frames": 252
+  },
+  {
+    "id": 7,
+    "file": "audio/kohli_vs_babar/chapters/ch_07.mp3",
+    "dur_sec": 13.25,
+    "frames": 409
+  },
+  {
+    "id": 8,
+    "file": "audio/kohli_vs_babar/chapters/ch_08.mp3",
+    "dur_sec": 24.46,
+    "frames": 746
+  },
+  {
+    "id": 9,
+    "file": "audio/kohli_vs_babar/chapters/ch_09.mp3",
+    "dur_sec": 19.78,
+    "frames": 605
+  },
+  {
+    "id": 10,
+    "file": "audio/kohli_vs_babar/chapters/ch_10.mp3",
+    "dur_sec": 11.71,
+    "frames": 363
+  },
+  {
+    "id": 11,
+    "file": "audio/kohli_vs_babar/chapters/ch_11.mp3",
+    "dur_sec": 24.19,
+    "frames": 738
+  },
+  {
+    "id": 12,
+    "file": "audio/kohli_vs_babar/chapters/ch_12.mp3",
+    "dur_sec": 8.18,
+    "frames": 258
+  },
+  {
+    "id": 13,
+    "file": "audio/kohli_vs_babar/chapters/ch_13.mp3",
+    "dur_sec": 8.78,
+    "frames": 276
+  },
+  {
+    "id": 14,
+    "file": "audio/kohli_vs_babar/chapters/ch_14.mp3",
+    "dur_sec": 37.01,
+    "frames": 1122
+  },
+  {
+    "id": 15,
+    "file": "audio/kohli_vs_babar/chapters/ch_15.mp3",
+    "dur_sec": 7.22,
+    "frames": 229
+  },
+  {
+    "id": 16,
+    "file": "audio/kohli_vs_babar/chapters/ch_16.mp3",
+    "dur_sec": 32.33,
+    "frames": 982
+  },
+  {
+    "id": 17,
+    "file": "audio/kohli_vs_babar/chapters/ch_17.mp3",
+    "dur_sec": 10.22,
+    "frames": 319
+  },
+  {
+    "id": 18,
+    "file": "audio/kohli_vs_babar/chapters/ch_18.mp3",
+    "dur_sec": 19.44,
+    "frames": 595
+  },
+  {
+    "id": 19,
+    "file": "audio/kohli_vs_babar/chapters/ch_19.mp3",
+    "dur_sec": 10.82,
+    "frames": 337
+  },
+  {
+    "id": 20,
+    "file": "audio/kohli_vs_babar/chapters/ch_20.mp3",
+    "dur_sec": 9.26,
+    "frames": 290
+  },
+  {
+    "id": 21,
+    "file": "audio/kohli_vs_babar/chapters/ch_21.mp3",
+    "dur_sec": 9.82,
+    "frames": 306
+  },
+  {
+    "id": 22,
+    "file": "audio/kohli_vs_babar/chapters/ch_22.mp3",
+    "dur_sec": 24.67,
+    "frames": 752
+  },
+  {
+    "id": 23,
+    "file": "audio/kohli_vs_babar/chapters/ch_23.mp3",
+    "dur_sec": 21.0,
+    "frames": 642
+  },
+  {
+    "id": 24,
+    "file": "audio/kohli_vs_babar/chapters/ch_24.mp3",
+    "dur_sec": 22.85,
+    "frames": 697
+  },
+  {
+    "id": 25,
+    "file": "audio/kohli_vs_babar/chapters/ch_25.mp3",
+    "dur_sec": 14.11,
+    "frames": 435
+  },
+  {
+    "id": 26,
+    "file": "audio/kohli_vs_babar/chapters/ch_26.mp3",
+    "dur_sec": 6.53,
+    "frames": 208
+  },
+  {
+    "id": 27,
+    "file": "audio/kohli_vs_babar/chapters/ch_27.mp3",
+    "dur_sec": 29.62,
+    "frames": 900
+  },
+  {
+    "id": 28,
+    "file": "audio/kohli_vs_babar/chapters/ch_28.mp3",
+    "dur_sec": 32.66,
+    "frames": 992
+  },
+  {
+    "id": 29,
+    "file": "audio/kohli_vs_babar/chapters/ch_29.mp3",
+    "dur_sec": 17.78,
+    "frames": 546
+  },
+  {
+    "id": 30,
+    "file": "audio/kohli_vs_babar/chapters/ch_30.mp3",
+    "dur_sec": 20.02,
+    "frames": 612
+  },
+  {
+    "id": 31,
+    "file": "audio/kohli_vs_babar/chapters/ch_31.mp3",
+    "dur_sec": 24.5,
+    "frames": 747
+  },
+  {
+    "id": 32,
+    "file": "audio/kohli_vs_babar/chapters/ch_32.mp3",
+    "dur_sec": 6.46,
+    "frames": 206
+  },
+  {
+    "id": 33,
+    "file": "audio/kohli_vs_babar/chapters/ch_33.mp3",
+    "dur_sec": 13.18,
+    "frames": 407
+  },
+  {
+    "id": 34,
+    "file": "audio/kohli_vs_babar/chapters/ch_34.mp3",
+    "dur_sec": 19.63,
+    "frames": 601
+  },
+  {
+    "id": 35,
+    "file": "audio/kohli_vs_babar/chapters/ch_35.mp3",
+    "dur_sec": 42.98,
+    "frames": 1302
+  },
+  {
+    "id": 36,
+    "file": "audio/kohli_vs_babar/chapters/ch_36.mp3",
+    "dur_sec": 29.5,
+    "frames": 897
+  }
+]
