@@ -61,61 +61,8 @@ export const Root: React.FC = () => {
 			/>
 
 			{/* Full Video Master Series */}
-			<Composition
-				id="ViratVsSmith-ModernGreats"
-				component={ViratVsSmithVideo}
-				durationInFrames={TOTAL_KOHLI_VS_SMITH_FRAMES}
-				fps={30}
-				width={1920}
-				height={1080}
-			/>
 
 			{/* Individual Scene Previews for Quick Review */}
-			<Composition
-				id="KohliVsSmith-Scene1-Intro"
-				component={Scene1Intro}
-				durationInFrames={1380}
-				fps={30}
-				width={1920}
-				height={1080}
-				defaultProps={{ hasAudio: true }}
-			/>
-			<Composition
-				id="KohliVsSmith-Scene2-Stats"
-				component={Scene2OverallStats}
-				durationInFrames={1686}
-				fps={30}
-				width={1920}
-				height={1080}
-				defaultProps={{ hasAudio: true }}
-			/>
-			<Composition
-				id="KohliVsSmith-Scene3-SENA"
-				component={Scene3SenaMap}
-				durationInFrames={3013}
-				fps={30}
-				width={1920}
-				height={1080}
-				defaultProps={{ hasAudio: true }}
-			/>
-			<Composition
-				id="KohliVsSmith-Scene4-Style"
-				component={Scene4ImpactStyle}
-				durationInFrames={1085}
-				fps={30}
-				width={1920}
-				height={1080}
-				defaultProps={{ hasAudio: true }}
-			/>
-			<Composition
-				id="KohliVsSmith-Scene5-Verdict"
-				component={Scene5VerdictOutro}
-				durationInFrames={1283}
-				fps={30}
-				width={1920}
-				height={1080}
-				defaultProps={{ hasAudio: true }}
-			/>
 
 			{/* ================= TELUGU QUIZ (ALL 20 MCQs IN ONE FULL VIDEO) ================= */}
 			{/* Master 20-MCQ Full Video (All 20 MCQs continuous YouTube Video) */}

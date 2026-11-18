@@ -163,7 +163,7 @@ export const CHAPTERS: Ch[] = [
     items: ['వంశధార తీరం · పచ్చని పొలాలు', 'ఎప్పుడూ నిప్పులు కక్కే రాజకీయం', 'ఒకటి ధర్మాన, రెండోది బగ్గు'] },
   { id: 3, act: 1, sec: 10, title: 'ధర్మాన కృష్ణదాస్ – సీనియర్ మోస్ట్ లీడర్', type: 'leader', who: 'dk',
     eyebrow: 'ఒకవైపు…', heroTitle: 'ధర్మాన కృష్ణదాస్',
-    items: [{ t: 'నాలుగుసార్లు ఎమ్మెల్యే' }, { t: 'ఆంధ్రప్రదేశ్ ఉప ముఖ్యమంత్రి' }, { t: 'సీనియర్ మోస్ట్ లీడర్' }] },
+    items: [{ t: 'నాలుగుసార్లు ఎమ్మెల్యే' }, { t: 'ఆంధ్రప్రదేశ్ ఉపముఖ్యమంత్రి' }, { t: 'సీనియర్ మోస్ట్ లీడర్' }] },
   { id: 4, act: 1, sec: 14, title: 'బగ్గు రమణమూర్తి – జెయింట్ కిల్లర్', type: 'leader', who: 'baggu',
     eyebrow: 'మరోవైపు…', heroTitle: 'బగ్గు రమణమూర్తి',
     items: [{ t: 'తండ్రి బగ్గు లక్ష్మణరావు రాజకీయ వారసత్వం' }, { t: '2014లో జెయింట్ కిల్లర్' }, { t: '2024లో చారిత్రాత్మక మెజారిటీతో విక్టరీ' }] },
@@ -196,7 +196,7 @@ export const CHAPTERS: Ch[] = [
   { id: 12, act: 2, sec: 10, title: '2004 – కృష్ణదాస్‌కు బాధ్యతలు', type: 'era', focus: [4],
     cap: 'ప్రసాదరావు శ్రీకాకుళం వెళ్లడంతో సోదరుడికి నరసన్నపేట బాధ్యతలు' },
   { id: 13, act: 2, sec: 12, title: '2004–2012 – కృష్ణదాస్ హ్యాట్రిక్', type: 'era', focus: [4, 5, 6],
-    cap: 'కాంగ్రెస్ (2004, 2009) · వైఎస్సార్ కాంగ్రెస్ ఉప ఎన్నిక (2012)' },
+    cap: 'కాంగ్రెస్ (2004, 2009) · వైఎస్సార్ కాంగ్రెస్ ఉపఎన్నిక (2012)' },
   { id: 14, act: 2, sec: 13, title: 'కంచుకోట బద్దలు కొట్టడం అసాధ్యమా?', type: 'era', focus: [4, 5], crack: true,
     cap: '2004, 2009లో బగ్గు లక్ష్మణరావుపై వరుస విజయాలు — అసాధ్యమని అంతా భావించారు' },
   { id: 15, act: 2, sec: 10, title: '2014 – బగ్గు రమణమూర్తి ఎంట్రీ', type: 'era', focus: [7],
@@ -219,7 +219,7 @@ export const CHAPTERS: Ch[] = [
     eyebrow: '2019 వైఎస్సార్సీపీ ప్రభంజనం', heroTitle: 'డిప్యూటీ సీఎం & రెవెన్యూ మంత్రి',
     items: [] },
   { id: 22, act: 3, sec: 20, title: '2024 – హిస్టారిక్ షిఫ్ట్', type: 'faceoff',
-    leftNote: 'ఐదేళ్లు ప్రజల మధ్యే', rightNote: 'మాజీ ఉప ముఖ్యమంత్రి', centerTitle: '2024 – మూడో యుద్ధం',
+    leftNote: 'ఐదేళ్లు ప్రజల మధ్యే', rightNote: 'మాజీ ఉపముఖ్యమంత్రి', centerTitle: '2024 – మూడో యుద్ధం',
     items: ['2019 ఓటమి తర్వాత నియోజకవర్గాన్ని వీడని బగ్గు'],
     stat: { value: 81.7, decimals: 1, suffix: '%', label: 'రికార్డు స్థాయి పోలింగ్' } },
   { id: 23, act: 3, sec: 18, title: '2024 ఫలితం – 99,951 ఓట్లు', type: 'bars', year: '2024',
@@ -254,7 +254,7 @@ export const CHAPTERS: Ch[] = [
     items: [{ t: 'అత్యంత అనుభవజ్ఞుడైన రాజకీయ వేత్త', ok: true }, { t: 'నవరత్నాలు ఇంటింటికీ చేర్చడంలో కీలక పాత్ర', ok: true }] },
   { id: 34, act: 5, sec: 11, title: 'క్యాడర్‌కు దూరమయ్యారనే విమర్శ', type: 'leader', who: 'dk',
     eyebrow: 'బలహీనతలు', heroTitle: 'ధర్మాన కృష్ణదాస్',
-    items: [{ t: 'ఉప ముఖ్యమంత్రిగా రాష్ట్ర స్థాయి బాధ్యతలు', ok: false }, { t: 'క్యాడర్‌కు అందుబాటులో లేరనే విమర్శ (సొంత పార్టీ నుంచే)', ok: false }] },
+    items: [{ t: 'ఉపముఖ్యమంత్రిగా రాష్ట్ర స్థాయి బాధ్యతలు', ok: false }, { t: 'క్యాడర్‌కు అందుబాటులో లేరనే విమర్శ (సొంత పార్టీ నుంచే)', ok: false }] },
   { id: 35, act: 5, sec: 10, title: 'ఓట్ షేర్ పతనం', type: 'bigstat', who: 'dk',
     label: 'ధర్మాన కృష్ణదాస్ ఓట్ షేర్ (2019 → 2024)', from: 52.9, fromDecimals: 1, value: 39.79, decimals: 2, suffix: '%',
     chips: ['స్థానిక నాయకుల మధ్య సమన్వయ లోపం'] },
@@ -399,21 +399,44 @@ const Pill: React.FC<{ children: React.ReactNode; color?: string }> = ({ childre
   </div>
 );
 
-const Row: React.FC<{ t: string; ok?: boolean; delay: number; size?: number; color: string }> = ({ t, ok, delay, size = 60, color }) => (
-  <Reveal delay={delay} from="right" style={{ display: 'flex', alignItems: 'center', gap: 30, width: '100%' }}>
-    <div style={{
-      width: Math.round(size * 1.25), height: Math.round(size * 1.25), borderRadius: '50%', flex: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center',
-      fontWeight: 900, fontSize: Math.round(size * 0.72),
-      background: ok === false ? '#FEE2E2' : ok === true ? '#DCFCE7' : `${color}22`,
-      color: ok === false ? C.red : ok === true ? C.green : color,
-      border: `3px solid ${ok === false ? C.red : ok === true ? C.green : color}55`,
-      boxShadow: '0 6px 18px rgba(15,23,42,0.08)',
-    }}>
-      {ok === false ? '✕' : ok === true ? '✓' : '●'}
-    </div>
-    <div style={{ fontSize: size, fontWeight: 800, color: C.ink, lineHeight: 1.35, flex: 1 }}>{t}</div>
-  </Reveal>
-);
+const Row: React.FC<{ t: string; ok?: boolean; delay: number; size?: number; color: string }> = ({ t, ok, delay, size = 56, color }) => {
+  const len = t.length;
+  const responsiveSize = len > 42 ? Math.min(size, 44) : len > 26 ? Math.min(size, 52) : size;
+  return (
+    <Reveal delay={delay} from="right" style={{ display: 'flex', alignItems: 'center', gap: 24, width: '100%', minWidth: 0 }}>
+      <div style={{
+        width: Math.round(responsiveSize * 1.2),
+        height: Math.round(responsiveSize * 1.2),
+        borderRadius: '50%',
+        flex: 'none',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontWeight: 900,
+        fontSize: Math.round(responsiveSize * 0.7),
+        background: ok === false ? '#FEE2E2' : ok === true ? '#DCFCE7' : `${color}22`,
+        color: ok === false ? C.red : ok === true ? C.green : color,
+        border: `3px solid ${ok === false ? C.red : ok === true ? C.green : color}55`,
+        boxShadow: '0 6px 18px rgba(15,23,42,0.08)',
+      }}>
+        {ok === false ? '✕' : ok === true ? '✓' : '●'}
+      </div>
+      <div style={{
+        fontSize: responsiveSize,
+        fontWeight: 800,
+        color: C.ink,
+        lineHeight: 1.2,
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        flex: 1,
+        minWidth: 0,
+      }}>
+        {t}
+      </div>
+    </Reveal>
+  );
+};
 
 // ============================================================================
 // 2. IMAGE COMPONENTS — LEADER CARD, ROUND PHOTO, PARTY SYMBOL (all with fallback)
@@ -650,13 +673,28 @@ const Hero: React.FC<{ c: Ch }> = ({ c }) => (
 );
 
 const FaceOff: React.FC<{ c: Ch }> = ({ c }) => (
-  <div style={{ display: 'grid', gridTemplateColumns: '580px 1fr 580px', gap: 28, height: '100%' }}>
-    <LeaderCard who="baggu" w={580} h={940} delay={4} sub={c.leftNote} />
-    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 26, textAlign: 'center' }}>
-      <SplitText text={c.centerTitle} size={60} delay={8} center />
+  <div style={{ display: 'grid', gridTemplateColumns: '560px 1fr 560px', gap: 24, height: '100%' }}>
+    <LeaderCard who="baggu" w={560} h={940} delay={4} sub={c.leftNote} />
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 24, textAlign: 'center' }}>
+      <SplitText text={c.centerTitle} size={56} delay={8} center />
       <VsBadge delay={36} />
       {c.items.map((t: string, i: number) => (
-        <Reveal key={i} delay={46 + i * 14} style={{ ...card, padding: '22px 34px', fontSize: 38, fontWeight: 700, width: '100%' }}>{t}</Reveal>
+        <Reveal
+          key={i}
+          delay={46 + i * 14}
+          style={{
+            ...card,
+            padding: '20px 28px',
+            fontSize: t.length > 28 ? 32 : 36,
+            fontWeight: 700,
+            width: '100%',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+          }}
+        >
+          {t}
+        </Reveal>
       ))}
       {c.stat && (
         <Reveal delay={90}>
@@ -667,7 +705,7 @@ const FaceOff: React.FC<{ c: Ch }> = ({ c }) => (
         </Reveal>
       )}
     </div>
-    <LeaderCard who="dk" w={580} h={940} delay={14} sub={c.rightNote} />
+    <LeaderCard who="dk" w={560} h={940} delay={14} sub={c.rightNote} />
   </div>
 );
 
@@ -675,21 +713,24 @@ const LeaderSlide: React.FC<{ c: Ch }> = ({ c }) => {
   const t = P[c.who as Who];
   const items = c.items || [];
   const n = items.length;
-  const size = n <= 2 ? 78 : n === 3 ? 72 : 58;
   const left = c.who === 'baggu';
-  const cardEl = <LeaderCard who={c.who} w={720} h={940} delay={2} />;
+  const cardEl = <LeaderCard who={c.who} w={580} h={940} delay={2} />;
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: left ? '720px 1fr' : '1fr 720px', gap: 36, height: '100%' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: left ? '580px 1fr' : '1fr 580px', gap: 36, height: '100%' }}>
       {left && cardEl}
       <div style={{ ...card, padding: 0, overflow: 'hidden', display: 'flex', flexDirection: 'column' }}>
-        <div style={{ background: `linear-gradient(90deg, ${t.main}, ${t.sub})`, padding: '38px 52px' }}>
-          <div style={{ fontSize: 34, fontWeight: 800, color: t.on, opacity: 0.9, letterSpacing: 2 }}>{c.eyebrow}</div>
-          <SplitText text={c.heroTitle} size={76} color={t.on} delay={6} />
+        <div style={{ background: `linear-gradient(90deg, ${t.main}, ${t.sub})`, padding: '34px 48px' }}>
+          <div style={{ fontSize: 32, fontWeight: 800, color: t.on, opacity: 0.9, letterSpacing: 2, whiteSpace: 'nowrap' }}>{c.eyebrow}</div>
+          <SplitText text={c.heroTitle} size={72} color={t.on} delay={6} />
         </div>
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', padding: '44px 56px' }}>
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-evenly', padding: '36px 44px' }}>
           {n > 0 ? (
-            items.map((it: any, i: number) => <Row key={i} t={it.t} ok={it.ok} delay={26 + i * 16} size={size} color={t.text} />)
+            items.map((it: any, i: number) => {
+              const itemLen = it.t.length;
+              const itemSize = itemLen > 38 ? 46 : itemLen > 24 ? 54 : 60;
+              return <Row key={i} t={it.t} ok={it.ok} delay={26 + i * 16} size={itemSize} color={t.text} />;
+            })
           ) : (
             /* Grand Party & Ministerial Presentation Showcase (No green bullet lines!) */
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 32, textAlign: 'center', height: '100%' }}>
@@ -723,7 +764,7 @@ const LeaderSlide: React.FC<{ c: Ch }> = ({ c }) => {
                     fontWeight: 900,
                     boxShadow: '0 12px 28px rgba(0,71,171,0.35)',
                   }}>
-                    ఉప ముఖ్యమంత్రి
+                    ఉపముఖ్యమంత్రి
                   </div>
                   <div style={{
                     padding: '16px 40px',
