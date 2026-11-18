@@ -358,10 +358,10 @@ const Row: React.FC<{ t: string; ok?: boolean; delay: number; size?: number; col
         fontSize: responsiveSize,
         fontWeight: 800,
         color: C.ink,
-        lineHeight: 1.25,
+        lineHeight: 1.55,
+        padding: '14px 8px',
         whiteSpace: 'nowrap',
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
+        overflow: 'visible',
         flex: 1,
         minWidth: 0,
       }}>
@@ -389,6 +389,41 @@ const Photo: React.FC<{ src: string; ini: string; color: string; size: number }>
   return (
     <div style={{ width: size, height: size, borderRadius: '50%', border: '7px solid #fff', boxShadow: `0 16px 40px ${color}55, 0 0 0 4px ${color}`, background: `${color}22`, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 'none' }}>
       {err ? <span style={{ fontSize: size * 0.5, fontWeight: 900, color }}>{ini}</span> : <img src={src} onError={() => setErr(true)} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%' }} />}
+    </div>
+  );
+};
+
+const SquarePhoto: React.FC<{ src: string; ini: string; color: string; size?: number }> = ({ src, ini, color, size = 320 }) => {
+  const [err, setErr] = useState(false);
+  return (
+    <div style={{
+      width: size,
+      height: size,
+      borderRadius: 26,
+      border: '4px solid #FFFFFF',
+      boxShadow: `0 18px 40px rgba(15,23,42,0.12), 0 0 0 2.5px ${color}`,
+      background: `linear-gradient(180deg, #FFFFFF 0%, ${color}22 100%)`,
+      overflow: 'hidden',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flex: 'none',
+      position: 'relative',
+    }}>
+      {err ? (
+        <span style={{ fontSize: size * 0.45, fontWeight: 900, color }}>{ini}</span>
+      ) : (
+        <img
+          src={src}
+          onError={() => setErr(true)}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center 12%',
+          }}
+        />
+      )}
     </div>
   );
 };
@@ -820,29 +855,78 @@ const Chips: React.FC<{ c: Ch }> = ({ c }) => {
 const Swing: React.FC<{ c: Ch }> = ({ c }) => {
   const frame = useCurrentFrame();
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 28, height: '100%' }}>
-      <SplitText text={c.heroTitle} size={76} delay={4} center />
-      <div style={{ display: 'flex', alignItems: 'stretch', justifyContent: 'center', flex: 1 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 24, height: '100%' }}>
+      <SplitText text={c.heroTitle} size={74} delay={4} center />
+      <div style={{ display: 'flex', alignItems: 'stretch', justifyContent: 'center', flex: 1, gap: 12 }}>
         {c.nodes.map((n: any, i: number) => {
           const e = ERAS[n.era];
           const t = PC[e.party];
           return (
             <React.Fragment key={i}>
-              <Reveal delay={18 + i * 18} from="zoom" style={{ ...card, flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 18, border: `3px solid ${t.main}`, background: t.soft, transform: `scale(${1 + Math.sin(frame * 0.05 + i) * 0.01})` }}>
-                <div style={{ fontSize: 90, fontWeight: 900, color: C.ink, lineHeight: 1.1 }}>{e.y}</div>
-                <Photo src={e.img} ini={e.ini} color={t.main} size={200} />
-                <div style={{ fontSize: 40, fontWeight: 900, color: C.ink }}>{e.name}</div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                  <Sym k={e.party as SymKey} size={60} />
-                  <span style={{ fontSize: 40, fontWeight: 900, color: t.text }}>{n.t}</span>
+              <Reveal
+                delay={18 + i * 18}
+                from="zoom"
+                style={{
+                  ...card,
+                  flex: 1,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '24px 20px 22px',
+                  border: `3.5px solid ${t.main}`,
+                  background: t.soft,
+                  borderRadius: 32,
+                  boxShadow: `0 20px 50px ${t.main}30, 0 8px 24px rgba(15,23,42,0.06)`,
+                  transform: `scale(${1 + Math.sin(frame * 0.05 + i) * 0.01})`,
+                }}
+              >
+                {/* 1. Year Header */}
+                <div style={{ fontSize: 68, fontWeight: 900, color: C.ink, lineHeight: 1.1, letterSpacing: 2 }}>
+                  {e.y}
+                </div>
+
+                {/* 2. Large Square Photo */}
+                <SquarePhoto src={e.img} ini={e.ini} color={t.main} size={300} />
+
+                {/* 3. Candidate Name */}
+                <div style={{
+                  fontSize: 34,
+                  fontWeight: 900,
+                  color: C.ink,
+                  lineHeight: 1.35,
+                  padding: '4px 0',
+                  whiteSpace: 'nowrap',
+                  textAlign: 'center',
+                }}>
+                  {e.name}
+                </div>
+
+                {/* 4. Party Pill */}
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 12,
+                  background: '#FFFFFF',
+                  padding: '6px 22px',
+                  borderRadius: 999,
+                  border: `2px solid ${t.main}44`,
+                  boxShadow: '0 4px 14px rgba(15,23,42,0.06)',
+                }}>
+                  <Sym k={e.party as SymKey} size={42} />
+                  <span style={{ fontSize: 28, fontWeight: 900, color: t.text }}>{n.t}</span>
                 </div>
               </Reveal>
-              {i < c.nodes.length - 1 && <Reveal delay={26 + i * 18} style={{ width: 100, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 80, fontWeight: 900, color: C.muted }}>→</Reveal>}
+              {i < c.nodes.length - 1 && (
+                <Reveal delay={26 + i * 18} style={{ width: 60, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 64, fontWeight: 900, color: C.muted }}>
+                  →
+                </Reveal>
+              )}
             </React.Fragment>
           );
         })}
       </div>
-      <Reveal delay={80}><div style={{ textAlign: 'center', fontSize: 52, fontWeight: 900, color: C.ink }}><Mark delay={86}>{c.foot}</Mark></div></Reveal>
+      <Reveal delay={80}><div style={{ textAlign: 'center', fontSize: 50, fontWeight: 900, color: C.ink }}><Mark delay={86}>{c.foot}</Mark></div></Reveal>
     </div>
   );
 };

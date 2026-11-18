@@ -425,10 +425,10 @@ const Row: React.FC<{ t: string; ok?: boolean; delay: number; size?: number; col
         fontSize: responsiveSize,
         fontWeight: 800,
         color: C.ink,
-        lineHeight: 1.25,
+        lineHeight: 1.55,
+        padding: '14px 8px',
         whiteSpace: 'nowrap',
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
+        overflow: 'visible',
         flex: 1,
         minWidth: 0,
       }}>
@@ -439,7 +439,7 @@ const Row: React.FC<{ t: string; ok?: boolean; delay: number; size?: number; col
 };
 
 // ============================================================================
-// 2. IMAGE COMPONENTS — LEADER CARD, ROUND PHOTO, PARTY SYMBOL (all with fallback)
+// 2. IMAGE COMPONENTS — LEADER CARD, ROUND PHOTO, SQUARE PHOTO, PARTY SYMBOL (all with fallback)
 // ============================================================================
 const Sym: React.FC<{ k: SymKey; size?: number }> = ({ k, size = 90 }) => {
   const [err, setErr] = useState(false);
@@ -469,6 +469,41 @@ const Photo: React.FC<{ src: string; ini: string; color: string; size: number }>
         <span style={{ fontSize: size * 0.5, fontWeight: 900, color }}>{ini}</span>
       ) : (
         <img src={src} onError={() => setErr(true)} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 15%' }} />
+      )}
+    </div>
+  );
+};
+
+const SquarePhoto: React.FC<{ src: string; ini: string; color: string; size?: number; objectPosition?: string }> = ({ src, ini, color, size = 300, objectPosition = 'center 15%' }) => {
+  const [err, setErr] = useState(false);
+  return (
+    <div style={{
+      width: size,
+      height: size,
+      borderRadius: 26,
+      border: '4px solid #FFFFFF',
+      boxShadow: `0 18px 40px rgba(15,23,42,0.12), 0 0 0 2.5px ${color}`,
+      background: `linear-gradient(180deg, #FFFFFF 0%, ${color}22 100%)`,
+      overflow: 'hidden',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flex: 'none',
+      position: 'relative',
+    }}>
+      {err ? (
+        <span style={{ fontSize: size * 0.45, fontWeight: 900, color }}>{ini}</span>
+      ) : (
+        <img
+          src={src}
+          onError={() => setErr(true)}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition,
+          }}
+        />
       )}
     </div>
   );
@@ -562,7 +597,8 @@ const LeaderCard: React.FC<{ who: Who; w: number; h: number; delay?: number; sub
           fontSize: w < 380 ? 30 : w < 460 ? 36 : w < 600 ? 40 : 46,
           fontWeight: 900,
           color: C.ink,
-          lineHeight: 1.15,
+          lineHeight: 1.35,
+          padding: '4px 0',
           whiteSpace: 'nowrap',
         }}>
           {t.name}
@@ -1076,31 +1112,87 @@ const Chips: React.FC<{ c: Ch }> = ({ c }) => {
 const Swing: React.FC<{ c: Ch }> = ({ c }) => {
   const frame = useCurrentFrame();
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 30, height: '100%' }}>
-      <SplitText text={c.heroTitle} size={80} delay={4} center />
-      <div style={{ display: 'flex', alignItems: 'stretch', justifyContent: 'center', flex: 1 }}>
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 24, height: '100%' }}>
+      <SplitText text={c.heroTitle} size={74} delay={4} center />
+      <div style={{ display: 'flex', alignItems: 'stretch', justifyContent: 'center', flex: 1, gap: 12 }}>
         {c.nodes.map((n: any, i: number) => {
           const q = !n.who;
           const t = q ? null : P[n.who as Who];
           const pulse = q ? 1 + Math.sin(frame * 0.1) * 0.03 : 1;
           return (
             <React.Fragment key={i}>
-              <Reveal delay={18 + i * 18} from="zoom" style={{ ...card, flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 20, border: q ? `4px dashed ${C.muted}` : `3px solid ${t!.main}`, background: q ? C.white : t!.soft, transform: `scale(${pulse})` }}>
-                <div style={{ fontSize: 100, fontWeight: 900, color: q ? C.muted : C.ink, lineHeight: 1.1 }}>{n.y}</div>
-                {t ? <Photo src={t.img} ini={t.ini} color={t.main} size={220} /> : <div style={{ fontSize: 200, fontWeight: 900, color: C.muted, lineHeight: 1.1 }}>?</div>}
-                <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                  {t && <Sym k={t.sym} size={70} />}
-                  <span style={{ fontSize: 46, fontWeight: 900, color: t ? t.text : C.muted }}>{n.t}</span>
+              <Reveal
+                delay={18 + i * 18}
+                from="zoom"
+                style={{
+                  ...card,
+                  flex: 1,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  padding: '24px 20px 22px',
+                  border: q ? `4px dashed ${C.muted}` : `3.5px solid ${t!.main}`,
+                  background: q ? C.white : t!.soft,
+                  borderRadius: 32,
+                  boxShadow: t ? `0 20px 50px ${t.main}30, 0 8px 24px rgba(15,23,42,0.06)` : undefined,
+                  transform: `scale(${pulse})`,
+                }}
+              >
+                {/* 1. Year Header */}
+                <div style={{ fontSize: 68, fontWeight: 900, color: q ? C.muted : C.ink, lineHeight: 1.1, letterSpacing: 2 }}>
+                  {n.y}
+                </div>
+
+                {/* 2. Large Square Photo */}
+                {t ? (
+                  <SquarePhoto src={t.img} ini={t.ini} color={t.main} size={300} />
+                ) : (
+                  <div style={{ width: 300, height: 300, borderRadius: 26, background: '#f1f5f9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 160, fontWeight: 900, color: C.muted }}>
+                    ?
+                  </div>
+                )}
+
+                {/* 3. Candidate Name */}
+                {t && (
+                  <div style={{
+                    fontSize: 34,
+                    fontWeight: 900,
+                    color: C.ink,
+                    lineHeight: 1.35,
+                    padding: '4px 0',
+                    whiteSpace: 'nowrap',
+                    textAlign: 'center',
+                  }}>
+                    {t.name}
+                  </div>
+                )}
+
+                {/* 4. Party Pill */}
+                <div style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 12,
+                  background: '#FFFFFF',
+                  padding: '6px 22px',
+                  borderRadius: 999,
+                  border: `2px solid ${t ? t.main : C.muted}44`,
+                  boxShadow: '0 4px 14px rgba(15,23,42,0.06)',
+                }}>
+                  {t && <Sym k={t.sym} size={42} />}
+                  <span style={{ fontSize: 28, fontWeight: 900, color: t ? t.text : C.muted }}>{n.t}</span>
                 </div>
               </Reveal>
               {i < c.nodes.length - 1 && (
-                <Reveal delay={26 + i * 18} style={{ width: 100, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 80, fontWeight: 900, color: C.muted }}>→</Reveal>
+                <Reveal delay={26 + i * 18} style={{ width: 60, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 64, fontWeight: 900, color: C.muted }}>
+                  →
+                </Reveal>
               )}
             </React.Fragment>
           );
         })}
       </div>
-      <Reveal delay={80}><div style={{ textAlign: 'center', fontSize: 52, fontWeight: 900, color: C.ink }}><Mark delay={86}>{c.foot}</Mark></div></Reveal>
+      <Reveal delay={80}><div style={{ textAlign: 'center', fontSize: 50, fontWeight: 900, color: C.ink }}><Mark delay={86}>{c.foot}</Mark></div></Reveal>
     </div>
   );
 };
