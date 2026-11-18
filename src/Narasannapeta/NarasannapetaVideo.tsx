@@ -852,30 +852,65 @@ const Era: React.FC<{ c: Ch }> = ({ c }) => {
   const frame = useCurrentFrame();
   const f: number[] = c.focus;
   const maxI = Math.max(...f);
-  const sz = f.length === 1 ? { ph: 210, yr: 110, nm: 50 } : f.length === 2 ? { ph: 180, yr: 90, nm: 40 } : { ph: 150, yr: 76, nm: 32 };
   const upto = ERAS.slice(0, maxI + 1);
   const prog = (fill(0, 60, frame) * maxI) / (ERAS.length - 1);
   return (
     <div style={{ display: 'grid', gridTemplateRows: '1fr 150px', gap: 24, height: '100%' }}>
       <div style={{ display: 'grid', gridTemplateColumns: '1.45fr .55fr', gap: 32, minHeight: 0 }}>
         <div style={{ ...card, padding: '24px 36px 18px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ display: 'flex', gap: 28, justifyContent: 'space-around', alignItems: 'center', flex: 1 }}>
-            {f.map((i, k) => {
-              const e = ERAS[i];
-              const t = P[e.who];
-              return (
-                <Reveal key={i} delay={6 + k * 14} from="zoom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
-                  <Photo src={e.img} ini={e.ini} color={t.main} size={sz.ph} />
-                  <div style={{ fontSize: sz.yr, fontWeight: 900, lineHeight: 1.1, color: C.ink }}>{e.y}</div>
-                  <div style={{ fontSize: sz.nm, fontWeight: 900, color: t.text }}>{e.name}</div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                    <Sym k={e.sym} size={50} />
-                    <span style={{ fontSize: 26, fontWeight: 700, color: C.muted }}>{e.party}</span>
+          {f.length === 1 ? (() => {
+            const e = ERAS[f[0]];
+            const t = P[e.who];
+            return (
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 1, gap: 44, padding: '10px 16px' }}>
+                {/* 1. LEFT: Prominent Box Type Image */}
+                <Reveal delay={6} from="zoom">
+                  <SquarePhoto src={e.img} ini={e.ini} color={t.main} size={330} />
+                </Reveal>
+
+                {/* 2. RIGHT: Related Matter */}
+                <Reveal delay={16} from="right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', gap: 14, flex: 1 }}>
+                  <div style={{ fontSize: 96, fontWeight: 900, color: C.ink, lineHeight: 1, letterSpacing: 2 }}>
+                    {e.y}
+                  </div>
+                  <div style={{ fontSize: 48, fontWeight: 900, color: t.text, lineHeight: 1.35, padding: '4px 0', whiteSpace: 'nowrap' }}>
+                    {e.name}
+                  </div>
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 12,
+                    background: '#FFFFFF',
+                    padding: '8px 24px',
+                    borderRadius: 999,
+                    border: `2px solid ${t.main}55`,
+                    boxShadow: '0 4px 14px rgba(15,23,42,0.06)',
+                  }}>
+                    <Sym k={e.sym} size={44} />
+                    <span style={{ fontSize: 30, fontWeight: 800, color: t.text }}>{e.party}</span>
                   </div>
                 </Reveal>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })() : (
+            <div style={{ display: 'flex', gap: 28, justifyContent: 'space-around', alignItems: 'center', flex: 1 }}>
+              {f.map((i, k) => {
+                const e = ERAS[i];
+                const t = P[e.who];
+                return (
+                  <Reveal key={i} delay={6 + k * 14} from="zoom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, textAlign: 'center' }}>
+                    <SquarePhoto src={e.img} ini={e.ini} color={t.main} size={210} />
+                    <div style={{ fontSize: 72, fontWeight: 900, lineHeight: 1.1, color: C.ink }}>{e.y}</div>
+                    <div style={{ fontSize: 34, fontWeight: 900, color: t.text, lineHeight: 1.35, padding: '2px 0' }}>{e.name}</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                      <Sym k={e.sym} size={44} />
+                      <span style={{ fontSize: 26, fontWeight: 700, color: C.muted }}>{e.party}</span>
+                    </div>
+                  </Reveal>
+                );
+              })}
+            </div>
+          )}
           <Reveal delay={10}>
             <div style={{ fontSize: 34, fontWeight: 800, color: C.ink, textAlign: 'center', borderTop: `2px solid ${C.line}`, paddingTop: 14, lineHeight: 1.35 }}>{c.cap}</div>
           </Reveal>
@@ -1091,6 +1126,85 @@ const Chips: React.FC<{ c: Ch }> = ({ c }) => {
         {c.tiles.map((t: any, i: number) => {
           const th = t.color ? P[t.color as Who] : null;
           const col = th ? th.main : accents[i % 5];
+          const hasImg = Boolean(t.img);
+
+          if (hasImg) {
+            return (
+              <Reveal
+                key={i}
+                delay={20 + i * 10}
+                from="zoom"
+                style={{
+                  ...card,
+                  borderTop: `10px solid ${col}`,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  padding: 20,
+                  justifyContent: 'space-between',
+                  borderRadius: 32,
+                  boxShadow: `0 20px 48px rgba(15,23,42,0.08), 0 0 0 1.5px ${col}33`,
+                }}
+              >
+                {/* 1. TOP: Related Image Box */}
+                <div style={{
+                  flex: 1,
+                  borderRadius: 22,
+                  overflow: 'hidden',
+                  position: 'relative',
+                  border: '2px solid rgba(15,23,42,0.08)',
+                  boxShadow: '0 8px 24px rgba(15,23,42,0.08)',
+                  background: '#F1F5F9',
+                }}>
+                  <img
+                    src={t.img}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: t.pos || 'center 20%',
+                    }}
+                  />
+                  {th && (
+                    <div style={{ position: 'absolute', top: 12, right: 12 }}>
+                      <Sym k={th.sym} size={52} />
+                    </div>
+                  )}
+                </div>
+
+                {/* 2. BOTTOM: Text pushed down */}
+                <div style={{
+                  padding: '20px 12px 6px',
+                  textAlign: 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: 8,
+                }}>
+                  {t.t && (
+                    <div style={{
+                      fontSize: cols >= 4 ? 34 : 40,
+                      fontWeight: 900,
+                      color: C.ink,
+                      lineHeight: 1.35,
+                      padding: '4px 0',
+                    }}>
+                      {t.t}
+                    </div>
+                  )}
+                  {t.sub && (
+                    <div style={{
+                      fontSize: 24,
+                      fontWeight: 700,
+                      color: C.muted,
+                    }}>
+                      {t.sub}
+                    </div>
+                  )}
+                </div>
+              </Reveal>
+            );
+          }
+
           return (
             <Reveal key={i} delay={20 + i * 10} from="zoom" style={{ ...card, borderTop: `10px solid ${col}`, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 18, padding: 28, textAlign: 'center' }}>
               <div style={{ fontSize: big, fontWeight: 900, color: th ? th.text : C.ink, lineHeight: 1.2 }}>{t.big}</div>

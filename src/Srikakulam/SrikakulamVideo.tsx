@@ -189,7 +189,11 @@ const RAW: Omit<Ch, 'id'>[] = [
     items: [{ t: 'పంచాయతీ నిధుల మళ్లింపుపై నిరసన', ok: true }, { t: 'పార్టీలకు అతీతంగా సర్పంచులను ఏకం చేశారు', ok: true }, { t: 'రాష్ట్రవ్యాప్తంగా సంచలనం', ok: true }] },
   { act: 3, sec: 13, title: 'టికెట్ ఎలా దక్కింది?', type: 'chips', cols: 3,
     heroTitle: 'శంకర్ కు టికెట్ ఎందుకు దక్కింది?',
-    tiles: [{ big: '🧑🤝🧑', t: 'ప్రజల మధ్య నిరంతరం', color: 'tdp' }, { big: '🔥', t: 'యువతలో క్రేజ్', color: 'tdp' }, { big: '🤝', t: 'రామ్మోహన్ నాయుడు & అచ్చెన్నాయుడు మద్దతు', color: 'tdp' }] },
+    tiles: [
+      { img: IMG('card_people_connect.jpg'), t: 'ప్రజల మధ్య నిరంతరం', color: 'tdp' },
+      { img: IMG('card_youth_craze.jpg'), t: 'యువతలో క్రేజ్', color: 'tdp' },
+      { img: IMG('card_tdp_leaders.jpg'), t: 'రామ్మోహన్ నాయుడు & అచ్చెన్నాయుడు మద్దతు', color: 'tdp' },
+    ] },
   { act: 3, sec: 10, title: 'అసమ్మతిని కలుపుకున్న శంకర్', type: 'quote', sides: ['shankar', null],
     sub: 'టికెట్ ప్రకటించిన కొత్తలో…', text: 'అసమ్మతి ఉన్నా… కలుపుగోలుతనంతో అందరినీ కలుపుకున్నారు!', size: 80 },
 
@@ -668,7 +672,6 @@ const EraSlide: React.FC<{ c: Ch }> = ({ c }) => {
   const d = useD();
   const f: number[] = c.focus;
   const maxI = Math.max(...f);
-  const sz = f.length === 1 ? { ph: 180, yr: 96, nm: 42 } : { ph: 150, yr: 80, nm: 34 };
   const upto = ERAS.slice(0, maxI + 1);
   const prog = (fill(0, d(60), frame) * maxI) / (ERAS.length - 1);
   const fams = [
@@ -678,25 +681,75 @@ const EraSlide: React.FC<{ c: Ch }> = ({ c }) => {
   return (
     <div style={{ display: 'grid', gridTemplateRows: '1fr 160px', gap: 24, height: '100%' }}>
       <div style={{ display: 'grid', gridTemplateColumns: '1.45fr .55fr', gap: 32, minHeight: 0 }}>
-        <div style={{ ...card, padding: '22px 36px 20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
-          <div style={{ display: 'flex', gap: 24, justifyContent: 'space-around', alignItems: 'center', flex: 1 }}>
-            {f.map((i, k) => {
-              const e = ERAS[i];
-              const t = PC[e.party];
-              return (
-                <Reveal key={i} delay={6 + k * 14} from="zoom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
-                  <Photo src={e.img} ini={e.ini} color={t.main} size={sz.ph} />
-                  <div style={{ fontSize: sz.yr, fontWeight: 900, lineHeight: 1.1, color: C.ink }}>{e.y}</div>
-                  <div style={{ fontSize: sz.nm, fontWeight: 900, color: t.text }}>{e.name}</div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                    <Sym k={e.party as SymKey} size={48} />
-                    <span style={{ fontSize: 26, fontWeight: 700, color: C.muted }}>{PARTY_TE[e.party]}</span>
-                  </div>
-                  {e.note && <div style={{ fontSize: 24, fontWeight: 800, color: t.text, background: t.soft, borderRadius: 99, padding: '4px 18px' }}>{e.note}</div>}
+        <div style={{ ...card, padding: '24px 36px 20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', overflow: 'hidden' }}>
+          {f.length === 1 ? (() => {
+            const e = ERAS[f[0]];
+            const t = PC[e.party];
+            return (
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 1, gap: 44, padding: '10px 16px' }}>
+                {/* 1. LEFT: Prominent Box Type Image */}
+                <Reveal delay={6} from="zoom">
+                  <SquarePhoto src={e.img} ini={e.ini} color={t.main} size={330} />
                 </Reveal>
-              );
-            })}
-          </div>
+
+                {/* 2. RIGHT: Related Matter */}
+                <Reveal delay={16} from="right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', gap: 14, flex: 1 }}>
+                  <div style={{ fontSize: 96, fontWeight: 900, color: C.ink, lineHeight: 1, letterSpacing: 2 }}>
+                    {e.y}
+                  </div>
+                  <div style={{ fontSize: 48, fontWeight: 900, color: t.text, lineHeight: 1.35, padding: '4px 0', whiteSpace: 'nowrap' }}>
+                    {e.name}
+                  </div>
+                  <div style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 12,
+                    background: '#FFFFFF',
+                    padding: '8px 24px',
+                    borderRadius: 999,
+                    border: `2px solid ${t.main}55`,
+                    boxShadow: '0 4px 14px rgba(15,23,42,0.06)',
+                  }}>
+                    <Sym k={e.party as SymKey} size={44} />
+                    <span style={{ fontSize: 30, fontWeight: 800, color: t.text }}>{PARTY_TE[e.party]}</span>
+                  </div>
+                  {e.note && (
+                    <div style={{
+                      fontSize: 32,
+                      fontWeight: 900,
+                      color: '#FFFFFF',
+                      background: `linear-gradient(135deg, ${t.main}, ${t.text})`,
+                      borderRadius: 999,
+                      padding: '8px 26px',
+                      boxShadow: `0 8px 20px ${t.main}44`,
+                      marginTop: 4,
+                    }}>
+                      {e.note}
+                    </div>
+                  )}
+                </Reveal>
+              </div>
+            );
+          })() : (
+            <div style={{ display: 'flex', gap: 24, justifyContent: 'space-around', alignItems: 'center', flex: 1 }}>
+              {f.map((i, k) => {
+                const e = ERAS[i];
+                const t = PC[e.party];
+                return (
+                  <Reveal key={i} delay={6 + k * 14} from="zoom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, textAlign: 'center' }}>
+                    <SquarePhoto src={e.img} ini={e.ini} color={t.main} size={210} />
+                    <div style={{ fontSize: 72, fontWeight: 900, lineHeight: 1.1, color: C.ink }}>{e.y}</div>
+                    <div style={{ fontSize: 34, fontWeight: 900, color: t.text, lineHeight: 1.35, padding: '2px 0' }}>{e.name}</div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                      <Sym k={e.party as SymKey} size={44} />
+                      <span style={{ fontSize: 26, fontWeight: 700, color: C.muted }}>{PARTY_TE[e.party]}</span>
+                    </div>
+                    {e.note && <div style={{ fontSize: 24, fontWeight: 800, color: t.text, background: t.soft, borderRadius: 99, padding: '4px 18px' }}>{e.note}</div>}
+                  </Reveal>
+                );
+              })}
+            </div>
+          )}
           <Reveal delay={50}><div style={{ fontSize: 32, fontWeight: 800, color: C.body, textAlign: 'center', borderTop: `2px solid ${C.line}`, paddingTop: 14, lineHeight: 1.35 }}>{c.cap}</div></Reveal>
         </div>
         <div style={{ ...card, padding: '24px 20px', display: 'flex', flexDirection: 'column', gap: 14 }}>
@@ -839,6 +892,85 @@ const Chips: React.FC<{ c: Ch }> = ({ c }) => {
         {c.tiles.map((t: any, i: number) => {
           const th = t.color ? PC[t.color as PartyKey] : null;
           const col = th ? th.main : accents[i % 5];
+          const hasImg = Boolean(t.img);
+
+          if (hasImg) {
+            return (
+              <Reveal
+                key={i}
+                delay={20 + i * 10}
+                from="zoom"
+                style={{
+                  ...card,
+                  borderTop: `10px solid ${col}`,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  padding: 20,
+                  justifyContent: 'space-between',
+                  borderRadius: 32,
+                  boxShadow: `0 20px 48px rgba(15,23,42,0.08), 0 0 0 1.5px ${col}33`,
+                }}
+              >
+                {/* 1. TOP: Related Image Box */}
+                <div style={{
+                  flex: 1,
+                  borderRadius: 22,
+                  overflow: 'hidden',
+                  position: 'relative',
+                  border: '2px solid rgba(15,23,42,0.08)',
+                  boxShadow: '0 8px 24px rgba(15,23,42,0.08)',
+                  background: '#F1F5F9',
+                }}>
+                  <img
+                    src={t.img}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: t.pos || 'center 20%',
+                    }}
+                  />
+                  {th && (
+                    <div style={{ position: 'absolute', top: 12, right: 12 }}>
+                      <Sym k={t.color as SymKey} size={52} />
+                    </div>
+                  )}
+                </div>
+
+                {/* 2. BOTTOM: Text pushed down */}
+                <div style={{
+                  padding: '20px 12px 6px',
+                  textAlign: 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: 8,
+                }}>
+                  {t.t && (
+                    <div style={{
+                      fontSize: cols >= 4 ? 34 : 40,
+                      fontWeight: 900,
+                      color: C.ink,
+                      lineHeight: 1.35,
+                      padding: '4px 0',
+                    }}>
+                      {t.t}
+                    </div>
+                  )}
+                  {t.sub && (
+                    <div style={{
+                      fontSize: 24,
+                      fontWeight: 700,
+                      color: C.muted,
+                    }}>
+                      {t.sub}
+                    </div>
+                  )}
+                </div>
+              </Reveal>
+            );
+          }
+
           const bs = String(t.big).length > 5 ? Math.min(big, 100) : big;
           return (
             <Reveal key={i} delay={20 + i * 10} from="zoom" style={{ ...card, borderTop: `10px solid ${col}`, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 18, padding: 28, textAlign: 'center' }}>
