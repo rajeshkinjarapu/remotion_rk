@@ -97,19 +97,19 @@ export const Root: React.FC = () => {
 			<Composition
 				id="Srikakulam"
 				component={SrikakulamVideo}
-				durationInFrames={16844}
+				durationInFrames={15329}
 				fps={30}
 				width={1920}
 				height={1080}
-				defaultProps={{ timeScale: 561.47 / 405 }}
+				defaultProps={{ timeScale: 510.97 / 405 }}
 			/>
 
 			{/* Srikakulam Act-by-Act Quick Previews */}
 			<Folder name="Srikakulam-Acts">
 				{SRIKAKULAM_ACTS.map((act, idx) => {
 					const actNum = idx + 1;
-					// Accurate synced frame counts matching the Telugu audio per Act
-					const actSyncedFrames = [2935, 3133, 2038, 3244, 2778, 2648];
+					// Accurate synced frame counts matching Cartesia Telugu audio per Act
+					const actSyncedFrames = [2765, 2846, 1786, 2971, 2522, 2371];
 					return (
 						<Composition
 							key={act.key}
@@ -128,19 +128,19 @@ export const Root: React.FC = () => {
 			<Composition
 				id="Narasannapeta"
 				component={NarasannapetaVideo}
-				durationInFrames={18503}
+				durationInFrames={16083}
 				fps={30}
 				width={1920}
 				height={1080}
-				defaultProps={{ timeScale: 616.77 / 578 }}
+				defaultProps={{ timeScale: 536.09 / 578 }}
 			/>
 
 			{/* Act-by-Act Quick Previews */}
 			<Folder name="Narasannapeta-Acts">
 				{ACTS.map((act, idx) => {
 					const actNum = idx + 1;
-					// Accurate synced frame counts matching the Telugu audio per Act
-					const actSyncedFrames = [3505, 2267, 4854, 3043, 2180, 2587];
+					// Accurate synced frame counts matching Cartesia Telugu audio per Act
+					const actSyncedFrames = [3048, 1968, 4106, 2820, 1877, 2196];
 					return (
 						<Composition
 							key={act.key}
