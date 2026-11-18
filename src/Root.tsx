@@ -24,41 +24,12 @@ import {
 	DEFAULT_BG_MUSIC,
 	QUIZ_VIDEOS,
 } from './TeluguQuiz';
-import {
-	ViratVsSmithVideo,
-	ViratVsSmithSingleScene,
-	ViratVsSmithCyberDark,
-	TOTAL_KOHLI_VS_SMITH_FRAMES,
-	Scene1Intro,
-	Scene2OverallStats,
-	Scene3SenaMap,
-	Scene4ImpactStyle,
-	Scene5VerdictOutro,
-} from './KohliVsSmith';
+
 
 export const Root: React.FC = () => {
 	return (
 		<>
-			{/* ================= VIRAT KOHLI VS STEVE SMITH (BROADCAST MOTION GRAPHICS) ================= */}
-			{/* Complete Single Scene Full Video with Single Master Audio (Luxury White Studio Edition) */}
-			<Composition
-				id="ViratVsSmith-SingleScene"
-				component={ViratVsSmithSingleScene}
-				durationInFrames={TOTAL_KOHLI_VS_SMITH_FRAMES}
-				fps={30}
-				width={1920}
-				height={1080}
-			/>
 
-			{/* Cyber Holographic 3D Dark Edition (Dark Stadium & Neon Mode) */}
-			<Composition
-				id="ViratVsSmith-CyberDark"
-				component={ViratVsSmithCyberDark}
-				durationInFrames={TOTAL_KOHLI_VS_SMITH_FRAMES}
-				fps={30}
-				width={1920}
-				height={1080}
-			/>
 
 			{/* Full Video Master Series */}
 
@@ -119,11 +90,11 @@ export const Root: React.FC = () => {
 			<Composition
 				id="Narasannapeta"
 				component={NarasannapetaVideo}
-				durationInFrames={16150}
+				durationInFrames={15725}
 				fps={30}
 				width={1920}
 				height={1080}
-				defaultProps={{ timeScale: 537.26 / 578 }}
+				defaultProps={{ timeScale: 524.18 / 578 }}
 			/>
 
 			{/* Act-by-Act Quick Previews */}
@@ -131,7 +102,7 @@ export const Root: React.FC = () => {
 				{ACTS.map((act, idx) => {
 					const actNum = idx + 1;
 					// Accurate synced frame counts matching the Telugu audio per Act
-					const actSyncedFrames = [3040, 2185, 3715, 2625, 2095, 2345];
+					const actSyncedFrames = [2925, 1968, 4119, 2537, 1883, 2175];
 					return (
 						<Composition
 							key={act.key}

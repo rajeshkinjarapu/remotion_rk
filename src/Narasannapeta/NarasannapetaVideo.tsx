@@ -401,7 +401,7 @@ const Pill: React.FC<{ children: React.ReactNode; color?: string }> = ({ childre
 
 const Row: React.FC<{ t: string; ok?: boolean; delay: number; size?: number; color: string }> = ({ t, ok, delay, size = 56, color }) => {
   const len = t.length;
-  const responsiveSize = len > 42 ? Math.min(size, 44) : len > 26 ? Math.min(size, 52) : size;
+  const responsiveSize = len > 46 ? Math.min(size, 38) : len > 34 ? Math.min(size, 44) : len > 24 ? Math.min(size, 50) : size;
   return (
     <Reveal delay={delay} from="right" style={{ display: 'flex', alignItems: 'center', gap: 24, width: '100%', minWidth: 0 }}>
       <div style={{
@@ -425,7 +425,7 @@ const Row: React.FC<{ t: string; ok?: boolean; delay: number; size?: number; col
         fontSize: responsiveSize,
         fontWeight: 800,
         color: C.ink,
-        lineHeight: 1.2,
+        lineHeight: 1.25,
         whiteSpace: 'nowrap',
         overflow: 'hidden',
         textOverflow: 'ellipsis',
@@ -548,14 +548,14 @@ const LeaderCard: React.FC<{ who: Who; w: number; h: number; delay?: number; sub
       <div style={{
         flex: 'none',
         minHeight: sub ? (w < 400 ? 146 : w < 600 ? 162 : 172) : (w < 400 ? 118 : w < 600 ? 132 : 142),
-        padding: w < 600 ? '14px 18px 18px' : '16px 22px 20px',
+        padding: w < 600 ? '12px 18px 22px' : '14px 22px 24px',
         textAlign: 'center',
         background: '#FFFFFF',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        gap: 6,
+        gap: 5,
         borderTop: `1.5px solid ${t.main}33`,
       }}>
         <div style={{
@@ -568,11 +568,11 @@ const LeaderCard: React.FC<{ who: Who; w: number; h: number; delay?: number; sub
           {t.name}
         </div>
         <div style={{
-          padding: w < 600 ? '4px 22px' : '6px 28px',
+          padding: w < 600 ? '4px 20px' : '5px 26px',
           borderRadius: 999,
           background: t.partyBg,
           color: t.partyText,
-          fontSize: w < 380 ? 16 : w < 600 ? 19 : 22,
+          fontSize: w < 380 ? 15 : w < 600 ? 18 : 21,
           fontWeight: 800,
           boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
         }}>
@@ -580,10 +580,10 @@ const LeaderCard: React.FC<{ who: Who; w: number; h: number; delay?: number; sub
         </div>
         {sub && (
           <div style={{
-            fontSize: w < 380 ? 16 : w < 600 ? 19 : 22,
+            fontSize: w < 380 ? 15 : w < 600 ? 18 : 21,
             fontWeight: 700,
             color: C.muted,
-            marginTop: 2,
+            marginTop: 1,
           }}>
             {sub}
           </div>
