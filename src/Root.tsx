@@ -14,6 +14,12 @@ import {
 	ACTS,
 } from './Narasannapeta';
 import {
+	SrikakulamVideo,
+	ActPreview as SrikakulamActPreview,
+	SRIKAKULAM_TOTAL_FRAMES,
+	ACTS as SRIKAKULAM_ACTS,
+} from './Srikakulam';
+import {
 	TeluguQuiz,
 	TeluguQuizSeries,
 	teluguQuizSchema,
@@ -82,6 +88,38 @@ export const Root: React.FC = () => {
 								questions: vid.questions,
 								timings: vid.timings,
 							}}
+						/>
+					);
+				})}
+			</Folder>
+
+			{/* ================= SRIKAKULAM POLITICAL MATRIX (32 CHAPTERS · 6 ACTS) ================= */}
+			<Composition
+				id="Srikakulam"
+				component={SrikakulamVideo}
+				durationInFrames={16844}
+				fps={30}
+				width={1920}
+				height={1080}
+				defaultProps={{ timeScale: 561.47 / 405 }}
+			/>
+
+			{/* Srikakulam Act-by-Act Quick Previews */}
+			<Folder name="Srikakulam-Acts">
+				{SRIKAKULAM_ACTS.map((act, idx) => {
+					const actNum = idx + 1;
+					// Accurate synced frame counts matching the Telugu audio per Act
+					const actSyncedFrames = [2935, 3133, 2038, 3244, 2778, 2648];
+					return (
+						<Composition
+							key={act.key}
+							id={`Srikakulam-Act${actNum}-${act.key}`}
+							component={SrikakulamActPreview}
+							durationInFrames={actSyncedFrames[idx]}
+							fps={30}
+							width={1920}
+							height={1080}
+							defaultProps={{ actNumber: actNum }}
 						/>
 					);
 				})}
