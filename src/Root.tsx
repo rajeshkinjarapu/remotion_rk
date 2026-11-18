@@ -97,11 +97,11 @@ export const Root: React.FC = () => {
 			<Composition
 				id="Srikakulam"
 				component={SrikakulamVideo}
-				durationInFrames={15329}
+				durationInFrames={15540}
 				fps={30}
 				width={1920}
 				height={1080}
-				defaultProps={{ timeScale: 510.97 / 405 }}
+				defaultProps={{ timeScale: 1 }}
 			/>
 
 			{/* Srikakulam Act-by-Act Quick Previews */}
@@ -109,7 +109,7 @@ export const Root: React.FC = () => {
 				{SRIKAKULAM_ACTS.map((act, idx) => {
 					const actNum = idx + 1;
 					// Accurate synced frame counts matching Cartesia Telugu audio per Act
-					const actSyncedFrames = [2765, 2846, 1786, 2971, 2522, 2371];
+					const actSyncedFrames = [2694, 3201, 1895, 2980, 2455, 2315];
 					return (
 						<Composition
 							key={act.key}

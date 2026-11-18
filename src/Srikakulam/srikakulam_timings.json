@@ -1,0 +1,295 @@
+{
+  "totalFrames": 15540,
+  "totalSec": 518.0,
+  "fps": 30,
+  "chapters": [
+    {
+      "id": 1,
+      "title": "శ్రీకాకుళం – చారిత్రాత్మక తీర్పు",
+      "durationSec": 15.6,
+      "totalSec": 15.9,
+      "durationFrames": 477,
+      "audioPath": "audio/srikakulam/chapters/ch_01.wav",
+      "startFrame": 0
+    },
+    {
+      "id": 2,
+      "title": "ధర్మాన ప్రసాదరావు – రాజకీయ దిగ్గజం",
+      "durationSec": 14.4,
+      "totalSec": 14.7,
+      "durationFrames": 441,
+      "audioPath": "audio/srikakulam/chapters/ch_02.wav",
+      "startFrame": 477
+    },
+    {
+      "id": 3,
+      "title": "గొండు శంకర్ – సర్పంచ్ నుంచి అభ్యర్థిగా",
+      "durationSec": 13.04,
+      "totalSec": 13.34,
+      "durationFrames": 400,
+      "audioPath": "audio/srikakulam/chapters/ch_03.wav",
+      "startFrame": 918
+    },
+    {
+      "id": 4,
+      "title": "కొత్త అభ్యర్థి నిలబడగలడా?",
+      "durationSec": 13.2,
+      "totalSec": 13.5,
+      "durationFrames": 405,
+      "audioPath": "audio/srikakulam/chapters/ch_04.wav",
+      "startFrame": 1318
+    },
+    {
+      "id": 5,
+      "title": "52,521 – కనీవినీ ఎరుగని విజయం",
+      "durationSec": 14.8,
+      "totalSec": 15.1,
+      "durationFrames": 453,
+      "audioPath": "audio/srikakulam/chapters/ch_05.wav",
+      "startFrame": 1723
+    },
+    {
+      "id": 6,
+      "title": "ఈ వీడియోలో ఏముంది?",
+      "durationSec": 16.96,
+      "totalSec": 17.26,
+      "durationFrames": 518,
+      "audioPath": "audio/srikakulam/chapters/ch_06.wav",
+      "startFrame": 2176
+    },
+    {
+      "id": 7,
+      "title": "1985–1999 – గుండ అప్పల సూర్యనారాయణ",
+      "durationSec": 21.92,
+      "totalSec": 22.22,
+      "durationFrames": 667,
+      "audioPath": "audio/srikakulam/chapters/ch_07.wav",
+      "startFrame": 2694
+    },
+    {
+      "id": 8,
+      "title": "2004 & 2009 – ధర్మాన ఎంట్రీ",
+      "durationSec": 16.16,
+      "totalSec": 16.46,
+      "durationFrames": 494,
+      "audioPath": "audio/srikakulam/chapters/ch_08.wav",
+      "startFrame": 3361
+    },
+    {
+      "id": 9,
+      "title": "2014 – గుండ లక్ష్మీదేవి విజయం",
+      "durationSec": 14.56,
+      "totalSec": 14.86,
+      "durationFrames": 446,
+      "audioPath": "audio/srikakulam/chapters/ch_09.wav",
+      "startFrame": 3855
+    },
+    {
+      "id": 10,
+      "title": "2019 – జనసేన చీలిక, స్వల్ప మెజారిటీ",
+      "durationSec": 17.6,
+      "totalSec": 17.9,
+      "durationFrames": 537,
+      "audioPath": "audio/srikakulam/chapters/ch_10.wav",
+      "startFrame": 4301
+    },
+    {
+      "id": 11,
+      "title": "7,557 చీలిక vs 5,777 మెజారిటీ",
+      "durationSec": 10.96,
+      "totalSec": 11.26,
+      "durationFrames": 338,
+      "audioPath": "audio/srikakulam/chapters/ch_11.wav",
+      "startFrame": 4838
+    },
+    {
+      "id": 12,
+      "title": "40 ఏళ్ల గుండ vs ధర్మాన రాజకీయం",
+      "durationSec": 8.0,
+      "totalSec": 8.3,
+      "durationFrames": 249,
+      "audioPath": "audio/srikakulam/chapters/ch_12.wav",
+      "startFrame": 5176
+    },
+    {
+      "id": 13,
+      "title": "చంద్రబాబు సాహసోపేత నిర్ణయం",
+      "durationSec": 15.36,
+      "totalSec": 15.66,
+      "durationFrames": 470,
+      "audioPath": "audio/srikakulam/chapters/ch_13.wav",
+      "startFrame": 5425
+    },
+    {
+      "id": 14,
+      "title": "అసలు ఎవరీ గొండు శంకర్?",
+      "durationSec": 20.32,
+      "totalSec": 20.62,
+      "durationFrames": 619,
+      "audioPath": "audio/srikakulam/chapters/ch_14.wav",
+      "startFrame": 5895
+    },
+    {
+      "id": 15,
+      "title": "పంచాయతీ నిధుల కోసం పోరాటం",
+      "durationSec": 15.52,
+      "totalSec": 15.82,
+      "durationFrames": 475,
+      "audioPath": "audio/srikakulam/chapters/ch_15.wav",
+      "startFrame": 6514
+    },
+    {
+      "id": 16,
+      "title": "టికెట్ ఎలా దక్కింది?",
+      "durationSec": 17.12,
+      "totalSec": 17.42,
+      "durationFrames": 523,
+      "audioPath": "audio/srikakulam/chapters/ch_16.wav",
+      "startFrame": 6989
+    },
+    {
+      "id": 17,
+      "title": "అసమ్మతిని కలుపుకున్న శంకర్",
+      "durationSec": 8.96,
+      "totalSec": 9.26,
+      "durationFrames": 278,
+      "audioPath": "audio/srikakulam/chapters/ch_17.wav",
+      "startFrame": 7512
+    },
+    {
+      "id": 18,
+      "title": "2024 పోలింగ్ – 70%",
+      "durationSec": 22.8,
+      "totalSec": 23.1,
+      "durationFrames": 693,
+      "audioPath": "audio/srikakulam/chapters/ch_18.wav",
+      "startFrame": 7790
+    },
+    {
+      "id": 19,
+      "title": "2024 ఫలితం – 1,17,091 ఓట్లు",
+      "durationSec": 27.36,
+      "totalSec": 27.66,
+      "durationFrames": 830,
+      "audioPath": "audio/srikakulam/chapters/ch_19.wav",
+      "startFrame": 8483
+    },
+    {
+      "id": 20,
+      "title": "పదేళ్లలో ఒక్క ఓటు పెరగలేదు!",
+      "durationSec": 21.28,
+      "totalSec": 21.58,
+      "durationFrames": 647,
+      "audioPath": "audio/srikakulam/chapters/ch_20.wav",
+      "startFrame": 9313
+    },
+    {
+      "id": 21,
+      "title": "ఓట్ షేర్ 14% పతనం",
+      "durationSec": 10.88,
+      "totalSec": 11.18,
+      "durationFrames": 335,
+      "audioPath": "audio/srikakulam/chapters/ch_21.wav",
+      "startFrame": 9960
+    },
+    {
+      "id": 22,
+      "title": "ఎంపీ ఆధిక్యం – 68,413",
+      "durationSec": 15.52,
+      "totalSec": 15.82,
+      "durationFrames": 475,
+      "audioPath": "audio/srikakulam/chapters/ch_22.wav",
+      "startFrame": 10295
+    },
+    {
+      "id": 23,
+      "title": "ఓటమికి నాలుగు కారణాలు",
+      "durationSec": 8.8,
+      "totalSec": 9.1,
+      "durationFrames": 273,
+      "audioPath": "audio/srikakulam/chapters/ch_23.wav",
+      "startFrame": 10770
+    },
+    {
+      "id": 24,
+      "title": "కారణం 1 – శ్రీకాకుళం అర్బన్ తిరుగుబాటు",
+      "durationSec": 21.6,
+      "totalSec": 21.9,
+      "durationFrames": 657,
+      "audioPath": "audio/srikakulam/chapters/ch_24.wav",
+      "startFrame": 11043
+    },
+    {
+      "id": 25,
+      "title": "కారణం 2 – గార & శ్రీకాకుళం రూరల్",
+      "durationSec": 18.56,
+      "totalSec": 18.86,
+      "durationFrames": 566,
+      "audioPath": "audio/srikakulam/chapters/ch_25.wav",
+      "startFrame": 11700
+    },
+    {
+      "id": 26,
+      "title": "కారణం 3 – ల్యాండ్ టైటిలింగ్ యాక్ట్",
+      "durationSec": 13.6,
+      "totalSec": 13.9,
+      "durationFrames": 417,
+      "audioPath": "audio/srikakulam/chapters/ch_26.wav",
+      "startFrame": 12266
+    },
+    {
+      "id": 27,
+      "title": "కారణం 4 – అందుబాటులో ఉండటం",
+      "durationSec": 17.76,
+      "totalSec": 18.06,
+      "durationFrames": 542,
+      "audioPath": "audio/srikakulam/chapters/ch_27.wav",
+      "startFrame": 12683
+    },
+    {
+      "id": 28,
+      "title": "శాశ్వతం కాదు – ప్రజల మధ్య ఉండేవాడే నాయకుడు",
+      "durationSec": 18.88,
+      "totalSec": 19.18,
+      "durationFrames": 575,
+      "audioPath": "audio/srikakulam/chapters/ch_28.wav",
+      "startFrame": 13225
+    },
+    {
+      "id": 29,
+      "title": "ధర్మాన అనుభవాన్ని తక్కువ చేయలేం",
+      "durationSec": 15.84,
+      "totalSec": 16.14,
+      "durationFrames": 484,
+      "audioPath": "audio/srikakulam/chapters/ch_29.wav",
+      "startFrame": 13800
+    },
+    {
+      "id": 30,
+      "title": "శంకర్ ముందున్న బాధ్యతలు",
+      "durationSec": 15.68,
+      "totalSec": 15.98,
+      "durationFrames": 479,
+      "audioPath": "audio/srikakulam/chapters/ch_30.wav",
+      "startFrame": 14284
+    },
+    {
+      "id": 31,
+      "title": "మీ అభిప్రాయం కామెంట్ చేయండి",
+      "durationSec": 13.52,
+      "totalSec": 13.82,
+      "durationFrames": 415,
+      "audioPath": "audio/srikakulam/chapters/ch_31.wav",
+      "startFrame": 14763
+    },
+    {
+      "id": 32,
+      "title": "లైక్ · షేర్ · సబ్స్క్రైబ్",
+      "durationSec": 11.76,
+      "totalSec": 12.06,
+      "durationFrames": 362,
+      "audioPath": "audio/srikakulam/chapters/ch_32.wav",
+      "startFrame": 15178
+    }
+  ]
+}

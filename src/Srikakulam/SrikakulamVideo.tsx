@@ -10,6 +10,7 @@ import {
   useVideoConfig,
 } from 'remotion';
 import { loadFont as loadAnek } from '@remotion/google-fonts/AnekTelugu';
+import srikakulamTimings from './srikakulam_timings.json';
 
 const { fontFamily: fontAnek } = loadAnek();
 
@@ -261,34 +262,40 @@ const RAW: Omit<Ch, 'id'>[] = [
     heroTitle: 'డేటా-డ్రివెన్ పొలిటికల్ అనాలిసిస్ కోసం సబ్స్క్రైబ్ చేయండి' },
 ];
 
-export const CHAPTERS: Ch[] = RAW.map((c, i) => ({ ...c, id: i + 1 }));
+export const CHAPTERS: Ch[] = RAW.map((c, i) => {
+  const timing = (srikakulamTimings as any)?.chapters?.[i];
+  return {
+    ...c,
+    id: i + 1,
+    exactFrames: timing ? timing.durationFrames : Math.round(c.sec * FPS),
+    exactSec: timing ? timing.totalSec : c.sec,
+    audioPath: timing ? timing.audioPath : `audio/srikakulam/chapters/ch_${String(i + 1).padStart(2, '0')}.wav`,
+  };
+});
 
 // ============================================================================
 // TIMELINE MATH
 // ============================================================================
-const BASE_SECONDS = CHAPTERS.reduce((a, c) => a + c.sec, 0);
 export const SRIKAKULAM_FPS = FPS;
-export const SRIKAKULAM_TOTAL_FRAMES = BASE_SECONDS * FPS;
+export const SRIKAKULAM_TOTAL_FRAMES = (srikakulamTimings as any)?.totalFrames || 15540;
+const BASE_SECONDS = SRIKAKULAM_TOTAL_FRAMES / FPS;
 
-const buildTimeline = (scale: number, secs?: number[]) => {
-  const exact = secs && secs.length === CHAPTERS.length ? secs : undefined;
-  const base = exact ?? CHAPTERS.map((c) => c.sec);
-  const k = exact ? 1 : scale;
-  const frames = base.map((s) => Math.max(30, Math.round(s * FPS * k)));
-  const target = Math.round(base.reduce((a, b) => a + b, 0) * FPS * k);
-  frames[frames.length - 1] += target - frames.reduce((a, b) => a + b, 0);
+export const buildTimeline = (_scale: number = 1, secs?: number[]) => {
+  const base = secs && secs.length === CHAPTERS.length
+    ? secs.map((s) => Math.round(s * FPS))
+    : CHAPTERS.map((c) => (c as any).exactFrames || Math.round(c.sec * FPS));
   const starts: number[] = [];
   let s = 0;
-  frames.forEach((f) => { starts.push(s); s += f; });
-  return { frames, starts, total: s };
+  base.forEach((f) => { starts.push(s); s += f; });
+  return { frames: base, starts, total: s };
 };
 
 export const getTotalFrames = (scale = 1, secs?: number[]) => buildTimeline(scale, secs).total;
 
 const ACT_TICKS = ACTS.map((_, a) => {
   const first = CHAPTERS.findIndex((c) => c.act === a + 1);
-  const before = CHAPTERS.slice(0, first).reduce((x, c) => x + c.sec, 0);
-  return (before / BASE_SECONDS) * 100;
+  const before = CHAPTERS.slice(0, first).reduce((x, c) => x + (c as any).exactFrames, 0);
+  return (before / SRIKAKULAM_TOTAL_FRAMES) * 100;
 }).slice(1);
 
 // ============================================================================
@@ -453,8 +460,8 @@ const LeaderCard: React.FC<{ who: Who; w: number; h: number; delay?: number; sub
   const d = useD();
   const t = P[who];
   const [err, setErr] = useState(false);
-  const pop = spring({ frame: frame - d(delay), fps, config: { damping: 12, stiffness: 115 } });
-  const floatY = Math.sin(frame * 0.06 + (who === 'dharmana' ? 2 : 0)) * 6;
+  const pop = spring({ frame: frame - d(delay), fps, config: { damping: 14, stiffness: 120 } });
+  const floatY = Math.sin(frame * 0.06 + (who === 'dharmana' ? 2 : 0)) * 4;
 
   return (
     <div style={{
@@ -464,13 +471,14 @@ const LeaderCard: React.FC<{ who: Who; w: number; h: number; delay?: number; sub
       flex: 'none',
       overflow: 'hidden',
       borderRadius: 34,
-      transform: `translateY(${floatY}px) scale(${0.7 + 0.3 * pop})`,
+      transform: `translateY(${floatY}px) scale(${Math.min(1, 0.7 + 0.3 * pop)})`,
       opacity: Math.min(1, pop * 1.5),
       background: '#FFFFFF',
       border: `3.5px solid ${t.main}`,
-      boxShadow: `0 25px 60px ${t.main}38, 0 10px 25px rgba(15,23,42,0.08)`,
+      boxShadow: `0 20px 50px ${t.main}33, 0 10px 25px rgba(15,23,42,0.08)`,
       display: 'flex',
       flexDirection: 'column',
+      boxSizing: 'border-box',
     }}>
       {/* 1. TOP: Dedicated Photo Frame */}
       <div style={{
@@ -633,32 +641,32 @@ const Hero: React.FC<{ c: Ch }> = ({ c }) => (
       </Reveal>
     </div>
     <div style={{ display: 'flex', gap: 24, alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-      <LeaderCard who="shankar" w={460} h={920} delay={20} />
-      <LeaderCard who="dharmana" w={460} h={920} delay={32} />
+      <LeaderCard who="shankar" w={460} h={880} delay={20} />
+      <LeaderCard who="dharmana" w={460} h={880} delay={32} />
       <VsBadge delay={60} abs />
     </div>
   </div>
 );
 
 const FaceOff: React.FC<{ c: Ch }> = ({ c }) => (
-  <div style={{ display: 'grid', gridTemplateColumns: '500px 1fr 500px', gap: 32, height: '100%' }}>
-    <LeaderCard who="shankar" w={500} h={920} delay={4} sub={c.leftNote} />
-    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 26, textAlign: 'center' }}>
-      <SplitText text={c.centerTitle} size={60} delay={8} center />
+  <div style={{ display: 'grid', gridTemplateColumns: '440px minmax(0, 1fr) 440px', gap: 28, height: '100%', alignItems: 'center', width: '100%', boxSizing: 'border-box' }}>
+    <LeaderCard who="shankar" w={440} h={880} delay={4} sub={c.leftNote} />
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 22, textAlign: 'center', minWidth: 0, overflow: 'hidden' }}>
+      <SplitText text={c.centerTitle} size={54} delay={8} center />
       <VsBadge delay={36} />
       {c.items.map((t: string, i: number) => (
-        <Reveal key={i} delay={46 + i * 14} style={{ ...card, padding: '22px 34px', fontSize: 36, fontWeight: 700, width: '100%', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{t}</Reveal>
+        <Reveal key={i} delay={46 + i * 14} style={{ ...card, padding: '16px 28px', fontSize: 30, fontWeight: 700, width: '100%', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{t}</Reveal>
       ))}
       {c.stat && (
         <Reveal delay={90}>
-          <div>
-            <AnimatedCounter target={c.stat.value} decimals={c.stat.decimals} suffix={c.stat.suffix} startFrame={94} duration={50} fontSize={120} color={C.blue} />
-            <div style={{ fontSize: 34, fontWeight: 700, color: C.muted }}>{c.stat.label}</div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <AnimatedCounter target={c.stat.value} decimals={c.stat.decimals} suffix={c.stat.suffix} startFrame={94} duration={50} fontSize={104} color={C.blue} />
+            <div style={{ fontSize: 32, fontWeight: 700, color: C.muted }}>{c.stat.label}</div>
           </div>
         </Reveal>
       )}
     </div>
-    <LeaderCard who="dharmana" w={500} h={920} delay={14} sub={c.rightNote} />
+    <LeaderCard who="dharmana" w={440} h={880} delay={14} sub={c.rightNote} />
   </div>
 );
 
@@ -1206,12 +1214,14 @@ const ChapterScene: React.FC<{ ch: Ch; idx: number; start: number; dur: number; 
     : { transform: `scale(${1.05 - 0.05 * e})`, filter: `blur(${(1 - e) * 10}px)`, opacity: e * exit };
   const actStart = idx > 0 && CHAPTERS[idx - 1].act !== ch.act;
   const T = TEMPLATES[ch.type];
+  const audioFile = (ch as any).audioPath || `audio/srikakulam/chapters/ch_${String(ch.id).padStart(2, '0')}.wav`;
   return (
-    <Sync.Provider value={{ scale: dur / (ch.sec * FPS), dur }}>
+    <Sync.Provider value={{ scale: 1, dur }}>
       <AbsoluteFill>
+        <Audio src={staticFile(audioFile)} volume={1} />
         <StudioWhiteBackground gf={gf} />
         <BroadcastHUD ch={ch} gf={gf} total={total} />
-        <AbsoluteFill style={{ padding: '44px 56px 40px', ...wrap }}>
+        <AbsoluteFill style={{ padding: '44px 56px 40px', ...wrap, overflow: 'hidden' }}>
           <T c={ch} />
         </AbsoluteFill>
         {actStart && (
@@ -1225,11 +1235,10 @@ const ChapterScene: React.FC<{ ch: Ch; idx: number; start: number; dur: number; 
 // ============================================================================
 // MASTER TIMELINE
 // ============================================================================
-export const SrikakulamVideo: React.FC<{ timeScale?: number; chapterSeconds?: number[] }> = ({ timeScale = 1, chapterSeconds }) => {
-  const { frames, starts, total } = buildTimeline(timeScale, chapterSeconds);
+export const SrikakulamVideo: React.FC<{ timeScale?: number; chapterSeconds?: number[] }> = ({ chapterSeconds }) => {
+  const { frames, starts, total } = buildTimeline(1, chapterSeconds);
   return (
     <AbsoluteFill style={{ backgroundColor: C.bg, fontFamily: `${fontAnek}, 'Anek Telugu', 'Noto Sans Telugu', sans-serif` }}>
-      <Audio src={staticFile(MASTER_VO)} volume={1} />
       {BG_MUSIC ? <Audio src={staticFile(BG_MUSIC)} volume={0.1} loop /> : null}
       <Series>
         {CHAPTERS.map((ch, i) => (

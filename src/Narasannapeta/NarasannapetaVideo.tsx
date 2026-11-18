@@ -709,10 +709,10 @@ const Hero: React.FC<{ c: Ch }> = ({ c }) => (
 );
 
 const FaceOff: React.FC<{ c: Ch }> = ({ c }) => (
-  <div style={{ display: 'grid', gridTemplateColumns: '560px 1fr 560px', gap: 24, height: '100%' }}>
-    <LeaderCard who="baggu" w={560} h={940} delay={4} sub={c.leftNote} />
-    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 24, textAlign: 'center' }}>
-      <SplitText text={c.centerTitle} size={56} delay={8} center />
+  <div style={{ display: 'grid', gridTemplateColumns: '460px minmax(0, 1fr) 460px', gap: 28, height: '100%', alignItems: 'center', width: '100%', boxSizing: 'border-box' }}>
+    <LeaderCard who="baggu" w={460} h={890} delay={4} sub={c.leftNote} />
+    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 22, textAlign: 'center', minWidth: 0, overflow: 'hidden' }}>
+      <SplitText text={c.centerTitle} size={54} delay={8} center />
       <VsBadge delay={36} />
       {c.items.map((t: string, i: number) => (
         <Reveal
@@ -720,8 +720,8 @@ const FaceOff: React.FC<{ c: Ch }> = ({ c }) => (
           delay={46 + i * 14}
           style={{
             ...card,
-            padding: '20px 28px',
-            fontSize: t.length > 28 ? 32 : 36,
+            padding: '16px 28px',
+            fontSize: t.length > 28 ? 30 : 34,
             fontWeight: 700,
             width: '100%',
             whiteSpace: 'nowrap',
@@ -734,14 +734,14 @@ const FaceOff: React.FC<{ c: Ch }> = ({ c }) => (
       ))}
       {c.stat && (
         <Reveal delay={90}>
-          <div>
-            <AnimatedCounter target={c.stat.value} decimals={c.stat.decimals} suffix={c.stat.suffix} startFrame={94} duration={50} fontSize={130} color={C.blue} />
-            <div style={{ fontSize: 36, fontWeight: 700, color: C.muted }}>{c.stat.label}</div>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <AnimatedCounter target={c.stat.value} decimals={c.stat.decimals} suffix={c.stat.suffix} startFrame={94} duration={50} fontSize={104} color={C.blue} />
+            <div style={{ fontSize: 32, fontWeight: 700, color: C.muted }}>{c.stat.label}</div>
           </div>
         </Reveal>
       )}
     </div>
-    <LeaderCard who="dk" w={560} h={940} delay={14} sub={c.rightNote} />
+    <LeaderCard who="dk" w={460} h={890} delay={14} sub={c.rightNote} />
   </div>
 );
 
