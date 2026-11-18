@@ -22,12 +22,15 @@ const { fontFamily: fontAnek } = loadAnek();
 const IMG = (p: string) => staticFile(`images/srikakulam/${p}`);
 
 export const LEADER_IMAGES = {
-  shankar: IMG('gondu_shankar.png'),
-  dharmana: IMG('dharmana_prasada_rao.png'),
+  shankar: IMG('gondu_shankar_main.jpg'),
+  shankarGrassroots: IMG('gondu_shankar_grassroots.jpg'),
+  dharmana: IMG('dharmana_prasada_rao_main.jpg'),
+  dharmanaWebp: IMG('dharmana_prasad.webp'),
 };
 export const OTHER_IMAGES = {
   gundaAppala: IMG('gunda_appala_suryanarayana.png'),
   gundaLakshmi: IMG('gunda_lakshmi_devi.png'),
+  rammohan: IMG('rammohan_naidu.jpg'),
 };
 export const PARTY_SYMBOLS = {
   tdp: IMG('symbols/tdp_cycle.png'),
@@ -49,7 +52,7 @@ const C = {
 
 type SymKey = keyof typeof PARTY_SYMBOLS;
 type PartyKey = 'tdp' | 'ysrcp' | 'inc';
-type Who = 'shankar' | 'dharmana';
+type Who = 'shankar' | 'dharmana' | 'rammohan';
 
 const PC: Record<PartyKey, { main: string; sub: string; text: string; soft: string; on: string }> = {
   tdp: { main: C.yel, sub: C.yel2, text: C.yelText, soft: 'rgba(245,184,0,0.14)', on: C.ink },
@@ -58,7 +61,7 @@ const PC: Record<PartyKey, { main: string; sub: string; text: string; soft: stri
 };
 const PARTY_TE: Record<PartyKey, string> = { tdp: 'తెలుగుదేశం', ysrcp: 'వైఎస్సార్సీపీ', inc: 'కాంగ్రెస్' };
 
-const P = {
+const P: Record<Who, any> = {
   shankar: {
     ...PC.tdp,
     name: 'గొండు శంకర్',
@@ -82,6 +85,18 @@ const P = {
     ini: 'ధ',
     partyBg: '#0066CC',
     partyText: '#FFFFFF',
+  },
+  rammohan: {
+    ...PC.tdp,
+    name: 'కింజరాపు రామ్మోహన్ నాయుడు',
+    short: 'రామ్మోహన్ నాయుడు',
+    party: PARTY_TE.tdp,
+    partyFull: 'శ్రీకాకుళం ఎంపీ (కేంద్ర మంత్రి)',
+    sym: 'tdp' as SymKey,
+    img: OTHER_IMAGES.rammohan,
+    ini: 'రా',
+    partyBg: '#FFD800',
+    partyText: '#0F172A',
   },
 };
 
@@ -190,9 +205,9 @@ const RAW: Omit<Ch, 'id'>[] = [
   { act: 3, sec: 13, title: 'టికెట్ ఎలా దక్కింది?', type: 'chips', cols: 3,
     heroTitle: 'శంకర్ కు టికెట్ ఎందుకు దక్కింది?',
     tiles: [
-      { img: IMG('card_people_connect.jpg'), t: 'ప్రజల మధ్య నిరంతరం', color: 'tdp' },
-      { img: IMG('card_youth_craze.jpg'), t: 'యువతలో క్రేజ్', color: 'tdp' },
-      { img: IMG('card_tdp_leaders.jpg'), t: 'రామ్మోహన్ నాయుడు & అచ్చెన్నాయుడు మద్దతు', color: 'tdp' },
+      { img: LEADER_IMAGES.shankarGrassroots, t: 'ప్రజల మధ్య నిరంతరం', color: 'tdp' },
+      { img: LEADER_IMAGES.shankar, t: 'యువతలో క్రేజ్', color: 'tdp' },
+      { img: OTHER_IMAGES.rammohan, t: 'రామ్మోహన్ నాయుడు & అచ్చెన్నాయుడు మద్దతు', color: 'tdp' },
     ] },
   { act: 3, sec: 10, title: 'అసమ్మతిని కలుపుకున్న శంకర్', type: 'quote', sides: ['shankar', null],
     sub: 'టికెట్ ప్రకటించిన కొత్తలో…', text: 'అసమ్మతి ఉన్నా… కలుపుగోలుతనంతో అందరినీ కలుపుకున్నారు!', size: 80 },
@@ -209,7 +224,7 @@ const RAW: Omit<Ch, 'id'>[] = [
     foot: 'పదేళ్లలో కొత్తగా ఒక్క ఓటు కూడా పెరగలేదు!' },
   { act: 4, sec: 12, title: 'ఓట్ షేర్ 14% పతనం', type: 'bigstat', who: 'dharmana',
     label: 'ధర్మాన ఓట్ షేర్ పతనం (2019తో పోలిస్తే)', value: 14, prefix: '−', suffix: '%', chips: ['సిట్టింగ్ మంత్రి అయినా పతనం'] },
-  { act: 4, sec: 12, title: 'ఎంపీ ఆధిక్యం – 68,413', type: 'bigstat', who: 'shankar',
+  { act: 4, sec: 12, title: 'ఎంపీ ఆధిక్యం – 68,413', type: 'bigstat', who: 'rammohan',
     label: 'ఈ సెగ్మెంట్ లో ఎంపీ రామ్మోహన్ నాయుడు ఆధిక్యం', value: 68413, chips: ['అర్బన్ + రూరల్ ఏకపక్షం'] },
 
   // ───────────── ACT 5 · REASONS ─────────────
@@ -520,11 +535,12 @@ const LeaderCard: React.FC<{ who: Who; w: number; h: number; delay?: number; sub
         borderTop: `1.5px solid ${t.main}33`,
       }}>
         <div style={{
-          fontSize: w < 380 ? 28 : w < 460 ? 34 : 40,
+          fontSize: t.name.length > 20 ? (w < 400 ? 22 : 28) : t.name.length > 14 ? (w < 400 ? 25 : 32) : (w < 380 ? 28 : w < 460 ? 34 : 40),
           fontWeight: 900,
           color: C.ink,
-          lineHeight: 1.15,
+          lineHeight: 1.25,
           whiteSpace: 'nowrap',
+          maxWidth: '100%',
         }}>
           {t.name}
         </div>
