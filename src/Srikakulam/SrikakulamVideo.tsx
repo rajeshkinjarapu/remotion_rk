@@ -360,19 +360,19 @@ const Pill: React.FC<{ children: React.ReactNode; color?: string }> = ({ childre
 
 const Row: React.FC<{ t: string; ok?: boolean; delay: number; size?: number; color: string }> = ({ t, ok, delay, size = 46, color }) => {
   const len = t.length;
-  const responsiveSize = len > 44 ? Math.min(size, 38) : len > 30 ? Math.min(size, 44) : size;
+  const responsiveSize = len > 44 ? Math.min(size, 34) : len > 30 ? Math.min(size, 38) : size;
   return (
-    <Reveal delay={delay} from="right" style={{ display: 'flex', alignItems: 'center', gap: 24, width: '100%', minWidth: 0 }}>
+    <Reveal delay={delay} from="right" style={{ display: 'flex', alignItems: 'center', gap: 20, width: '100%', minWidth: 0 }}>
       <div style={{
-        width: Math.round(responsiveSize * 1.25),
-        height: Math.round(responsiveSize * 1.25),
+        width: Math.round(responsiveSize * 1.15),
+        height: Math.round(responsiveSize * 1.15),
         borderRadius: '50%',
         flex: 'none',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         fontWeight: 900,
-        fontSize: Math.round(responsiveSize * 0.75),
+        fontSize: Math.round(responsiveSize * 0.7),
         background: ok === false ? '#FEE2E2' : ok === true ? '#DCFCE7' : `${color}22`,
         color: ok === false ? C.red : ok === true ? C.green : color,
         border: `3px solid ${ok === false ? C.red : ok === true ? C.green : color}55`,
@@ -384,9 +384,10 @@ const Row: React.FC<{ t: string; ok?: boolean; delay: number; size?: number; col
         fontSize: responsiveSize,
         fontWeight: 800,
         color: C.ink,
-        lineHeight: 1.55,
-        padding: '14px 8px',
-        whiteSpace: 'nowrap',
+        lineHeight: 1.4,
+        padding: '6px 4px',
+        whiteSpace: 'normal',
+        wordBreak: 'break-word',
         overflow: 'visible',
         flex: 1,
         minWidth: 0,

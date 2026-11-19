@@ -401,19 +401,19 @@ const Pill: React.FC<{ children: React.ReactNode; color?: string }> = ({ childre
 
 const Row: React.FC<{ t: string; ok?: boolean; delay: number; size?: number; color: string }> = ({ t, ok, delay, size = 56, color }) => {
   const len = t.length;
-  const responsiveSize = len > 46 ? Math.min(size, 38) : len > 34 ? Math.min(size, 44) : len > 24 ? Math.min(size, 50) : size;
+  const responsiveSize = len > 46 ? Math.min(size, 34) : len > 34 ? Math.min(size, 38) : len > 24 ? Math.min(size, 44) : size;
   return (
-    <Reveal delay={delay} from="right" style={{ display: 'flex', alignItems: 'center', gap: 24, width: '100%', minWidth: 0 }}>
+    <Reveal delay={delay} from="right" style={{ display: 'flex', alignItems: 'center', gap: 20, width: '100%', minWidth: 0 }}>
       <div style={{
-        width: Math.round(responsiveSize * 1.2),
-        height: Math.round(responsiveSize * 1.2),
+        width: Math.round(responsiveSize * 1.15),
+        height: Math.round(responsiveSize * 1.15),
         borderRadius: '50%',
         flex: 'none',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         fontWeight: 900,
-        fontSize: Math.round(responsiveSize * 0.7),
+        fontSize: Math.round(responsiveSize * 0.65),
         background: ok === false ? '#FEE2E2' : ok === true ? '#DCFCE7' : `${color}22`,
         color: ok === false ? C.red : ok === true ? C.green : color,
         border: `3px solid ${ok === false ? C.red : ok === true ? C.green : color}55`,
@@ -425,9 +425,10 @@ const Row: React.FC<{ t: string; ok?: boolean; delay: number; size?: number; col
         fontSize: responsiveSize,
         fontWeight: 800,
         color: C.ink,
-        lineHeight: 1.55,
-        padding: '14px 8px',
-        whiteSpace: 'nowrap',
+        lineHeight: 1.4,
+        padding: '6px 4px',
+        whiteSpace: 'normal',
+        wordBreak: 'break-word',
         overflow: 'visible',
         flex: 1,
         minWidth: 0,
@@ -1007,25 +1008,26 @@ const BigStat: React.FC<{ c: Ch }> = ({ c }) => {
   const frame = useCurrentFrame();
   const t = P[(c.who as Who) || 'baggu'];
   const fromTo = c.from !== undefined;
+  const cardW = fromTo ? 580 : 650;
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 700px', gap: 36, height: '100%' }}>
-      <div style={{ ...card, padding: '44px 56px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 28, position: 'relative', overflow: 'hidden' }}>
-        <Reveal delay={4}><div style={{ fontSize: 42, fontWeight: 800, color: C.muted }}>{c.label}</div></Reveal>
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: 28, flexWrap: 'nowrap' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: `1fr ${cardW}px`, gap: 36, height: '100%' }}>
+      <div style={{ ...card, padding: '44px 50px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 28, position: 'relative', overflow: 'hidden' }}>
+        <Reveal delay={4}><div style={{ fontSize: 40, fontWeight: 800, color: C.muted }}>{c.label}</div></Reveal>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: 20, flexWrap: 'nowrap' }}>
           {fromTo && (
             <>
-              <AnimatedCounter target={c.from} decimals={c.fromDecimals || 0} suffix={c.suffix || ''} startFrame={10} duration={40} fontSize={130} color={C.muted} />
-              <span style={{ fontSize: 100, color: C.red, fontWeight: 900 }}>→</span>
+              <AnimatedCounter target={c.from} decimals={c.fromDecimals || 0} suffix={c.suffix || ''} startFrame={10} duration={40} fontSize={100} color={C.muted} />
+              <span style={{ fontSize: 75, color: C.red, fontWeight: 900 }}>→</span>
             </>
           )}
-          <AnimatedCounter target={c.value} decimals={c.decimals || 0} suffix={c.suffix || ''} startFrame={fromTo ? 50 : 10} duration={50} fontSize={fromTo ? 160 : 270} color={t.text} />
+          <AnimatedCounter target={c.value} decimals={c.decimals || 0} suffix={c.suffix || ''} startFrame={fromTo ? 50 : 10} duration={50} fontSize={fromTo ? 130 : 250} color={t.text} />
         </div>
         <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
           {(c.chips || []).map((x: string, i: number) => <Reveal key={i} delay={60 + i * 10} from="zoom"><Pill>{x}</Pill></Reveal>)}
         </div>
         <div style={{ position: 'absolute', top: 0, bottom: 0, left: ((frame * 14) % 2400) - 300, width: 160, background: 'linear-gradient(90deg, transparent, rgba(255,255,255,.7), transparent)', transform: 'skewX(-20deg)' }} />
       </div>
-      <LeaderCard who={(c.who as Who) || 'baggu'} w={700} h={940} delay={6} />
+      <LeaderCard who={(c.who as Who) || 'baggu'} w={cardW} h={940} delay={6} />
     </div>
   );
 };
@@ -1102,14 +1104,14 @@ const AllianceRow: React.FC<{ keys: SymKey[]; title: string; sub: string; merge:
 const Alliance: React.FC<{ c: Ch }> = ({ c }) => {
   const both = c.mode === 'both';
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 520px', gap: 36, height: '100%' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 640px', gap: 36, height: '100%' }}>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
         {both && <AllianceRow keys={['tdp', 'jsp']} title="2019 · విడివిడిగా" sub="ప్రభుత్వ వ్యతిరేక ఓటు చీలింది" merge={false} tone={C.red} delay={4} />}
         <AllianceRow keys={['tdp', 'jsp', 'bjp']} title="2024 · ఒకే కూటమి" sub="ఓట్లు చీలలేదు" merge tone={C.green} delay={both ? 40 : 4} />
       </div>
-      <div style={{ ...card, padding: 40, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 34 }}>
-        <Reveal delay={6}><div style={{ fontSize: 50, fontWeight: 900 }}><Mark delay={12}>{c.sideTitle}</Mark></div></Reveal>
-        {c.points.map((p: string, i: number) => <Row key={i} t={p} ok delay={26 + i * 16} size={38} color={C.green} />)}
+      <div style={{ ...card, padding: '36px 36px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 30, minWidth: 0 }}>
+        <Reveal delay={6}><div style={{ fontSize: 48, fontWeight: 900 }}><Mark delay={12}>{c.sideTitle}</Mark></div></Reveal>
+        {c.points.map((p: string, i: number) => <Row key={i} t={p} ok delay={26 + i * 16} size={32} color={C.green} />)}
       </div>
     </div>
   );
