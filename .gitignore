@@ -16,3 +16,5 @@ smallest_accounts.json
 *.mkv
 public/Reference Video/
 public/InShot_*
+stills/
+extracted_zip/

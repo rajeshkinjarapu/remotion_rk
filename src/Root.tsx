@@ -20,6 +20,10 @@ import {
 	ACTS as SRIKAKULAM_ACTS,
 } from './Srikakulam';
 import {
+	PrabhasVsAlluArjunVideo,
+	TOTAL_PRABHAS_ALLU_FRAMES,
+} from './PrabhasVsAlluArjun';
+import {
 	TeluguQuiz,
 	TeluguQuizSeries,
 	teluguQuizSchema,
@@ -165,6 +169,16 @@ export const Root: React.FC = () => {
 				width={1920}
 				height={1080}
 				defaultProps={{ timeScale: 1 }}
+			/>
+
+			{/* ================= PRABHAS VS ALLU ARJUN (8 MINUTES · 60 SCENES) ================= */}
+			<Composition
+				id="PrabhasVsAlluArjun"
+				component={PrabhasVsAlluArjunVideo}
+				durationInFrames={TOTAL_PRABHAS_ALLU_FRAMES}
+				fps={30}
+				width={1920}
+				height={1080}
 			/>
 
 			<Composition
