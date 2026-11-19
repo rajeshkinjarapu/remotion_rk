@@ -723,41 +723,11 @@ const PlayerTiltCard: React.FC<{
           background: lightMode
             ? `linear-gradient(165deg, #FFFFFF 0%, ${p.main}18 75%, ${p.glow}28 100%)`
             : `linear-gradient(165deg, #0F172A 0%, ${p.main}44 65%, ${p.glow}33 100%)`,
-          border: `3px solid ${p.main}`,
+          border: `3.5px solid ${p.main}`,
           boxShadow: `0 24px 65px ${p.main}55`,
         }}
       >
-        {/* Giant Jersey Watermark */}
-        <div
-          style={{
-            position: 'absolute',
-            top: 12,
-            left: 22,
-            fontSize: Math.round(w * 0.24),
-            fontWeight: 900,
-            color: lightMode ? `${p.main}22` : 'rgba(255,255,255,0.12)',
-            lineHeight: 1,
-          }}
-        >
-          {p.jersey}
-        </div>
-
-        {/* Rotating Energy Ring */}
-        <div
-          style={{
-            position: 'absolute',
-            top: '12%',
-            left: '50%',
-            width: w * 0.78,
-            height: w * 0.78,
-            marginLeft: -w * 0.39,
-            borderRadius: '50%',
-            border: `4px dashed ${p.glow}77`,
-            transform: `rotate(${(frame * 1.3) % 360}deg)`,
-          }}
-        />
-
-        {/* Cutout Photo or Stylized Jersey Crest Fallback */}
+        {/* Full Card Cover Photo */}
         {err ? (
           <div
             style={{
@@ -786,72 +756,112 @@ const PlayerTiltCard: React.FC<{
             onError={() => setErr(true)}
             style={{
               position: 'absolute',
-              bottom: '16%',
+              top: 0,
               left: 0,
               width: '100%',
-              height: '74%',
-              objectFit: 'contain',
-              objectPosition: 'bottom',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: who === 'kohli' ? 'center 30%' : 'center 12%',
             }}
           />
         )}
 
-        {/* Flag + Jersey Pill */}
+        {/* Top Vignette Overlay for Clean Contrast on Badges */}
         <div
           style={{
             position: 'absolute',
-            top: 20,
-            right: 20,
+            top: 0,
+            left: 0,
+            right: 0,
+            height: 150,
+            background: lightMode
+              ? 'linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.4) 60%, transparent 100%)'
+              : 'linear-gradient(180deg, rgba(5,9,20,0.88) 0%, rgba(5,9,20,0.45) 60%, transparent 100%)',
+            pointerEvents: 'none',
+          }}
+        />
+
+        {/* Top Left: Team Pill Badge */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 18,
+            left: 18,
+            zIndex: 10,
+            background: lightMode ? p.main : 'rgba(5, 9, 20, 0.85)',
+            border: `2px solid ${p.glow}`,
+            color: '#fff',
+            padding: '5px 16px',
+            borderRadius: 999,
+            fontSize: 20,
+            fontWeight: 900,
+            letterSpacing: 1,
+            boxShadow: '0 4px 14px rgba(0,0,0,0.4)',
+          }}
+        >
+          {p.team}
+        </div>
+
+        {/* Top Right: Flag + Jersey Pill */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 18,
+            right: 18,
+            zIndex: 10,
             background: 'rgba(5, 9, 20, 0.85)',
             border: `2px solid ${p.glow}`,
             borderRadius: 999,
-            padding: '6px 18px',
+            padding: '5px 16px',
             display: 'flex',
             alignItems: 'center',
             gap: 8,
             color: '#fff',
             fontWeight: 900,
             fontSize: 22,
+            boxShadow: '0 4px 14px rgba(0,0,0,0.4)',
           }}
         >
           <span>{p.flag}</span>
           <span>{p.jersey}</span>
         </div>
 
-        {/* Bottom Nameplate */}
+        {/* Bottom Nameplate with Seamless Gradient Backing */}
         <div
           style={{
             position: 'absolute',
             bottom: 0,
             left: 0,
             right: 0,
-            padding: '48px 18px 22px',
+            padding: sub ? '72px 18px 20px' : '62px 18px 22px',
             textAlign: 'center',
+            zIndex: 10,
             background: lightMode
-              ? 'linear-gradient(0deg, #FFFFFF 68%, rgba(255,255,255,0))'
-              : 'linear-gradient(0deg, #050914 70%, rgba(5,9,20,0))',
+              ? 'linear-gradient(0deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.92) 65%, transparent 100%)'
+              : 'linear-gradient(0deg, rgba(5,9,20,0.98) 0%, rgba(5,9,20,0.90) 65%, transparent 100%)',
           }}
         >
-          <div style={{ fontSize: Math.round(w * 0.095), fontWeight: 900, color: lightMode ? C.ink : C.white }}>
+          <div style={{ fontSize: Math.round(w * 0.095), fontWeight: 900, color: lightMode ? C.ink : C.white, textShadow: lightMode ? 'none' : '0 2px 10px rgba(0,0,0,0.8)' }}>
             {p.name}
           </div>
           <div
             style={{
               display: 'inline-block',
-              marginTop: 8,
-              padding: '5px 22px',
+              marginTop: 6,
+              padding: '4px 20px',
               borderRadius: 999,
               background: p.main,
               color: '#fff',
-              fontSize: Math.round(w * 0.056),
+              fontSize: Math.round(w * 0.054),
               fontWeight: 900,
               letterSpacing: 1.5,
+              boxShadow: `0 4px 14px ${p.main}66`,
             }}
           >
             {p.team} · {p.jersey}
           </div>
           {sub && (
-            <div style={{ marginTop: 8, fontSize: Math.round(w * 0.06), fontWeight: 800, color: C.goldLight }}>
+            <div style={{ marginTop: 6, fontSize: Math.round(w * 0.058), fontWeight: 800, color: lightMode ? p.main : C.goldLight, textShadow: lightMode ? 'none' : '0 2px 8px rgba(0,0,0,0.8)' }}>
               {sub}
             </div>
           )}
