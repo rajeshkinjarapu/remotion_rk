@@ -36,10 +36,10 @@ export const CHAPTER_TIMINGS: ChapterTiming[] = chapterTimingsData;
 const IMG = (p: string) => staticFile(`images/kohli_vs_babar/${p}`);
 
 export const PLAYER_IMAGES = {
-  kohli: IMG('virat_kohli_18.png'),     // transparent PNG, India blue jersey #18
-  babar: IMG('babar_azam_56.png'),      // transparent PNG, Pakistan green jersey #56
-  kohliTest: IMG('virat_test.png'),     // optional white Test jersey cutout
-  babarTest: IMG('babar_test.png'),     // optional white Test jersey cutout
+  kohli: IMG('virat_kohli_18.png'),                        // user-provided Kohli action photo
+  babar: IMG('babar.webp'),                                // user-provided Babar official green jersey photo
+  kohliTest: IMG('49798d32e7a2091c652fc20c0bbba250.jpg'),  // user-provided Kohli Test whites celebration
+  babarTest: IMG('images (1).jpg'),                        // user-provided Babar Test whites photo
 };
 
 export const MASTER_VO = 'audio/kohli_vs_babar/master_complete_audio.mp3';
@@ -680,6 +680,9 @@ const PlayerTiltCard: React.FC<{
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const p = PLAYERS[who];
+  const imgSrc = lightMode
+    ? (who === 'kohli' ? PLAYER_IMAGES.kohliTest : PLAYER_IMAGES.babarTest)
+    : p.img;
   const [err, setErr] = useState(false);
 
   const pop = spring({ frame: frame - delay, fps, config: { damping: 12, stiffness: 115 } });
@@ -752,7 +755,7 @@ const PlayerTiltCard: React.FC<{
           </div>
         ) : (
           <img
-            src={p.img}
+            src={imgSrc}
             onError={() => setErr(true)}
             style={{
               position: 'absolute',
@@ -761,7 +764,7 @@ const PlayerTiltCard: React.FC<{
               width: '100%',
               height: '100%',
               objectFit: 'cover',
-              objectPosition: who === 'kohli' ? 'center 30%' : 'center 12%',
+              objectPosition: lightMode ? 'center 15%' : (who === 'kohli' ? 'center 30%' : 'center 15%'),
             }}
           />
         )}
