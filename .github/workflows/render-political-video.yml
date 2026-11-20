@@ -12,10 +12,10 @@ on:
         description: 'వీడియో సెలెక్ట్ చేయండి (Target to Render)'
         required: true
         type: choice
-        default: 'Narasannapeta'
+        default: 'Srikakulam'
         options:
-          - 'Narasannapeta'
           - 'Srikakulam'
+          - 'Narasannapeta'
           - 'Narasannapeta-Act1-HOOK'
           - 'Narasannapeta-Act2-HISTORY'
           - 'Narasannapeta-Act3-BAGGU'
@@ -31,7 +31,7 @@ on:
 
 jobs:
   render:
-    name: 🎬 Render ${{ github.event.inputs.target || 'Narasannapeta' }}
+    name: 🎬 Render ${{ github.event.inputs.target || github.ref_name }}
     runs-on: ubuntu-latest
     timeout-minutes: 180
 
@@ -52,16 +52,27 @@ jobs:
       - name: 📦 Install Dependencies
         run: bun install
 
-      - name: 🎥 Render Video
+      - name: 🎥 Determine Target and Render Video
         run: |
           mkdir -p out
-          TARGET="${{ github.event.inputs.target || 'Narasannapeta' }}"
+          TARGET="${{ github.event.inputs.target }}"
+          if [ -z "$TARGET" ]; then
+            TAG_NAME="${{ github.ref_name }}"
+            if [[ "$TAG_NAME" == *srikakulam* ]]; then
+              TARGET="Srikakulam"
+            elif [[ "$TAG_NAME" == *narasannapeta* ]]; then
+              TARGET="Narasannapeta"
+            else
+              TARGET="Srikakulam"
+            fi
+          fi
           echo "🚀 Rendering $TARGET on Cloud..."
           bunx remotion render "$TARGET" "out/${TARGET}.mp4" --concurrency=2
+          echo "RENDER_TARGET=$TARGET" >> $GITHUB_ENV
 
       - name: 📤 Upload Rendered Video
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ github.event.inputs.target || 'Narasannapeta' }}-rendered-video
+          name: ${{ env.RENDER_TARGET }}-rendered-video
           path: out/*.mp4
           retention-days: 14
